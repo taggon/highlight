@@ -65,4 +65,4 @@ fastlane/screenshots
 fastlane/test_output
 
 Highlight/scripts/
-highlight.js/
+node_modules/
