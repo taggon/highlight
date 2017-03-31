@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "2kO-dj-y58"; */
+"2kO-dj-y58.title" = "종료";
+
+/* Class = "NSMenuItem"; title = "Highlight"; ObjectID = "7e0-EK-iZC"; */
+"7e0-EK-iZC.title" = "Highlight";
+
+/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "Cak-uC-bOn"; */
+"Cak-uC-bOn.title" = "환경설정";
+
+/* Class = "NSMenu"; title = "Styles"; ObjectID = "JgB-tL-Aap"; */
+"JgB-tL-Aap.title" = "스타일";
+
+/* Class = "NSMenuItem"; title = "Highlight code"; ObjectID = "r5b-UX-VfX"; */
+"r5b-UX-VfX.title" = "구문강조된 코드 복사";
+
+/* Class = "NSMenuItem"; title = "Styles"; ObjectID = "wlZ-TW-NyO"; */
+"wlZ-TW-NyO.title" = "스타일";

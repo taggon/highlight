@@ -1,0 +1,25 @@
+PODS:
+  - KeyHolder (2.0.0):
+    - Magnet (~> 2.0)
+  - Magnet (2.0.0)
+
+DEPENDENCIES:
+  - KeyHolder (from `https://github.com/taggon/KeyHolder.git`)
+  - Magnet
+
+EXTERNAL SOURCES:
+  KeyHolder:
+    :git: https://github.com/taggon/KeyHolder.git
+
+CHECKOUT OPTIONS:
+  KeyHolder:
+    :commit: 14644656e283a9bb10abbb6b96b7e33a115be131
+    :git: https://github.com/taggon/KeyHolder.git
+
+SPEC CHECKSUMS:
+  KeyHolder: b062a8e003254133b95453a79d7bb9e3ccf29e50
+  Magnet: b30d2807dd0d8a349ce4e6574ecefa38012d02ca
+
+PODFILE CHECKSUM: 65eae6fc30a7ac164ff520bcd97c8d857ae81acf
+
+COCOAPODS: 1.2.0.beta.3

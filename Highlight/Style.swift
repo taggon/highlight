@@ -1,43 +1,70 @@
 //
-//  ThemeParser.swift
+//  Style.swift
 //  Highlight
 //
-//  Created by Taegon Kim on 12/02/2017.
+//  Created by Taegon Kim on 27/03/2017.
 //  Copyright © 2017 Taegon Kim. All rights reserved.
 //
 
 import Foundation
 
-class ThemeParser {
-    var regexStylesheet: NSRegularExpression!
-    var regexPreprocess: NSRegularExpression!
-    var regexDeclaration: NSRegularExpression!
-    var regexColor: NSRegularExpression!
-    
+let regexStylesheet = try! NSRegularExpression(pattern: "([^\\{\\}]+?)\\s*\\{\\s*([^\\}]+)\\s*\\}", options: [])
+let regexPreprocess = try! NSRegularExpression(pattern: "/\\*.+?\\*/|\r?\n|\u{D}", options: [.dotMatchesLineSeparators])
+let regexDeclaration = try! NSRegularExpression(pattern: "\\s*([^:;]+)\\s*:\\s*([^;]+);?\\s*", options: [])
+let regexColor = try! NSRegularExpression(pattern: "#([0-9a-fA-F]{3,6})", options: [])
+
+class Style {
     struct Ruleset {
         var selectors: [String]!
         var declarations: [Declaration]!
     }
     
     struct Declaration {
-        var property: String!
+        var property: Property!
         var value: String!
         var color: CGColor?
     }
     
-    init() {
-        regexStylesheet = try! NSRegularExpression(pattern: "([^\\{\\}]+?)\\s*\\{\\s*([^\\}]+)\\s*\\}", options: [])
-        regexPreprocess = try! NSRegularExpression(pattern: "/\\*.+?\\*/|\r?\n|\u{D}", options: [.dotMatchesLineSeparators])
-        regexDeclaration = try! NSRegularExpression(pattern: "\\s*([^:;]+)\\s*:\\s*([^;]+);?\\s*", options: [])
-        regexColor = try! NSRegularExpression(pattern: "#([0-9a-fA-F]{3,6})", options: [])
+    typealias Property = String
+
+    var name: String {
+        return self._name
+    }
+    private var _name: String! = ""
+    var rulesets: [Ruleset] = [];
+    
+    init(name: String, code: String) {
+        _name = name
+        setCode(code: code)
     }
     
-    public func parse(input: String) -> [Ruleset] {
-        let css = preprocess(input: input)
+    subscript(selector: String) -> [Property: Declaration]? {
+        let filteredRuleset = rulesets.filter { ruleset in
+            return ruleset.selectors.contains(selector)
+        }
+        
+        if filteredRuleset.count == 0 {
+            return nil
+        }
+
+        var result:[Property: Declaration] = [:]
+        
+        for ruleset in filteredRuleset {
+            for declaration in ruleset.declarations {
+                result[declaration.property] = declaration
+            }
+        }
+        
+        return (result.count > 0) ? result: nil
+    }
+    
+    func setCode(code: String) {
+        let css = preprocess(input: code)
         let cssNS = css as NSString
         let matches = regexStylesheet.matches(in: css, options: [], range: NSMakeRange(0, css.characters.count))
-        var rulesets:[Ruleset] = []
-
+        
+        rulesets = []
+        
         for match in matches {
             let selectors = cssNS.substring(with: match.rangeAt(1)).trimmingCharacters(in: .whitespacesAndNewlines)
             let ruleset = cssNS.substring(with: match.rangeAt(2)).trimmingCharacters(in: .whitespacesAndNewlines)
@@ -45,14 +72,19 @@ class ThemeParser {
             if selectors == "" || ruleset == "" {
                 continue
             }
-
+            
             rulesets.append(Ruleset(
                 selectors: parseSelector(input: selectors),
                 declarations: parseRuleset(input: ruleset)
             ))
         }
+    }
+    
+    func preprocess(input: String) -> String {
+        // remove comment and new lines
+        let code  = regexPreprocess.stringByReplacingMatches(in: input, options: [], range: NSMakeRange(0, input.characters.count), withTemplate: "")
         
-        return rulesets
+        return code
     }
     
     func parseSelector(input: String) -> [String] {
@@ -62,30 +94,23 @@ class ThemeParser {
         return selectors
     }
     
-    func parseRuleset(input: String) -> [Declaration] {
+    func parseRuleset(input: String) -> [Style.Declaration] {
         let inputNS = input as NSString
         let matches = regexDeclaration.matches(in: input, options: [], range: NSMakeRange(0, input.characters.count))
-        var declarations:[Declaration] = []
+        var declarations:[Style.Declaration] = []
         
         for match in matches {
             let prop = inputNS.substring(with: match.rangeAt(1)).trimmingCharacters(in: .whitespacesAndNewlines)
             let value = inputNS.substring(with: match.rangeAt(2)).trimmingCharacters(in: .whitespacesAndNewlines)
-
+            
             if prop == "" || value == "" {
                 continue
             }
-
-            declarations.append(Declaration(property: prop, value: value, color: parseColor(input: value)))
+            
+            declarations.append(Style.Declaration(property: prop, value: value, color: parseColor(input: value)))
         }
         
         return declarations
-    }
-
-    func preprocess(input: String) -> String {
-        // remove comment and new lines
-        let code  = regexPreprocess.stringByReplacingMatches(in: input, options: [], range: NSMakeRange(0, input.characters.count), withTemplate: "")
-        
-        return code
     }
     
     func parseColor(input: String) -> CGColor? {

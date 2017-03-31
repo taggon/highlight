@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "2kO-dj-y58"; */
+"2kO-dj-y58.title" = "Quit";
+
+/* Class = "NSMenuItem"; title = "Highlight"; ObjectID = "7e0-EK-iZC"; */
+"7e0-EK-iZC.title" = "Highlight";
+
+/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "Cak-uC-bOn"; */
+"Cak-uC-bOn.title" = "Preferences";
+
+/* Class = "NSMenu"; title = "Styles"; ObjectID = "JgB-tL-Aap"; */
+"JgB-tL-Aap.title" = "Styles";
+
+/* Class = "NSMenuItem"; title = "Highlight code"; ObjectID = "r5b-UX-VfX"; */
+"r5b-UX-VfX.title" = "Highlight code";
+
+/* Class = "NSMenuItem"; title = "Styles"; ObjectID = "wlZ-TW-NyO"; */
+"wlZ-TW-NyO.title" = "Styles";

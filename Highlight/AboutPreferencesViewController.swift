@@ -9,10 +9,14 @@
 import Cocoa
 
 class AboutPreferencesViewController: NSViewController {
+    
+    @IBOutlet weak var versionField: NSTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        versionField.stringValue = "Version \(appDelegate.version) (Build \(appDelegate.buildNumber))"
     }
-    
+
 }

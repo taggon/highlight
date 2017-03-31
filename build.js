@@ -1,4 +1,5 @@
 const fs = require('fs');
+const https = require('https');
 const path = require('path');
 const glob = require('glob');
 const cssmin = require('cssmin');
@@ -14,7 +15,7 @@ let cssTask = Promise.all(
 				let filename = path.basename(filepath, '.css');
 				let style = filename.replace(/(?:^|[_-])([a-z])/g, ($0, $1) => ' ' + $1.toUpperCase() ).trim();
 				let newPath = filepath.replace(/\.css$/, '.min.css');
-				fs.unlink(filepath);
+				fs.unlink(filepath, () => {});
 				fs.writeFile( newPath, cssmin(data), (err) => {
 					if (err) return reject(err);
 					resolve({filename, style});
@@ -44,16 +45,24 @@ let jsTask = Promise.all(
 				if (err) return reject(err);
 
 				let filename = path.basename(filepath, '.js');
-				data = data.replace(/^module.exports\s*=\s*/, `hljs.registerLanguage('${filename}',`).replace(/;$/, ');');
+				data = data.replace(/^module.exports\s*=\s*/, `self.addLang('${filename}',`).replace(/;$/, ');');
 
-				resolve( data );
+				resolve( { lang: filename, data } );
 			} );
 		} );
 	} )
 )
 .then( (langs) => {
 	let hljs = fs.readFileSync('node_modules/highlight.js/lib/highlight.js');
-	hljs += langs.join('');
+	hljs += 'self.addLang=function(name,fn){self.hljs.registerLanguage(name,fn);};';
+
+	// load the order of registration
+	let order = (fs.readFileSync('node_modules/highlight.js/lib/index.js')+"")
+		.match(/'[\w-]+(?=')/g)
+		.map( s => s.substring(1) );
+
+	langs.sort( (a, b) => order.indexOf(a.lang) - order.indexOf(b.lang) );
+	hljs += langs.map( ({data}) => data ).join('');
 
 	console.log('⏱  Compiling the Highlight package file...');
 
@@ -72,8 +81,33 @@ let jsTask = Promise.all(
 	console.log(err);
 } );
 
+// Language name map
+let mapTask = new Promise( (resolve, reject) => {
+	https.get( 'https://highlightjs.org/download/', (res) => {
+		var html = '';
+		var map = [];
+
+		res.on('data', data => { html += data; } );
+		res.on('end', () => {
+			let regex = /name="([\w-]+).js"(?: checked)?>([^<>]+)<\/label>/g, match;
+			while (match = regex.exec(html) ) {
+				map.push( `\t"${match[2].trim()}": "${match[1]}",\n` );
+			}
+			resolve(
+				'public let hlLanguages = [\n' +
+				map.join('') +
+				']'
+			);
+		});
+	})
+	.on('error', (e) => reject(e) );
+} )
+.catch( err => {
+	console.log(err);
+} );
+
 // Generate the constant file.
-Promise.all( [ jsTask, cssTask ] ).then( ([lang, style]) => {
+Promise.all( [ jsTask, cssTask, mapTask ] ).then( ([lang, style, langMap]) => {
 	fs.writeFile(
 		'Highlight/Constant.swift',
 		`
@@ -87,7 +121,10 @@ Promise.all( [ jsTask, cssTask ] ).then( ([lang, style]) => {
 
 ${lang}
 
+${langMap}
+
 ${style}
-		`.trim() + '\n'
+		`.trim() + '\n',
+		() => {}
 	)
 } );
