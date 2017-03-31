@@ -116,5 +116,25 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     @IBAction func quitApplication(sender: AnyObject?) {
         NSApplication.shared().terminate(self)
     }
+    
+}
+
+extension AppDelegate {
+    func openURLwithDefaultBrowser(urlKey: String) {
+        guard let urls = Bundle.main.object(forInfoDictionaryKey: "URLs") as? Dictionary<String, String> else {
+            return
+        }
+        if let urlString = urls[urlKey] {
+            NSWorkspace.shared().open(URL(string: urlString)!)
+        }
+    }
+    
+    @IBAction func openHomepage(sender: AnyObject?) {
+        openURLwithDefaultBrowser(urlKey: "Homepage")
+    }
+    
+    @IBAction func openIssuePage(sender: AnyObject?) {
+        openURLwithDefaultBrowser(urlKey: "Issue Tracker")
+    }
 }
 

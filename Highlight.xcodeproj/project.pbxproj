@@ -11,7 +11,6 @@
 		F24B1DCD1E2B1B1400FCE0A7 /* AppDelegate+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24B1DCC1E2B1B1400FCE0A7 /* AppDelegate+Version.swift */; };
 		F25AEB731E212C6E0083CB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB721E212C6E0083CB52 /* AppDelegate.swift */; };
 		F25AEB751E212C6E0083CB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25AEB741E212C6E0083CB52 /* Assets.xcassets */; };
-		F25AEB821E212F9B0083CB52 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25AEB801E212F9B0083CB52 /* MainMenu.xib */; };
 		F25AEB871E213D230083CB52 /* AboutPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB851E213D230083CB52 /* AboutPreferencesViewController.swift */; };
 		F25AEB8B1E213D360083CB52 /* StylePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB891E213D360083CB52 /* StylePreferencesViewController.swift */; };
 		F25AEB8F1E213D570083CB52 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */; };
@@ -21,6 +20,7 @@
 		F29B17081E8D1BF80060CA02 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B17071E8D1BF80060CA02 /* UserSettings.swift */; };
 		F29B170A1E8D37AA0060CA02 /* snippets in Resources */ = {isa = PBXBuildFile; fileRef = F29B17091E8D37AA0060CA02 /* snippets */; };
 		F29E0C221E8E4B91005A3DF3 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */; };
+		F29E0C2E1E8E5AA8005A3DF3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25AEB801E212F9B0083CB52 /* MainMenu.xib */; };
 		F2A67B161E2257D2009D3AC1 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F2A67B151E2257D2009D3AC1 /* scripts */; };
 		F2DFC4C51E2F5FA3009F4623 /* PrefWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */; };
 /* End PBXBuildFile section */
@@ -44,8 +44,8 @@
 		F29B17071E8D1BF80060CA02 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		F29B17091E8D37AA0060CA02 /* snippets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = snippets; sourceTree = "<group>"; };
 		F29E0C231E8E4B91005A3DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
-		F29E0C291E8E4C45005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Preferences.strings; sourceTree = "<group>"; };
-		F29E0C2A1E8E4C45005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		F29E0C2C1E8E581C005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Preferences.strings; sourceTree = "<group>"; };
+		F29E0C301E8E5AC8005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		F2A67B151E2257D2009D3AC1 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,9 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A67B161E2257D2009D3AC1 /* scripts in Resources */,
+				F29E0C2E1E8E5AA8005A3DF3 /* MainMenu.xib in Resources */,
 				F25AEB751E212C6E0083CB52 /* Assets.xcassets in Resources */,
 				F29B170A1E8D37AA0060CA02 /* snippets in Resources */,
-				F25AEB821E212F9B0083CB52 /* MainMenu.xib in Resources */,
 				F29E0C221E8E4B91005A3DF3 /* Preferences.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +274,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F25AEB811E212F9B0083CB52 /* Base */,
-				F29E0C2A1E8E4C45005A3DF3 /* ko */,
+				F29E0C301E8E5AC8005A3DF3 /* ko */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F29E0C231E8E4B91005A3DF3 /* Base */,
-				F29E0C291E8E4C45005A3DF3 /* ko */,
+				F29E0C2C1E8E581C005A3DF3 /* ko */,
 			);
 			name = Preferences.storyboard;
 			sourceTree = "<group>";

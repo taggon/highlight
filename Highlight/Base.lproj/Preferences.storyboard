@@ -435,17 +435,17 @@
             <objects>
                 <viewController title="About" showSeguePresentationStyle="single" id="oug-7P-IAg" customClass="AboutPreferencesViewController" customModule="Highlight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="IOB-6N-VQQ">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="369"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box boxType="custom" borderWidth="0.0" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="XC9-xg-04Z">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="369"/>
                                 <view key="contentView" id="m2k-WE-ccQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="369"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-I4-vz1">
-                                            <rect key="frame" x="123" y="98" width="205" height="35"/>
+                                            <rect key="frame" x="123" y="132" width="205" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="201" id="9aZ-pd-SfV"/>
                                                 <constraint firstAttribute="height" constant="35" id="QHE-I7-GsL"/>
@@ -457,7 +457,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-mn-3jH">
-                                            <rect key="frame" x="161" y="142" width="128" height="128"/>
+                                            <rect key="frame" x="161" y="177" width="128" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="128" id="001-cQ-Psh"/>
                                                 <constraint firstAttribute="height" constant="128" id="Qls-lv-bsD"/>
@@ -465,7 +465,7 @@
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Highlight" id="1Vb-ea-M7A"/>
                                         </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szj-vi-jb6">
-                                            <rect key="frame" x="98" y="77" width="254" height="17"/>
+                                            <rect key="frame" x="98" y="111" width="254" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="GkG-QY-SzQ"/>
                                                 <constraint firstAttribute="width" constant="250" id="LwL-8t-Sco"/>
@@ -517,7 +517,7 @@
                 </viewController>
                 <customObject id="vEm-VK-Ha8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="448"/>
+            <point key="canvasLocation" x="990" y="482.5"/>
         </scene>
     </scenes>
     <resources>

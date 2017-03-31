@@ -8,6 +8,9 @@
 /* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
 "2PS-QP-pcK.title" = "언어";
 
+/* Class = "NSButtonCell"; title = "Bug Report"; ObjectID = "3S7-rh-Mnk"; */
+"3S7-rh-Mnk.title" = "버그 신고";
+
 /* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "4Ye-Oh-xmM"; */
 "4Ye-Oh-xmM.title" = "Table View Cell";
 
@@ -19,6 +22,9 @@
 
 /* Class = "NSTableColumn"; headerCell.title = "2"; ObjectID = "65K-Ye-fLE"; */
 "65K-Ye-fLE.headerCell.title" = "2";
+
+/* Class = "NSButtonCell"; title = "Homepage"; ObjectID = "AIx-mv-Gq6"; */
+"AIx-mv-Gq6.title" = "홈페이지";
 
 /* Class = "NSTextFieldCell"; title = "Style"; ObjectID = "BLU-5E-HbM"; */
 "BLU-5E-HbM.title" = "스타일";
@@ -39,7 +45,7 @@
 "SUD-NV-zh2.title" = "Check";
 
 /* Class = "NSTextFieldCell"; title = "Language detection is restricted to the selected languages."; ObjectID = "VuA-aV-eN8"; */
-"VuA-aV-eN8.title" = "선택한 언어에 대해서만 언어를 자동으로 감지합니다.";
+"VuA-aV-eN8.title" = "언어 자동 감지는 선택한 언어에 대해서만 동작합니다.";
 
 /* Class = "NSTextFieldCell"; title = "Highlight"; ObjectID = "W8z-Re-N6q"; */
 "W8z-Re-N6q.title" = "Highlight";
@@ -54,10 +60,10 @@
 "hKW-KG-5ma.title" = "Table View Cell";
 
 /* Class = "NSTextFieldCell"; title = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one."; ObjectID = "j1b-Kg-9pB"; */
-"j1b-Kg-9pB.title" = "위의 필드를 클릭한 후 코드를 구문 강조할 때 사용할 단축키를 지정하세요.";
+"j1b-Kg-9pB.title" = "위 필드를 선택한 후 미리 복사한 코드를 구문 강조하여 복사할 때 사용할 단축키를 설정하세요.";
 
 /* Class = "NSTextFieldCell"; title = "Font"; ObjectID = "jAJ-Id-PgJ"; */
-"jAJ-Id-PgJ.title" = "Font";
+"jAJ-Id-PgJ.title" = "글꼴";
 
 /* Class = "NSWindow"; title = "Preferences"; ObjectID = "jgc-RP-WDF"; */
 "jgc-RP-WDF.title" = "환경설정";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="localizable" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
@@ -30,7 +30,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Styles" id="JgB-tL-Aap"/>
                 </menuItem>
-                <menuItem title="Highlight code" id="r5b-UX-VfX">
+                <menuItem title="Highlight Code" id="r5b-UX-VfX">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="highlightCodeActionWithSender:" target="Voe-Tx-rLC" id="k7n-3n-Dhk"/>
@@ -40,6 +40,19 @@
                 <menuItem title="Preferences" keyEquivalent="," id="Cak-uC-bOn">
                     <connections>
                         <action selector="openPreferenceWithSender:" target="Voe-Tx-rLC" id="mky-YS-jB2"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="fwT-2w-SHM"/>
+                <menuItem title="Visit Homepage..." id="q61-bd-wOJ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openHomepageWithSender:" target="Voe-Tx-rLC" id="aoG-LL-CTw"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Report Issues..." id="cJW-q1-t5Y">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openIssuePageWithSender:" target="Voe-Tx-rLC" id="Hw0-JP-Lzb"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="eiG-Yg-NSn"/>
