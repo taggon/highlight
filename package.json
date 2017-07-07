@@ -6,9 +6,9 @@
 		"copy-css": "n-copy --source node_modules/highlight.js/styles --destination Highlight/scripts/styles '*'"
 	},
 	"dependencies": {
+		"butternut": "^0.4.6",
 		"cssmin": "^0.4.3",
 		"glob": "^7.1.1",
-		"google-closure-compiler-js": "^20170218.0.0",
 		"highlight.js": "^9.10.0",
 		"npm-build-tools": "^2.2.5"
 	}

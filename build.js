@@ -3,7 +3,8 @@ const https = require('https');
 const path = require('path');
 const glob = require('glob');
 const cssmin = require('cssmin');
-const compile = require('google-closure-compiler-js').compile;
+const butternut = require('butternut');
+const { styleNames } = require('./alias');
 
 // minify all css files
 let cssTask = Promise.all(
@@ -13,8 +14,9 @@ let cssTask = Promise.all(
 				if (err) return reject(err);
 
 				let filename = path.basename(filepath, '.css');
-				let style = filename.replace(/(?:^|[_-])([a-z])/g, ($0, $1) => ' ' + $1.toUpperCase() ).trim();
 				let newPath = filepath.replace(/\.css$/, '.min.css');
+				let style = styleNames[ filename ] || filename.replace(/(?:^|[_-])([a-z])/g, ($0, $1) => ' ' + $1.toUpperCase() ).trim();
+
 				fs.unlink(filepath, () => {});
 				fs.writeFile( newPath, cssmin(data), (err) => {
 					if (err) return reject(err);
@@ -28,7 +30,7 @@ let cssTask = Promise.all(
 	console.log('✨  Successfully minified css files.');
 
 	return (
-		'public let hlStyles = [\n' +
+		'public let hlStyles:[String: String] = [\n' +
 		names.map( ({filename, style}) => `\t"${style}": "${filename}",\n` ).join('') +
 		']'
 	);
@@ -45,7 +47,7 @@ let jsTask = Promise.all(
 				if (err) return reject(err);
 
 				let filename = path.basename(filepath, '.js');
-				data = data.replace(/^module.exports\s*=\s*/, `self.addLang('${filename}',`).replace(/;$/, ');');
+				data = data.replace(/^module.exports\s*=\s*/, `self.hljs.registerLanguage('${filename}',`).replace(/;$/, ');');
 
 				resolve( { lang: filename, data } );
 			} );
@@ -54,7 +56,7 @@ let jsTask = Promise.all(
 )
 .then( (langs) => {
 	let hljs = fs.readFileSync('node_modules/highlight.js/lib/highlight.js');
-	hljs += 'self.addLang=function(name,fn){self.hljs.registerLanguage(name,fn);};';
+	//hljs += 'self.addLang=function(name,fn){self.hljs.registerLanguage(name,fn);};';
 
 	// load the order of registration
 	let order = (fs.readFileSync('node_modules/highlight.js/lib/index.js')+"")
@@ -67,13 +69,14 @@ let jsTask = Promise.all(
 	console.log('⏱  Compiling the Highlight package file...');
 
 	return new Promise( (resolve, reject) => {
-		let result = compile({ jsCode: [{src: hljs}] });
+		const { code } = butternut.squash(hljs, { sourceMap: false });
 
-		fs.writeFile('Highlight/scripts/highlight.pack.js', result.compiledCode, (err) => {
+		fs.writeFile('Highlight/scripts/highlight.pack.js', code, (err) => {
 			if (err) return reject(err);
+
 			console.log('✨  Successfully generated highlight.pack.js');
 
-			resolve(`public let hlLangCount = ${langs.length}`);
+			resolve(`public let hlLangCount: UInt16 = ${langs.length}`);
 		} );
 	} );
 } )
@@ -94,7 +97,7 @@ let mapTask = new Promise( (resolve, reject) => {
 				map.push( `\t"${match[2].trim()}": "${match[1]}",\n` );
 			}
 			resolve(
-				'public let hlLanguages = [\n' +
+				'public let hlLanguages:[String: String] = [\n' +
 				map.join('') +
 				']'
 			);
