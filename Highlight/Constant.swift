@@ -6,9 +6,9 @@
 // DO NOT MODIFY THIS FILE MANUALLY
 //
 
-public let hlLangCount = 172
+public let hlLangCount: UInt16 = 176
 
-public let hlLanguages = [
+public let hlLanguages:[String: String] = [
 	"Apache": "apache",
 	"Bash": "bash",
 	"C#": "cs",
@@ -31,7 +31,8 @@ public let hlLanguages = [
 	"Python": "python",
 	"Ruby": "ruby",
 	"SQL": "sql",
-	"1C": "1c",
+	"Shell Session": "shell",
+	"1C:Enterprise (v7, v8)": "1c",
 	"ARM Assembly": "armasm",
 	"AVR Assembler": "avrasm",
 	"Access log": "accesslog",
@@ -100,6 +101,7 @@ public let hlLanguages = [
 	"Inform 7": "inform7",
 	"Intel x86 Assembly": "x86asm",
 	"Julia": "julia",
+	"Julia REPL": "julia-repl",
 	"Kotlin": "kotlin",
 	"LDIF": "ldif",
 	"LLVM IR": "llvm",
@@ -117,6 +119,7 @@ public let hlLanguages = [
 	"Matlab": "matlab",
 	"Maxima": "maxima",
 	"Mercury": "mercury",
+	"Microtik RouterOS script": "routeros",
 	"Mizar": "mizar",
 	"Mojolicious": "mojolicious",
 	"Monkey": "monkey",
@@ -180,12 +183,13 @@ public let hlLanguages = [
 	"Zephir": "zephir",
 	"crmsh": "crmsh",
 	"dsconfig": "dsconfig",
+	"jboss-cli": "jboss-cli",
 	"pf": "pf",
 ]
 
-public let hlStyles = [
+public let hlStyles:[String: String] = [
 	"Agate": "agate",
-	"Androidstudio": "androidstudio",
+	"Android Studio": "androidstudio",
 	"Arduino Light": "arduino-light",
 	"Arta": "arta",
 	"Ascetic": "ascetic",
@@ -224,16 +228,16 @@ public let hlStyles = [
 	"Foundation": "foundation",
 	"Github Gist": "github-gist",
 	"Github": "github",
-	"Googlecode": "googlecode",
+	"Google Code": "googlecode",
 	"Grayscale": "grayscale",
 	"Gruvbox Dark": "gruvbox-dark",
 	"Gruvbox Light": "gruvbox-light",
 	"Hopscotch": "hopscotch",
 	"Hybrid": "hybrid",
-	"Idea": "idea",
-	"Ir Black": "ir-black",
-	"Kimbie.dark": "kimbie.dark",
-	"Kimbie.light": "kimbie.light",
+	"Intellij IDEA": "idea",
+	"IR Black": "ir-black",
+	"Kimbie Dark": "kimbie.dark",
+	"Kimbie Light": "kimbie.light",
 	"Magula": "magula",
 	"Mono Blue": "mono-blue",
 	"Monokai Sublime": "monokai-sublime",
@@ -244,10 +248,11 @@ public let hlStyles = [
 	"Paraiso Light": "paraiso-light",
 	"Pojoaque": "pojoaque",
 	"Purebasic": "purebasic",
-	"Qtcreator Dark": "qtcreator_dark",
-	"Qtcreator Light": "qtcreator_light",
+	"QT Creator Dark": "qtcreator_dark",
+	"QT Creator Light": "qtcreator_light",
 	"Railscasts": "railscasts",
 	"Rainbow": "rainbow",
+	"RouterOS": "routeros",
 	"School Book": "school-book",
 	"Solarized Dark": "solarized-dark",
 	"Solarized Light": "solarized-light",
@@ -257,8 +262,9 @@ public let hlStyles = [
 	"Tomorrow Night Eighties": "tomorrow-night-eighties",
 	"Tomorrow Night": "tomorrow-night",
 	"Tomorrow": "tomorrow",
-	"Vs": "vs",
+	"Visual Studio": "vs",
+	"Visual Studio Dark": "vs2015",
 	"Xcode": "xcode",
-	"Xt256": "xt256",
+	"XT256": "xt256",
 	"Zenburn": "zenburn",
 ]
