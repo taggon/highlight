@@ -3,7 +3,7 @@ const https = require('https');
 const path = require('path');
 const glob = require('glob');
 const cssmin = require('cssmin');
-const butternut = require('butternut');
+const uglify = require('uglify-js');
 const { styleNames } = require('./alias');
 
 // minify all css files
@@ -56,7 +56,8 @@ let jsTask = Promise.all(
 )
 .then( (langs) => {
 	let hljs = fs.readFileSync('node_modules/highlight.js/lib/highlight.js');
-	//hljs += 'self.addLang=function(name,fn){self.hljs.registerLanguage(name,fn);};';
+
+	hljs = 'var self={};' + hljs;
 
 	// load the order of registration
 	let order = (fs.readFileSync('node_modules/highlight.js/lib/index.js')+"")
@@ -69,7 +70,8 @@ let jsTask = Promise.all(
 	console.log('⏱  Compiling the Highlight package file...');
 
 	return new Promise( (resolve, reject) => {
-		const { code } = butternut.squash(hljs, { sourceMap: false });
+		//const code = hljs;
+		const code = uglify.minify(hljs, { sourceMap: false, mangle: false }).code;
 
 		fs.writeFile('Highlight/scripts/highlight.pack.js', code, (err) => {
 			if (err) return reject(err);
