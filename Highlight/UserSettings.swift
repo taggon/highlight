@@ -105,7 +105,9 @@ extension UserSettings {
         
         removeHotkey()
         UserDefaults.standard.set(info, forKey: "highlight:hotkey")
-        HotKeyCenter.shared.register(with: hotkey)
+        if !HotKeyCenter.shared.register(with: hotkey) {
+            debugPrint("Failure to register the hotkey.")
+        }
 
         appDelegate.updateKeyEquivalentOfHighlightMenu()
     }
@@ -115,5 +117,23 @@ extension UserSettings {
         UserDefaults.standard.removeObject(forKey: "highlight:hotkey")
         HotKeyCenter.shared.unregisterHotKey(with: "highlight:hotkey")
         appDelegate.updateKeyEquivalentOfHighlightMenu()
+    }
+
+    // # Line numbers
+
+    var showLineNumbers: Bool {
+        return UserDefaults.standard.bool(forKey: "show-line-numbers")
+    }
+
+    func setShowLineNumbers(display: Bool) {
+        UserDefaults.standard.set(display, forKey: "show-line-numbers")
+    }
+
+    var lineNumberPadding: Int {
+        return UserDefaults.standard.integer(forKey: "line-number-padding")
+    }
+
+    func setLineNumberPadding(numberOfSpaces: Int) {
+        UserDefaults.standard.set(numberOfSpaces, forKey: "line-number-padding")
     }
 }

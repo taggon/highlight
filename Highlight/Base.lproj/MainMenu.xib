@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -37,6 +37,16 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="dmA-J9-fuB"/>
+                <menuItem title="Show Line Numbers" id="eaO-KG-myD">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <binding destination="AVO-t1-eJD" name="value" keyPath="values.show-line-numbers" id="g3C-5w-5X6">
+                            <dictionary key="options">
+                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </menuItem>
                 <menuItem title="Preferences" keyEquivalent="," id="Cak-uC-bOn">
                     <connections>
                         <action selector="openPreferenceWithSender:" target="Voe-Tx-rLC" id="mky-YS-jB2"/>
@@ -64,5 +74,6 @@
             </items>
             <point key="canvasLocation" x="99" y="-21"/>
         </menu>
+        <userDefaultsController representsSharedInstance="YES" id="AVO-t1-eJD"/>
     </objects>
 </document>

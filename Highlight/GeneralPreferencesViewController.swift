@@ -10,16 +10,15 @@ import Cocoa
 import KeyHolder
 import Magnet
 
-class GeneralPreferencesViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, UserSettings {
+class GeneralPreferencesViewController: NSViewController, UserSettings {
     
     @IBOutlet weak var recordView: RecordView!
-    @IBOutlet weak var langs: NSTableView!
-    
-    var langNames:[String] = []
+    @IBOutlet weak var toggleLineNumbers: NSButton!
+    @IBOutlet weak var spacesAfterLineNumber: NSTextField!
+    @IBOutlet weak var spacesAfterLineNumberStepper: NSStepper!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        langNames = hlLanguages.keys.sorted()
         recordView.delegate = self
         recordView.borderColor = NSColor.windowFrameColor
     }
@@ -27,44 +26,18 @@ class GeneralPreferencesViewController: NSViewController, NSTableViewDataSource,
     override func viewDidAppear() {
         super.viewDidAppear()
         recordView.keyCombo = hotkey
+        toggleLineNumbers.state = showLineNumbers ? NSOnState : NSOffState
+        spacesAfterLineNumberStepper.integerValue = lineNumberPadding
+        spacesAfterLineNumber.integerValue = spacesAfterLineNumberStepper.integerValue
     }
-    
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        return Int(ceil(Float(hlLanguages.count) / Float(tableView.tableColumns.count)))
+
+    @IBAction func toggleLineNumbersDidChange(sender: AnyObject) {
+        setShowLineNumbers(display: toggleLineNumbers.state == NSOnState)
     }
-    
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let button = NSButton()
-        let index = row  * tableView.tableColumns.count + Int(tableColumn!.title)!
 
-        if index > hlLanguages.count - 1 {
-            return nil
-        }
-        
-        let name = langNames[ index ]
-
-        button.title = name
-        button.setButtonType(.switch)
-        button.lineBreakMode = .byTruncatingTail
-        button.action = #selector(selectLang)
-        
-        let selectedLangs = userLangs
-
-        if selectedLangs.contains(hlLanguages[name]!) {
-            button.state = NSOnState
-        }
-
-        return button
-    }
-    
-    func selectLang(sender: AnyObject?) {
-        guard let button = sender as? NSButton else { return }
-        let lang = hlLanguages[button.title]!
-        if button.state == NSOnState {
-            addLang(lang: lang)
-        } else {
-            removeLang(lang: lang)
-        }
+    @IBAction func spacesAfterLineNumberDidChange(sender: AnyObject) {
+        spacesAfterLineNumber.integerValue = (sender as! NSStepper).integerValue
+        setLineNumberPadding(numberOfSpaces: spacesAfterLineNumber.integerValue)
     }
 }
 

@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9C3A29C36924C181370FD63F /* Pods_Highlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796E30C469239AC0F938F1D4 /* Pods_Highlight.framework */; };
+		F24592121F126EB400727164 /* RGBtoHSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24592111F126EB400727164 /* RGBtoHSV.swift */; };
 		F24B1DCD1E2B1B1400FCE0A7 /* AppDelegate+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24B1DCC1E2B1B1400FCE0A7 /* AppDelegate+Version.swift */; };
 		F25AEB731E212C6E0083CB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB721E212C6E0083CB52 /* AppDelegate.swift */; };
 		F25AEB751E212C6E0083CB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25AEB741E212C6E0083CB52 /* Assets.xcassets */; };
 		F25AEB871E213D230083CB52 /* AboutPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB851E213D230083CB52 /* AboutPreferencesViewController.swift */; };
 		F25AEB8B1E213D360083CB52 /* StylePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB891E213D360083CB52 /* StylePreferencesViewController.swift */; };
 		F25AEB8F1E213D570083CB52 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */; };
+		F25EE5EB1F1240EA00722817 /* LanguagePreferecensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EE5EA1F1240EA00722817 /* LanguagePreferecensViewController.swift */; };
 		F2663F0E1E87EA6400951DE6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F0D1E87EA6400951DE6 /* Constant.swift */; };
 		F2663F161E8889B700951DE6 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F151E8889B700951DE6 /* Highlighter.swift */; };
 		F2663F181E88EFC400951DE6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F171E88EFC400951DE6 /* Style.swift */; };
@@ -29,6 +31,7 @@
 		63DA08134009628B6644DACB /* Pods-Highlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.debug.xcconfig"; sourceTree = "<group>"; };
 		796E30C469239AC0F938F1D4 /* Pods_Highlight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Highlight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8607AD41AA27C6C4FBCE1B75 /* Pods-Highlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.release.xcconfig"; sourceTree = "<group>"; };
+		F24592111F126EB400727164 /* RGBtoHSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBtoHSV.swift; sourceTree = "<group>"; };
 		F24B1DCC1E2B1B1400FCE0A7 /* AppDelegate+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Version.swift"; sourceTree = "<group>"; };
 		F25AEB6F1E212C6E0083CB52 /* Highlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Highlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25AEB721E212C6E0083CB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		F25AEB851E213D230083CB52 /* AboutPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPreferencesViewController.swift; sourceTree = "<group>"; };
 		F25AEB891E213D360083CB52 /* StylePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePreferencesViewController.swift; sourceTree = "<group>"; };
 		F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
+		F25EE5EA1F1240EA00722817 /* LanguagePreferecensViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePreferecensViewController.swift; sourceTree = "<group>"; };
 		F2663F0D1E87EA6400951DE6 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F2663F151E8889B700951DE6 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
 		F2663F171E88EFC400951DE6 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				F2663F151E8889B700951DE6 /* Highlighter.swift */,
 				F2663F171E88EFC400951DE6 /* Style.swift */,
 				F29B17071E8D1BF80060CA02 /* UserSettings.swift */,
+				F24592111F126EB400727164 /* RGBtoHSV.swift */,
 			);
 			path = Highlight;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			children = (
 				F25AEB851E213D230083CB52 /* AboutPreferencesViewController.swift */,
 				F25AEB891E213D360083CB52 /* StylePreferencesViewController.swift */,
+				F25EE5EA1F1240EA00722817 /* LanguagePreferecensViewController.swift */,
 				F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */,
 				F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */,
 				F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */,
@@ -254,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24592121F126EB400727164 /* RGBtoHSV.swift in Sources */,
 				F25AEB731E212C6E0083CB52 /* AppDelegate.swift in Sources */,
+				F25EE5EB1F1240EA00722817 /* LanguagePreferecensViewController.swift in Sources */,
 				F24B1DCD1E2B1B1400FCE0A7 /* AppDelegate+Version.swift in Sources */,
 				F25AEB8B1E213D360083CB52 /* StylePreferencesViewController.swift in Sources */,
 				F29B17081E8D1BF80060CA02 /* UserSettings.swift in Sources */,

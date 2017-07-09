@@ -19,17 +19,24 @@ class Highlighter: UserSettings {
     init() {
         vm = JSVirtualMachine()
         context = JSContext(virtualMachine: vm)
+        context.exceptionHandler = { context, exception in
+            self.logJSException(exception: exception)
+        }
         loadHighlightJS()
 
         setStyle(name: "Default")
         setStyle(name: UserDefaults.standard.string(forKey: "style") ?? "Default")
+    }
+
+    func logJSException(exception: JSValue?) {
+        debugPrint(exception ?? "Unknown JavaScript exception occurs.")
     }
     
     func loadHighlightJS() {
         let jsPath = Bundle.main.path(forResource: "scripts/highlight.pack", ofType: "js")
         let js = try! String(contentsOfFile: jsPath!, encoding: .utf8)
 
-        context.evaluateScript("var self={};" + js)
+        context.evaluateScript(js)
         hljs = context.objectForKeyedSubscript("self").forProperty("hljs")
     }
     
@@ -55,19 +62,27 @@ class Highlighter: UserSettings {
     func paint(code: String, lang: String = "") -> NSAttributedString {
         let codeVar = JSValue(object: code, in: context)!
         let subset = (lang == "") ? getDefaultSubsetLanguages(): JSValue(object: [JSValue(object: lang, in: context)], in: context )!
-        let result = hljs.invokeMethod("highlightAuto", withArguments: [codeVar, subset])
-        let renderedCode = result!.forProperty("value")
-        
+        let result = hljs.invokeMethod("highlightAuto", withArguments: [codeVar, subset])!.forProperty("value")
         var attrStr = NSMutableAttributedString(string: "An error occurs while rendering the code")
-        if renderedCode != nil {
-            let html = parseClassAsInlineStyles(html: "<pre class=\"hljs\"><code>\(renderedCode!.toString()!)</code></pre>")
-            attrStr = NSMutableAttributedString(html: html.data(using: .utf8)!, options: [:], documentAttributes: nil)!
-            attrStr.addAttribute(NSFontAttributeName, value: userFont ?? defaultFont, range: NSMakeRange(0, attrStr.length))
+
+        guard var renderedCode = result?.toString() else {
+            return attrStr
         }
+
+        // Add line numbers
+        if showLineNumbers {
+            renderedCode = addLineNumbers(code: renderedCode)
+        }
+
+        let html = parseClassAsInlineStyles(html: "<pre class=\"hljs\"><code>\(renderedCode)</code></pre>")
+        attrStr = NSMutableAttributedString(html: html.data(using: .utf8)!, options: [:], documentAttributes: nil)!
+
+        // set the default font size
+        attrStr.addAttribute(NSFontAttributeName, value: userFont ?? defaultFont, range: NSMakeRange(0, attrStr.length))
         
         return attrStr
     }
-    
+
     func parseClassAsInlineStyles(html: String) -> String {
         var str = html
         let regex = try! NSRegularExpression(pattern: "<(span|pre)\\s+class=\"([^\"]+)\">", options: [])
@@ -76,7 +91,7 @@ class Highlighter: UserSettings {
         while let match = regex.firstMatch(in: str, options: [], range: NSMakeRange(anchorPos, str.characters.count - anchorPos)) {
             let strNS = str as NSString
             let classNames = strNS.substring(with: match.rangeAt(2)).components(separatedBy: .whitespacesAndNewlines)
-            
+
             var style = ""
             for className in classNames {
                 guard let ruleset = currentStyle?[".\(className)"] else {
@@ -86,11 +101,10 @@ class Highlighter: UserSettings {
                 for (_, prop) in ruleset.keys.enumerated() {
                     style += "\(prop):\(ruleset[prop]!.value!);"
                 }
-                
-                // For the root container, skip the background and add font family and size
+
+                // For the root container, skip the background
                 if className == "hljs" {
-                    let font = userFont ?? defaultFont
-                    style += "background:transparent none;font-size:\(Float(font.pointSize))pt"
+                    style += "background:transparent none"
                 }
             }
             
@@ -111,5 +125,18 @@ class Highlighter: UserSettings {
     func getDefaultSubsetLanguages() -> JSValue {
         let subset = userLangs.map { lang in JSValue(object: lang, in: context) }
         return JSValue(object: subset, in: context)
+    }
+
+    func addLineNumbers(code: String) -> String {
+        var lines = code.components(separatedBy: .newlines)
+        let maxDigit = "\(lines.count)".characters.count
+        let padding = "".padding(toLength: lineNumberPadding, withPad: " ", startingAt: 0)
+
+        for (index, line) in lines.enumerated() {
+            let lineNum = "".padding(toLength: maxDigit - "\(index + 1)".characters.count, withPad: " ", startingAt: 0) + "\(index + 1)"
+            lines[index] = "<span class=\"hljs-line-number\">\(lineNum)</span>\(padding)\(line)"
+        }
+
+        return lines.joined(separator:"\n")
     }
 }

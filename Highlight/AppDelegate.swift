@@ -21,8 +21,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     
     lazy var prefWindowController: NSWindowController! = {
         let storyboard = NSStoryboard(name: "Preferences", bundle: Bundle.main)
+        let controller = storyboard.instantiateInitialController() as! PrefWindowController
         
-        return storyboard.instantiateInitialController() as! PrefWindowController
+        return controller
     }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -50,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
             let pboard = NSPasteboard.general()
             
             guard let code = pboard.string(forType: NSPasteboardTypeString) else { return }
-            
+
             let attrStr = self.highlighter.paint(code: code)
             let data = try? attrStr.data(from: NSMakeRange(0, attrStr.length), documentAttributes: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType])
             if data != nil {
@@ -119,6 +120,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     
 }
 
+// visit web pages
 extension AppDelegate {
     func openURLwithDefaultBrowser(urlKey: String) {
         guard let urls = Bundle.main.object(forInfoDictionaryKey: "URLs") as? Dictionary<String, String> else {
@@ -137,4 +139,3 @@ extension AppDelegate {
         openURLwithDefaultBrowser(urlKey: "Issue Tracker")
     }
 }
-

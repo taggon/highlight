@@ -44,8 +44,11 @@
 /* Class = "NSButtonCell"; title = "Check"; ObjectID = "SUD-NV-zh2"; */
 "SUD-NV-zh2.title" = "Check";
 
+/* Class = "NSViewController"; title = "Style"; ObjectID = "ajm-LN-tcW"; */
+"ajm-LN-tcW.title" = "언어";
+
 /* Class = "NSTextFieldCell"; title = "Language detection is restricted to the selected languages."; ObjectID = "VuA-aV-eN8"; */
-"VuA-aV-eN8.title" = "언어 자동 감지는 선택한 언어에 대해서만 동작합니다.";
+"VuA-aV-eN8.title" = "코드 하이라이팅 기능은 선택한 언어에 대해서만 동작합니다.";
 
 /* Class = "NSTextFieldCell"; title = "Highlight"; ObjectID = "W8z-Re-N6q"; */
 "W8z-Re-N6q.title" = "Highlight";
