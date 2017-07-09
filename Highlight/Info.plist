@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.2.0</string>
 	<key>CFBundleVersion</key>
-	<string>46</string>
+	<string>170710.1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.productivity</string>
 	<key>LSMinimumSystemVersion</key>
@@ -39,5 +39,11 @@
 		<key>Issue Tracker</key>
 		<string>https://github.com/taggon/highlight-for-mac/issues</string>
 	</dict>
+	<key>SUFeedURL</key>
+	<string>https://taggon.github.io/appcast.xml</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUPublicDSAKeyFile</key>
+	<string>pub.pem</string>
 </dict>
 </plist>

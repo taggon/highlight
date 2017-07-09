@@ -24,6 +24,7 @@
 		F29E0C221E8E4B91005A3DF3 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */; };
 		F29E0C2E1E8E5AA8005A3DF3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25AEB801E212F9B0083CB52 /* MainMenu.xib */; };
 		F2A67B161E2257D2009D3AC1 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F2A67B151E2257D2009D3AC1 /* scripts */; };
+		F2C0630D1F12B5A7001D6019 /* pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F2C0630C1F12B5A7001D6019 /* pub.pem */; };
 		F2DFC4C51E2F5FA3009F4623 /* PrefWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		F29E0C2C1E8E581C005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Preferences.strings; sourceTree = "<group>"; };
 		F29E0C301E8E5AC8005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		F2A67B151E2257D2009D3AC1 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		F2C0630C1F12B5A7001D6019 /* pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pub.pem; sourceTree = "<group>"; };
 		F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,12 +106,10 @@
 		F25AEB711E212C6E0083CB52 /* Highlight */ = {
 			isa = PBXGroup;
 			children = (
-				F29B17091E8D37AA0060CA02 /* snippets */,
-				F2A67B151E2257D2009D3AC1 /* scripts */,
+				F2C0630E1F12B5B6001D6019 /* Resources */,
 				F25AEB7F1E212E830083CB52 /* Preferences */,
 				F25AEB721E212C6E0083CB52 /* AppDelegate.swift */,
 				F24B1DCC1E2B1B1400FCE0A7 /* AppDelegate+Version.swift */,
-				F25AEB741E212C6E0083CB52 /* Assets.xcassets */,
 				F25AEB801E212F9B0083CB52 /* MainMenu.xib */,
 				F2663F0D1E87EA6400951DE6 /* Constant.swift */,
 				F25AEB791E212C6E0083CB52 /* Info.plist */,
@@ -132,6 +132,17 @@
 				F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */,
 			);
 			name = Preferences;
+			sourceTree = "<group>";
+		};
+		F2C0630E1F12B5B6001D6019 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F25AEB741E212C6E0083CB52 /* Assets.xcassets */,
+				F2C0630C1F12B5A7001D6019 /* pub.pem */,
+				F29B17091E8D37AA0060CA02 /* snippets */,
+				F2A67B151E2257D2009D3AC1 /* scripts */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C0630D1F12B5A7001D6019 /* pub.pem in Resources */,
 				F2A67B161E2257D2009D3AC1 /* scripts in Resources */,
 				F29E0C2E1E8E5AA8005A3DF3 /* MainMenu.xib in Resources */,
 				F25AEB751E212C6E0083CB52 /* Assets.xcassets in Resources */,

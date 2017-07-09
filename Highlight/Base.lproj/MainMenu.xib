@@ -53,6 +53,12 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="fwT-2w-SHM"/>
+                <menuItem title="Check for Updates..." id="ipy-gK-Auz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkForUpdates:" target="Ndd-9d-abA" id="wsC-CY-4fD"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Visit Homepage..." id="q61-bd-wOJ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -75,5 +81,6 @@
             <point key="canvasLocation" x="99" y="-21"/>
         </menu>
         <userDefaultsController representsSharedInstance="YES" id="AVO-t1-eJD"/>
+        <customObject id="Ndd-9d-abA" customClass="SUUpdater"/>
     </objects>
 </document>
