@@ -91,3 +91,12 @@
 
 /* Class = "NSButtonCell"; title = "Check"; ObjectID = "xkX-zA-uuC"; */
 "xkX-zA-uuC.title" = "Check";
+
+/* Class = "NSTextFieldCell"; title = "Line Numbers"; ObjectID = "nDw-EK-mDh"; */
+"nDw-EK-mDh.title" = "줄 번호";
+
+/* Class = "NSButtonCell"; title = "Show line numbers in highlighted code"; ObjectID = "9du-Dn-gKI"; */
+"9du-Dn-gKI.title" = "구문 강조된 코드에서 줄 번호를 표시합니다.";
+
+/* Class = "NSTextFieldCell"; title = "Number of spaces immediately after each line number:"; ObjectID = "X1H-5f-2xK"; */
+"X1H-5f-2xK.title" = "줄 번호 뒤에 표시할 여백 스페이스의 갯수:";
