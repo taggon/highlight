@@ -5,26 +5,14 @@
 /* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
 "2PS-QP-pcK.title" = "언어";
 
-/* Class = "NSTableColumn"; headerCell.title = "1"; ObjectID = "2qP-Vf-gOS"; */
-"2qP-Vf-gOS.headerCell.title" = "1";
-
 /* Class = "NSButtonCell"; title = "Bug Report"; ObjectID = "3S7-rh-Mnk"; */
 "3S7-rh-Mnk.title" = "버그 신고";
-
-/* Class = "NSTextFieldCell"; title = "v1.0.0"; ObjectID = "60N-Ul-LsY"; */
-"60N-Ul-LsY.title" = "v1.0.0";
 
 /* Class = "NSButtonCell"; title = "Homepage"; ObjectID = "AIx-mv-Gq6"; */
 "AIx-mv-Gq6.title" = "홈페이지";
 
 /* Class = "NSTextFieldCell"; title = "Style"; ObjectID = "BLU-5E-HbM"; */
 "BLU-5E-HbM.title" = "스타일";
-
-/* Class = "NSTextFieldCell"; title = "© 2017 Taegon Kim "; ObjectID = "Iez-uL-80p"; */
-"Iez-uL-80p.title" = "© 2017 Taegon Kim ";
-
-/* Class = "NSButtonCell"; title = "Language: JS"; ObjectID = "Msb-4H-9cY"; */
-"Msb-4H-9cY.title" = "Language: JS";
 
 /* Class = "NSTextFieldCell"; title = "Hotkey"; ObjectID = "N8n-kU-hku"; */
 "N8n-kU-hku.title" = "단축키";
@@ -41,9 +29,6 @@
 /* Class = "NSButtonCell"; title = "Select..."; ObjectID = "aZd-Ql-ME9"; */
 "aZd-Ql-ME9.title" = "선택...";
 
-/* Class = "NSTableColumn"; headerCell.title = "0"; ObjectID = "dvH-nO-iQl"; */
-"dvH-nO-iQl.headerCell.title" = "0";
-
 /* Class = "NSTextFieldCell"; title = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one."; ObjectID = "j1b-Kg-9pB"; */
 "j1b-Kg-9pB.title" = "위 필드를 선택한 후 미리 복사한 코드를 구문 강조하여 복사할 때 사용할 단축키를 설정하세요.";
 
@@ -53,14 +38,8 @@
 /* Class = "NSWindow"; title = "Preferences"; ObjectID = "jgc-RP-WDF"; */
 "jgc-RP-WDF.title" = "환경설정";
 
-/* Class = "NSTableColumn"; headerCell.title = "2"; ObjectID = "mSq-ch-IhW"; */
-"mSq-ch-IhW.headerCell.title" = "2";
-
 /* Class = "NSViewController"; title = "About"; ObjectID = "oug-7P-IAg"; */
 "oug-7P-IAg.title" = "이 프로그램은";
-
-/* Class = "NSTextFieldCell"; title = "Highlight"; ObjectID = "W8z-Re-N6q"; */
-"W8z-Re-N6q.title" = "Highlight";
 
 /* Class = "NSTextFieldCell"; title = "Line Numbers"; ObjectID = "nDw-EK-mDh"; */
 "nDw-EK-mDh.title" = "줄 번호";
@@ -69,15 +48,24 @@
 "85V-RR-o6T.title" = "구문 강조된 코드에서 줄 번호를 표시합니다.";
 
 /* Class = "NSTextFieldCell"; title = "Number of spaces immediately after each line number:"; ObjectID = "X1H-5f-2xK"; */
-"X1H-5f-2xK.title" = "줄 번호 뒤에 표시할 여백 스페이스의 갯수:";
+"X1H-5f-2xK.title" = "줄 번호와 코드 사이에 표시할 여백 스페이스의 갯수:";
 
 /* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
 "deK-X4-va6.title" = "구문 강조 기능은 선택한 언어에 한해서만 동작합니다. 선택한 언어가 적으면 성능이 더 좋아질 수 있습니다.";
 
-/* You don't need to translate the followings */
+/**
+ * DO NOT TRANSLATE OR REMOVE THE FOLLOWING STRINGS
+ */
 "oJY-Ef-Jrd.title" = "";
 "wdO-dc-vAf.title" = "";
 "65X-Tt-ru4.title" = "";
 "vZs-RY-NGH.title" = "";
 "pRO-Ef-Nnf.title" = "";
 "wxL-pb-316.title" = "";
+"Msb-4H-9cY.title" = "Language: JS";
+"dvH-nO-iQl.headerCell.title" = "0";
+"2qP-Vf-gOS.headerCell.title" = "1";
+"mSq-ch-IhW.headerCell.title" = "2";
+"W8z-Re-N6q.title" = "Highlight";
+"60N-Ul-LsY.title" = "v1.0.0";
+"Iez-uL-80p.title" = "© 2017 Taegon Kim ";
