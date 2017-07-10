@@ -202,9 +202,9 @@ class Style {
 
         // lighten or darken the default text color to get line number color
         if hsv.v > 127 {
-            hsv = HSV(h: hsv.h, s: hsv.s, v: hsv.v - 50)
+            hsv = HSV(h: hsv.h, s: hsv.s, v: 127)
         } else {
-            hsv = HSV(h: hsv.h, s: hsv.s, v: hsv.v + 50)
+            hsv = HSV(h: hsv.h, s: hsv.s, v: 127)
         }
 
         rulesets.append(Ruleset(
