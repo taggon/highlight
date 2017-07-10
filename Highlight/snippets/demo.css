@@ -5,35 +5,12 @@
  * details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-
-/*
- * Bootstrap Documentation
- * Special styles for presenting Bootstrap's documentation and code examples.
- */
-
-
-/*
- * Scaffolding
- *
- * Update the basics of our documents to prep for docs content.
- */
-
-body {
-  position: relative; /* For scrollspy */
-}
-
 /* Keep code small in tables on account of limited space */
 .table code {
   font-size: 13px;
   font-weight: normal;
 }
 
-/* Inline code within headings retain the heading's background-color */
-h2 code,
-h3 code,
-h4 code {
-  background-color: inherit;
-}
 
 /* Outline button for use within the docs */
 .btn-outline {
@@ -48,43 +25,6 @@ h4 code {
   background-color: #563d7c;
   border-color: #563d7c;
 }
-
-/* Inverted outline button (white on dark) */
-.btn-outline-inverse {
-  color: #fff;
-  background-color: transparent;
-  border-color: #cdbfe3;
-}
-.btn-outline-inverse:hover,
-.btn-outline-inverse:focus,
-.btn-outline-inverse:active {
-  color: #563d7c;
-  text-shadow: none;
-  background-color: #fff;
-  border-color: #fff;
-}
-
-/*
- * Main navigation
- *
- * Turn the `.navbar` at the top of the docs purple.
- */
-
-.bs-docs-nav {
-  margin-bottom: 0;
-  background-color: #fff;
-  border-bottom: 0;
-}
-.bs-home-nav .bs-nav-b {
-  display: none;
-}
-.bs-docs-nav .navbar-nav > li > a:hover,
-.bs-docs-nav .navbar-nav > .active > a,
-.bs-docs-nav .navbar-nav > .active > a:hover {
-  color: #463265;
-  background-color: #f9f9f9;
-}
-
 
 /*
  * Footer
