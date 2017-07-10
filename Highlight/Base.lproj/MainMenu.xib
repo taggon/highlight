@@ -26,10 +26,6 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="bqB-mj-I0B"/>
-                <menuItem title="Styles" id="wlZ-TW-NyO">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Styles" id="JgB-tL-Aap"/>
-                </menuItem>
                 <menuItem title="Highlight Code" id="r5b-UX-VfX">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -37,6 +33,10 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="dmA-J9-fuB"/>
+                <menuItem title="Styles" id="wlZ-TW-NyO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Styles" id="JgB-tL-Aap"/>
+                </menuItem>
                 <menuItem title="Show Line Numbers" id="eaO-KG-myD">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -47,7 +47,8 @@
                         </binding>
                     </connections>
                 </menuItem>
-                <menuItem title="Preferences" keyEquivalent="," id="Cak-uC-bOn">
+                <menuItem isSeparatorItem="YES" id="jVy-AG-1Oc"/>
+                <menuItem title="Preferences..." keyEquivalent="," id="Cak-uC-bOn">
                     <connections>
                         <action selector="openPreferenceWithSender:" target="Voe-Tx-rLC" id="mky-YS-jB2"/>
                     </connections>

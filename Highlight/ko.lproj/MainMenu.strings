@@ -9,7 +9,7 @@
 "eaO-KG-myD.title" = "줄 번호 표시";
 
 /* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "Cak-uC-bOn"; */
-"Cak-uC-bOn.title" = "환경설정";
+"Cak-uC-bOn.title" = "환경설정...";
 
 /* Class = "NSMenu"; title = "Styles"; ObjectID = "JgB-tL-Aap"; */
 "JgB-tL-Aap.title" = "스타일";
