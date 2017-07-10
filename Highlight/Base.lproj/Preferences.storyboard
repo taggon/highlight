@@ -12,7 +12,7 @@
         <scene sceneID="dfW-pe-wGi">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="OL7-Zh-gPH" customClass="PrefWindowController" customModule="Highlight" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="jgc-RP-WDF">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="jgc-RP-WDF">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <rect key="contentRect" x="586" y="819" width="500" height="350"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
@@ -28,7 +28,7 @@
         <!--Tab View Controller-->
         <scene sceneID="Cru-EV-yAQ">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" tabStyle="toolbar" canPropagateSelectedChildViewControllerTitle="NO" id="JtN-cq-QYP" sceneMemberID="viewController">
+                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="0" tabStyle="toolbar" canPropagateSelectedChildViewControllerTitle="NO" id="JtN-cq-QYP" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" image="NSPreferencesGeneral" id="Pya-f8-baD"/>
                         <tabViewItem image="Swift" id="fYy-Zd-XU9"/>
@@ -267,13 +267,13 @@
                                     </menu>
                                 </popUpButtonCell>
                             </popUpButton>
-                            <scrollView canDrawConcurrently="YES" focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIq-Q7-eYW">
+                            <scrollView canDrawConcurrently="YES" focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIq-Q7-eYW">
                                 <rect key="frame" x="20" y="20" width="410" height="264"/>
-                                <clipView key="contentView" copiesOnScroll="NO" id="vCH-Xd-sD4">
+                                <clipView key="contentView" canDrawConcurrently="YES" copiesOnScroll="NO" id="vCH-Xd-sD4">
                                     <rect key="frame" x="1" y="1" width="408" height="262"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView canDrawConcurrently="YES" editable="NO" importsGraphics="NO" allowsCharacterPickerTouchBarItem="NO" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" id="kbl-Ah-CJR">
+                                        <textView canDrawConcurrently="YES" editable="NO" importsGraphics="NO" allowsCharacterPickerTouchBarItem="NO" allowsDocumentBackgroundColorChange="YES" textCompletion="NO" id="kbl-Ah-CJR">
                                             <rect key="frame" x="0.0" y="0.0" width="408" height="262"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -285,11 +285,11 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="c50-Wq-Axr">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <rect key="frame" x="1" y="247" width="408" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="yEm-fn-qFW">
-                                    <rect key="frame" x="393" y="1" width="16" height="193"/>
+                                    <rect key="frame" x="393" y="1" width="16" height="262"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>

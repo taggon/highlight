@@ -27,6 +27,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildLangMenu()
+        disableWordWrap()
         loadSnippet(type: lang)
     }
 
@@ -38,13 +39,22 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         resetStyles()
         setupStyle()
         refreshCode()
-        
+
         NotificationCenter.default.addObserver(self, selector: #selector(defaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
     }
 
     override func viewWillDisappear() {
         NotificationCenter.default.removeObserver(self)
         super.viewWillDisappear()
+    }
+
+    func disableWordWrap() {
+        guard let container = codeView.textContainer else {
+            return
+        }
+
+        container.containerSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        container.widthTracksTextView = false
     }
 
     func defaultsDidChange(notification: Notification) {
@@ -70,11 +80,14 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         let senderItem = sender as! NSMenuItem
         stylePopup.select(senderItem)
         saveStyle(style: senderItem.title)
+        UserDefaults.standard.synchronize()
     }
 
     func setupStyle() {
-        stylePopup.setTitle(userStyle)
-        stylePopup.synchronizeTitleAndSelectedItem()
+        if userStyle != stylePopup.title {
+            stylePopup.setTitle(userStyle)
+            stylePopup.synchronizeTitleAndSelectedItem()
+        }
     }
 
     func selectFont(sender: AnyObject?) {
@@ -94,14 +107,14 @@ class StylePreferencesViewController: NSViewController, UserSettings {
     func refreshCode() {
         let containerRuleset = appDelegate.highlighter.currentStyle?[".hljs"]
         let bgColor = containerRuleset?["background"]?.color ?? containerRuleset?["background-color"]?.color ?? CGColor.white
-        codeView.backgroundColor = NSColor(cgColor: bgColor)!
-        
-        codeView.isEditable = true
+
         DispatchQueue.global().async {
             let text = self.appDelegate.highlighter.paint(code: self.snippet)
             DispatchQueue.main.async {
+                self.codeView.isEditable = true
                 self.codeView.string = ""
                 self.codeView.textStorage?.append(text)
+                self.codeView.backgroundColor = NSColor(cgColor: bgColor)!
                 self.codeView.isEditable = false
             }
         }
@@ -119,7 +132,6 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         fontManager.action = #selector(selectFont)
         fontManager.setSelectedFont(font, isMultiple: false)
         fontManager.orderFrontFontPanel(self)
-        
     }
 }
 
