@@ -19,4 +19,16 @@ class PrefWindowController: NSWindowController, NSToolbarDelegate {
         
     }
 
+    override func showWindow(_ sender: Any?) {
+        var frame = window?.frame
+
+        if frame != nil {
+            frame?.size.width = CGFloat( 550 )
+            frame?.size.height = CGFloat( 500 )
+            window?.setFrame(frame!, display: false)
+        }
+
+        super.showWindow(self)
+    }
+
 }
