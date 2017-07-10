@@ -55,9 +55,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
 
     func defaultsChanged(notification: Notification) {
         let styleChanged = ( highlighter.getStyle() != userStyle )
-        let fontChanged = ( currentFont != userFont )
 
-        if styleChanged || fontChanged {
+        if styleChanged {
+            highlighter.setStyle(name: userStyle)
         }
     }
     

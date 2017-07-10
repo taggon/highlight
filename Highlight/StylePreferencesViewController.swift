@@ -48,7 +48,6 @@ class StylePreferencesViewController: NSViewController, UserSettings {
     }
 
     func defaultsChanged(notification: Notification) {
-        setupFont()
         setupStyle()
         refreshCode()
     }
@@ -71,8 +70,6 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         let senderItem = sender as! NSMenuItem
         stylePopup.select(senderItem)
         saveStyle(style: senderItem.title)
-
-        refreshCode()
     }
 
     func setupStyle() {
@@ -84,6 +81,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         let fontManager = sender as? NSFontManager
         if let font = fontManager?.convert(.systemFont(ofSize: 10)) {
             saveFont(font: font)
+            setupFont()
         }
     }
 
