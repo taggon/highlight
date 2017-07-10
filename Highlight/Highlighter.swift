@@ -60,9 +60,18 @@ class Highlighter: UserSettings {
     
     func paint(code: String, lang: String = "") -> NSAttributedString {
         let codeVar = JSValue(object: code, in: context)!
-        let subset = (lang == "") ? getDefaultSubsetLanguages(): JSValue(object: [JSValue(object: lang, in: context)], in: context )!
-        let result = hljs.invokeMethod("highlightAuto", withArguments: [codeVar, subset])!.forProperty("value")
         var attrStr = NSMutableAttributedString(string: "An error occurs while rendering the code")
+        var result: JSValue? = nil
+
+        if lang != "" {
+            // use a specific language
+            let langVar = JSValue(object: lang, in: context)!
+            result = hljs.invokeMethod("highlight", withArguments: [langVar, codeVar])!.forProperty("value")
+        } else {
+            // auto detect language
+            let subset = getDefaultSubsetLanguages()
+            result = hljs.invokeMethod("highlightAuto", withArguments: [codeVar, subset])!.forProperty("value")
+        }
 
         guard var renderedCode = result?.toString() else {
             return attrStr

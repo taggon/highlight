@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Highlight" customModuleProvider="target">
             <connections>
                 <outlet property="highlightCodeItem" destination="r5b-UX-VfX" id="qiL-74-e84"/>
+                <outlet property="langMenu" destination="Pde-q3-dbZ" id="R9U-ST-ceA"/>
                 <outlet property="statusMenu" destination="eNE-Vy-oMj" id="SxJ-HA-yOw"/>
                 <outlet property="styleMenu" destination="JgB-tL-Aap" id="bVt-YL-mMo"/>
             </connections>
@@ -26,11 +27,15 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="bqB-mj-I0B"/>
-                <menuItem title="Highlight Code" id="r5b-UX-VfX">
+                <menuItem title="Highlight Code (Auto-detect)" id="r5b-UX-VfX">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="highlightCodeActionWithSender:" target="Voe-Tx-rLC" id="k7n-3n-Dhk"/>
                     </connections>
+                </menuItem>
+                <menuItem title="Highlight Code" id="fpy-ku-YlT">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Highlight Code" id="Pde-q3-dbZ"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="dmA-J9-fuB"/>
                 <menuItem title="Styles" id="wlZ-TW-NyO">

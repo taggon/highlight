@@ -13,6 +13,10 @@ class LanguagePreferecensViewController: NSViewController, NSTableViewDataSource
     @IBOutlet weak var langs: NSTableView!
     
     var langNames:[String] = []
+
+    private var appDelegate: AppDelegate {
+        return NSApplication.shared().delegate as! AppDelegate
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,5 +59,6 @@ class LanguagePreferecensViewController: NSViewController, NSTableViewDataSource
         } else {
             removeLang(lang: lang)
         }
+        appDelegate.drawLangMenu()
     }
 }

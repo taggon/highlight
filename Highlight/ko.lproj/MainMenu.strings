@@ -23,8 +23,11 @@
 /* Class = "NSMenuItem"; title = "Visit Homepage..."; ObjectID = "q61-bd-wOJ"; */
 "q61-bd-wOJ.title" = "홈페이지...";
 
-/* Class = "NSMenuItem"; title = "Highlight Code"; ObjectID = "r5b-UX-VfX"; */
-"r5b-UX-VfX.title" = "구문강조 후 복사";
+/* Class = "NSMenuItem"; title = "Highlight Code (Auto-detect)"; ObjectID = "r5b-UX-VfX"; */
+"r5b-UX-VfX.title" = "구문강조 후 복사 (언어 자동 감지)";
+
+/* Class = "NSMenuItem"; title = "Highlight Code"; ObjectID = "fpy-ku-YlT"; */
+"fpy-ku-YlT.title" = "구문강조 후 복사";
 
 /* Class = "NSMenuItem"; title = "Styles"; ObjectID = "wlZ-TW-NyO"; */
 "wlZ-TW-NyO.title" = "스타일";

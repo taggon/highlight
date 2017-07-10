@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var styleMenu: NSMenu!
     @IBOutlet weak var highlightCodeItem: NSMenuItem!
+    @IBOutlet weak var langMenu: NSMenu!
 
     var statusItem: NSStatusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
     var highlighter: Highlighter = Highlighter()
@@ -65,14 +66,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
         }
     }
     
-    func highlightCode() {
+    func highlightCode(lang: String = "") {
         DispatchQueue.global().async {
             // get text from the pasteboard
             let pboard = NSPasteboard.general()
             
             guard let code = pboard.string(forType: NSPasteboardTypeString) else { return }
 
-            let attrStr = self.highlighter.paint(code: code)
+            let attrStr = self.highlighter.paint(code: code, lang: lang)
             let data = try? attrStr.data(from: NSMakeRange(0, attrStr.length), documentAttributes: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType])
             if data != nil {
                 pboard.declareTypes([NSRTFPboardType], owner: self)
@@ -116,7 +117,11 @@ extension AppDelegate {
 
         drawStyleMenu()
         updateStyleMenu()
+
+        drawLangMenu()
     }
+
+    // # Style
 
     func drawStyleMenu() {
         let styles = hlStyles.keys.enumerated().map { item in
@@ -135,7 +140,7 @@ extension AppDelegate {
         }
     }
 
-    @IBAction func setStyleFromMenu(sender: AnyObject?) {
+    func setStyleFromMenu(sender: AnyObject?) {
         guard let styleMenuItem = sender as? NSMenuItem else {
             return
         }
@@ -146,6 +151,26 @@ extension AppDelegate {
         if let button = statusItem.button {
             button.image = NSImage(named: name)
             button.image!.size = NSMakeSize(18.0, 18.0)
+        }
+    }
+
+    // # Languages
+
+    func drawLangMenu() {
+        for lang in userLangs {
+            if let langName = hlLanguages.first(where: { $1 == lang })?.key {
+                let item = NSMenuItem(title: langName, action: #selector(didSelectLanguage), keyEquivalent: "")
+                langMenu.addItem(item)
+            }
+        }
+    }
+
+    func didSelectLanguage(sender: AnyObject?) {
+        guard let langItem = sender as? NSMenuItem else {
+            return
+        }
+        if let lang = hlLanguages[langItem.title] {
+            highlightCode(lang: lang)
         }
     }
 }
