@@ -5,4 +5,5 @@ target 'Highlight' do
 	pod 'KeyHolder', :git => 'https://github.com/taggon/KeyHolder.git'
     pod 'Magnet'
 	pod 'Sparkle'
+	pod 'LetsMove'
 end

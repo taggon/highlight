@@ -17,21 +17,27 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.0</string>
+	<string>1.3.1</string>
 	<key>CFBundleVersion</key>
 	<string>170710.1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.productivity</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Taegon Kim. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>LSUIElement</key>
+	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedURL</key>
+	<string>https://taggon.github.io/appcast.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>pub.pem</string>
 	<key>URLs</key>
 	<dict>
 		<key>Homepage</key>
@@ -39,11 +45,5 @@
 		<key>Issue Tracker</key>
 		<string>https://github.com/taggon/highlight-for-mac/issues</string>
 	</dict>
-	<key>SUFeedURL</key>
-	<string>https://taggon.github.io/appcast.xml</string>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUPublicDSAKeyFile</key>
-	<string>pub.pem</string>
 </dict>
 </plist>

@@ -20,10 +20,10 @@ class StylePreferencesViewController: NSViewController, UserSettings {
     private var appDelegate: AppDelegate {
         return NSApplication.shared().delegate as! AppDelegate
     }
-    
+
     var snippet: String!
     var lang = "js"
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         buildLangMenu()
@@ -32,14 +32,16 @@ class StylePreferencesViewController: NSViewController, UserSettings {
 
     override func viewDidAppear() {
         super.viewDidAppear()
+
         fontInfo.selectText(nil)
         setupFont()
         resetStyles()
+        setupStyle()
         refreshCode()
         
         NotificationCenter.default.addObserver(self, selector: #selector(defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
     }
-    
+
     override func viewWillDisappear() {
         NotificationCenter.default.removeObserver(self)
         super.viewWillDisappear()
@@ -50,7 +52,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         setupStyle()
         refreshCode()
     }
-    
+
     func resetStyles() {
         let menu = stylePopup.menu!
         menu.removeAllItems()
@@ -63,37 +65,34 @@ class StylePreferencesViewController: NSViewController, UserSettings {
             let item = NSMenuItem(title: style, action: #selector(setStyle), keyEquivalent: "")
             menu.addItem(item)
         }
-        
-        setupStyle()
     }
-    
+
     func setStyle(sender: AnyObject?) {
         let senderItem = sender as! NSMenuItem
         stylePopup.select(senderItem)
-        appDelegate.setStyle(sender: sender)
-        
-        setupStyle()
+        saveStyle(style: senderItem.title)
+
         refreshCode()
     }
-    
+
     func setupStyle() {
-        stylePopup.setTitle(UserDefaults.standard.string(forKey: "style")!)
+        stylePopup.setTitle(userStyle)
         stylePopup.synchronizeTitleAndSelectedItem()
     }
-    
+
     func selectFont(sender: AnyObject?) {
         let fontManager = sender as? NSFontManager
-        if let font = fontManager?.convert(.systemFont(ofSize: 0)) {
+        if let font = fontManager?.convert(.systemFont(ofSize: 10)) {
             saveFont(font: font)
         }
     }
-    
+
     func setupFont() {
-        guard let userFont = self.userFont else { return }
-        fontInfo.stringValue = "\(userFont.displayName!), \(Float(userFont.pointSize))pt"
-        codeView.font = userFont
+        let font = userFont ?? defaultFont
+        fontInfo.stringValue = "\(font.displayName!), \(Float(font.pointSize))pt"
+        codeView.font = font
     }
-    
+
     func refreshCode() {
         let containerRuleset = appDelegate.highlighter.currentStyle?[".hljs"]
         let bgColor = containerRuleset?["background"]?.color ?? containerRuleset?["background-color"]?.color ?? CGColor.white
@@ -109,10 +108,9 @@ class StylePreferencesViewController: NSViewController, UserSettings {
             }
         }
     }
-    
+
     @IBAction func openFontPanel(sender: AnyObject?) {
-        let defaults = UserDefaults.standard
-        let font = NSFont( name: defaults.string(forKey: "font-family")!, size: CGFloat(defaults.float(forKey: "font-size")) )
+        let font = userFont ?? defaultFont
         let buttonRect = fontSelectButton.window!.convertToScreen(fontSelectButton.frame)
         let panel = NSFontPanel.shared()
         let panelOrigin = CGPoint(x: buttonRect.origin.x, y: buttonRect.origin.y - panel.frame.height)
@@ -121,13 +119,13 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         panel.setFrameOrigin(panelOrigin)
 
         fontManager.action = #selector(selectFont)
-        fontManager.setSelectedFont(font!, isMultiple: false)
+        fontManager.setSelectedFont(font, isMultiple: false)
         fontManager.orderFrontFontPanel(self)
         
     }
 }
 
-// Lanauges
+// Languages
 extension StylePreferencesViewController {
     var languages:[String: String] {
         return [
@@ -144,11 +142,11 @@ extension StylePreferencesViewController {
         langMenu.removeAllItems()
 
         for lang in languages.keys {
-            langMenu.insertItem(withTitle: lang, action: #selector(changeLanguage), keyEquivalent: "", at: 0)
+            langMenu.insertItem(withTitle: lang, action: #selector(languageDidChange), keyEquivalent: "", at: 0)
         }
     }
     
-    func changeLanguage(sender: AnyObject?) {
+    func languageDidChange(sender: AnyObject?) {
         guard let item = sender as? NSMenuItem else { return }
 
         loadSnippet(type: languages[item.title]!)

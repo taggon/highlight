@@ -19,6 +19,7 @@
 		F2663F0E1E87EA6400951DE6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F0D1E87EA6400951DE6 /* Constant.swift */; };
 		F2663F161E8889B700951DE6 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F151E8889B700951DE6 /* Highlighter.swift */; };
 		F2663F181E88EFC400951DE6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F171E88EFC400951DE6 /* Style.swift */; };
+		F26B79D91F134326007A1F13 /* MoveApplication.strings in Resources */ = {isa = PBXBuildFile; fileRef = F26B79D71F134326007A1F13 /* MoveApplication.strings */; };
 		F29B17081E8D1BF80060CA02 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B17071E8D1BF80060CA02 /* UserSettings.swift */; };
 		F29B170A1E8D37AA0060CA02 /* snippets in Resources */ = {isa = PBXBuildFile; fileRef = F29B17091E8D37AA0060CA02 /* snippets */; };
 		F29E0C221E8E4B91005A3DF3 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */; };
@@ -32,6 +33,8 @@
 		63DA08134009628B6644DACB /* Pods-Highlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.debug.xcconfig"; sourceTree = "<group>"; };
 		796E30C469239AC0F938F1D4 /* Pods_Highlight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Highlight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8607AD41AA27C6C4FBCE1B75 /* Pods-Highlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.release.xcconfig"; sourceTree = "<group>"; };
+		F21C8BF31F134B6E00BA2414 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Preferences.strings; sourceTree = "<group>"; };
+		F21C8BF41F134BBF00BA2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
 		F24592111F126EB400727164 /* RGBtoHSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBtoHSV.swift; sourceTree = "<group>"; };
 		F24B1DCC1E2B1B1400FCE0A7 /* AppDelegate+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Version.swift"; sourceTree = "<group>"; };
 		F25AEB6F1E212C6E0083CB52 /* Highlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Highlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +49,9 @@
 		F2663F0D1E87EA6400951DE6 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F2663F151E8889B700951DE6 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
 		F2663F171E88EFC400951DE6 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		F26B79D81F134326007A1F13 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MoveApplication.strings; sourceTree = "<group>"; };
 		F29B17071E8D1BF80060CA02 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		F29B17091E8D37AA0060CA02 /* snippets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = snippets; sourceTree = "<group>"; };
-		F29E0C231E8E4B91005A3DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
-		F29E0C2C1E8E581C005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Preferences.strings; sourceTree = "<group>"; };
 		F29E0C301E8E5AC8005A3DF3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		F2A67B151E2257D2009D3AC1 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		F2C0630C1F12B5A7001D6019 /* pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pub.pem; sourceTree = "<group>"; };
@@ -134,9 +136,18 @@
 			name = Preferences;
 			sourceTree = "<group>";
 		};
+		F26B79DA1F13432C007A1F13 /* LetsMoveTranslation */ = {
+			isa = PBXGroup;
+			children = (
+				F26B79D71F134326007A1F13 /* MoveApplication.strings */,
+			);
+			name = LetsMoveTranslation;
+			sourceTree = "<group>";
+		};
 		F2C0630E1F12B5B6001D6019 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F26B79DA1F13432C007A1F13 /* LetsMoveTranslation */,
 				F25AEB741E212C6E0083CB52 /* Assets.xcassets */,
 				F2C0630C1F12B5A7001D6019 /* pub.pem */,
 				F29B17091E8D37AA0060CA02 /* snippets */,
@@ -192,6 +203,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = F25AEB661E212C6E0083CB52;
 			productRefGroup = F25AEB701E212C6E0083CB52 /* Products */;
@@ -212,6 +224,7 @@
 				F2A67B161E2257D2009D3AC1 /* scripts in Resources */,
 				F29E0C2E1E8E5AA8005A3DF3 /* MainMenu.xib in Resources */,
 				F25AEB751E212C6E0083CB52 /* Assets.xcassets in Resources */,
+				F26B79D91F134326007A1F13 /* MoveApplication.strings in Resources */,
 				F29B170A1E8D37AA0060CA02 /* snippets in Resources */,
 				F29E0C221E8E4B91005A3DF3 /* Preferences.storyboard in Resources */,
 			);
@@ -299,11 +312,19 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
+		F26B79D71F134326007A1F13 /* MoveApplication.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F26B79D81F134326007A1F13 /* ko */,
+			);
+			name = MoveApplication.strings;
+			sourceTree = "<group>";
+		};
 		F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F29E0C231E8E4B91005A3DF3 /* Base */,
-				F29E0C2C1E8E581C005A3DF3 /* ko */,
+				F21C8BF31F134B6E00BA2414 /* ko */,
+				F21C8BF41F134BBF00BA2414 /* Base */,
 			);
 			name = Preferences.storyboard;
 			sourceTree = "<group>";

@@ -25,19 +25,36 @@ class GeneralPreferencesViewController: NSViewController, UserSettings {
     
     override func viewDidAppear() {
         super.viewDidAppear()
+
         recordView.keyCombo = hotkey
-        toggleLineNumbers.state = showLineNumbers ? NSOnState : NSOffState
         spacesAfterLineNumberStepper.integerValue = lineNumberPadding
         spacesAfterLineNumber.integerValue = spacesAfterLineNumberStepper.integerValue
+        updateToggleLineNumbers()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+    }
+
+    override func viewWillDisappear() {
+        NotificationCenter.default.removeObserver(self)
+
+        super.viewWillDisappear()
+    }
+
+    func defaultsChanged(notification: Notification) {
+        updateToggleLineNumbers()
+    }
+
+    func updateToggleLineNumbers() {
+        toggleLineNumbers.state = showLineNumbers ? NSOnState : NSOffState
     }
 
     @IBAction func toggleLineNumbersDidChange(sender: AnyObject) {
-        setShowLineNumbers(display: toggleLineNumbers.state == NSOnState)
+        saveShowLineNumbers(display: toggleLineNumbers.state == NSOnState)
     }
 
     @IBAction func spacesAfterLineNumberDidChange(sender: AnyObject) {
         spacesAfterLineNumber.integerValue = (sender as! NSStepper).integerValue
-        setLineNumberPadding(numberOfSpaces: spacesAfterLineNumber.integerValue)
+        saveLineNumberPadding(numberOfSpaces: spacesAfterLineNumber.integerValue)
     }
 }
 

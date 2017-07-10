@@ -2,26 +2,17 @@
 /* Class = "NSTextFieldCell"; title = "Languages"; ObjectID = "04A-gG-WMa"; */
 "04A-gG-WMa.title" = "언어";
 
-/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "1Ht-9G-NUk"; */
-"1Ht-9G-NUk.title" = "Table View Cell";
-
 /* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
 "2PS-QP-pcK.title" = "언어";
+
+/* Class = "NSTableColumn"; headerCell.title = "1"; ObjectID = "2qP-Vf-gOS"; */
+"2qP-Vf-gOS.headerCell.title" = "1";
 
 /* Class = "NSButtonCell"; title = "Bug Report"; ObjectID = "3S7-rh-Mnk"; */
 "3S7-rh-Mnk.title" = "버그 신고";
 
-/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "4Ye-Oh-xmM"; */
-"4Ye-Oh-xmM.title" = "Table View Cell";
-
-/* Class = "NSTableColumn"; headerCell.title = "1"; ObjectID = "5UD-FP-01e"; */
-"5UD-FP-01e.headerCell.title" = "1";
-
 /* Class = "NSTextFieldCell"; title = "v1.0.0"; ObjectID = "60N-Ul-LsY"; */
 "60N-Ul-LsY.title" = "v1.0.0";
-
-/* Class = "NSTableColumn"; headerCell.title = "2"; ObjectID = "65K-Ye-fLE"; */
-"65K-Ye-fLE.headerCell.title" = "2";
 
 /* Class = "NSButtonCell"; title = "Homepage"; ObjectID = "AIx-mv-Gq6"; */
 "AIx-mv-Gq6.title" = "홈페이지";
@@ -41,17 +32,8 @@
 /* Class = "NSViewController"; title = "General"; ObjectID = "O2h-iU-ciu"; */
 "O2h-iU-ciu.title" = "일반";
 
-/* Class = "NSButtonCell"; title = "Check"; ObjectID = "SUD-NV-zh2"; */
-"SUD-NV-zh2.title" = "Check";
-
 /* Class = "NSViewController"; title = "Style"; ObjectID = "ajm-LN-tcW"; */
 "ajm-LN-tcW.title" = "언어";
-
-/* Class = "NSTextFieldCell"; title = "Language detection is restricted to the selected languages."; ObjectID = "VuA-aV-eN8"; */
-"VuA-aV-eN8.title" = "코드 하이라이팅 기능은 선택한 언어에 대해서만 동작합니다.";
-
-/* Class = "NSTextFieldCell"; title = "Highlight"; ObjectID = "W8z-Re-N6q"; */
-"W8z-Re-N6q.title" = "Highlight";
 
 /* Class = "NSViewController"; title = "Style"; ObjectID = "Wbl-MD-Wd8"; */
 "Wbl-MD-Wd8.title" = "스타일";
@@ -59,8 +41,8 @@
 /* Class = "NSButtonCell"; title = "Select..."; ObjectID = "aZd-Ql-ME9"; */
 "aZd-Ql-ME9.title" = "선택...";
 
-/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "hKW-KG-5ma"; */
-"hKW-KG-5ma.title" = "Table View Cell";
+/* Class = "NSTableColumn"; headerCell.title = "0"; ObjectID = "dvH-nO-iQl"; */
+"dvH-nO-iQl.headerCell.title" = "0";
 
 /* Class = "NSTextFieldCell"; title = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one."; ObjectID = "j1b-Kg-9pB"; */
 "j1b-Kg-9pB.title" = "위 필드를 선택한 후 미리 복사한 코드를 구문 강조하여 복사할 때 사용할 단축키를 설정하세요.";
@@ -71,32 +53,31 @@
 /* Class = "NSWindow"; title = "Preferences"; ObjectID = "jgc-RP-WDF"; */
 "jgc-RP-WDF.title" = "환경설정";
 
+/* Class = "NSTableColumn"; headerCell.title = "2"; ObjectID = "mSq-ch-IhW"; */
+"mSq-ch-IhW.headerCell.title" = "2";
+
 /* Class = "NSViewController"; title = "About"; ObjectID = "oug-7P-IAg"; */
 "oug-7P-IAg.title" = "이 프로그램은";
 
-/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "pRO-Ef-Nnf"; */
-"pRO-Ef-Nnf.title" = "Item 2";
-
-/* Class = "NSButtonCell"; title = "Check"; ObjectID = "shh-YK-Il4"; */
-"shh-YK-Il4.title" = "Check";
-
-/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "vZs-RY-NGH"; */
-"vZs-RY-NGH.title" = "Item 1";
-
-/* Class = "NSTableColumn"; headerCell.title = "0"; ObjectID = "wEe-33-4Xl"; */
-"wEe-33-4Xl.headerCell.title" = "0";
-
-/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "wxL-pb-316"; */
-"wxL-pb-316.title" = "Item 3";
-
-/* Class = "NSButtonCell"; title = "Check"; ObjectID = "xkX-zA-uuC"; */
-"xkX-zA-uuC.title" = "Check";
+/* Class = "NSTextFieldCell"; title = "Highlight"; ObjectID = "W8z-Re-N6q"; */
+"W8z-Re-N6q.title" = "Highlight";
 
 /* Class = "NSTextFieldCell"; title = "Line Numbers"; ObjectID = "nDw-EK-mDh"; */
 "nDw-EK-mDh.title" = "줄 번호";
 
-/* Class = "NSButtonCell"; title = "Show line numbers in highlighted code"; ObjectID = "9du-Dn-gKI"; */
-"9du-Dn-gKI.title" = "구문 강조된 코드에서 줄 번호를 표시합니다.";
+/* Class = "NSButtonCell"; title = "Show line numbers in highlighted code"; ObjectID = "85V-RR-o6T"; */
+"85V-RR-o6T.title" = "구문 강조된 코드에서 줄 번호를 표시합니다.";
 
 /* Class = "NSTextFieldCell"; title = "Number of spaces immediately after each line number:"; ObjectID = "X1H-5f-2xK"; */
 "X1H-5f-2xK.title" = "줄 번호 뒤에 표시할 여백 스페이스의 갯수:";
+
+/* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
+"deK-X4-va6.title" = "구문 강조 기능은 선택한 언어에 한해서만 동작합니다. 선택한 언어가 적으면 성능이 더 좋아질 수 있습니다.";
+
+/* You don't need to translate the followings */
+"oJY-Ef-Jrd.title" = "";
+"wdO-dc-vAf.title" = "";
+"65X-Tt-ru4.title" = "";
+"vZs-RY-NGH.title" = "";
+"pRO-Ef-Nnf.title" = "";
+"wxL-pb-316.title" = "";

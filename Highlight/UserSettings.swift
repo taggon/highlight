@@ -13,21 +13,23 @@ import Magnet
 protocol UserSettings { }
 
 extension UserSettings {
-    
+
     // # Font
     
     var defaultFont: NSFont {
-        return NSFontManager.shared().font(withFamily: "Courier", traits: NSFontTraitMask(rawValue: 0), weight: Int(NSFontWeightRegular), size: CGFloat(12.0))!
+        return NSFontManager.shared().font(withFamily: "Courier", traits: NSFontTraitMask(rawValue: 0), weight: Int(NSFontWeightRegular), size: CGFloat(14.0))!
     }
 
     var userFont: NSFont? {
         let fontManager = NSFontManager.shared()
         let defaults = UserDefaults.standard
+        let family = defaults.string(forKey: "font-family") ?? fontManager.localizedName(forFamily: "Courier", face: nil)
+
         let font = fontManager.font(
-            withFamily: defaults.string(forKey: "font-family")!,
+            withFamily: family,
             traits: NSFontTraitMask(rawValue: UInt(defaults.integer(forKey: "font-traits"))),
             weight: defaults.integer(forKey: "font-weight"),
-            size: CGFloat(max(defaults.float(forKey: "font-size"), 9))
+            size: CGFloat(max(defaults.float(forKey: "font-size"), 12))
         )
         
         return font
@@ -105,6 +107,7 @@ extension UserSettings {
         
         removeHotkey()
         UserDefaults.standard.set(info, forKey: "highlight:hotkey")
+
         if !HotKeyCenter.shared.register(with: hotkey) {
             debugPrint("Failure to register the hotkey.")
         }
@@ -125,7 +128,7 @@ extension UserSettings {
         return UserDefaults.standard.bool(forKey: "show-line-numbers")
     }
 
-    func setShowLineNumbers(display: Bool) {
+    func saveShowLineNumbers(display: Bool) {
         UserDefaults.standard.set(display, forKey: "show-line-numbers")
     }
 
@@ -133,7 +136,7 @@ extension UserSettings {
         return UserDefaults.standard.integer(forKey: "line-number-padding")
     }
 
-    func setLineNumberPadding(numberOfSpaces: Int) {
+    func saveLineNumberPadding(numberOfSpaces: Int) {
         UserDefaults.standard.set(numberOfSpaces, forKey: "line-number-padding")
     }
 }

@@ -8,6 +8,7 @@
 
 import Cocoa
 import Magnet
+import LetsMove
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
@@ -18,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
 
     var statusItem: NSStatusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
     var highlighter: Highlighter = Highlighter()
+    var currentFont: NSFont?
     
     lazy var prefWindowController: NSWindowController! = {
         let storyboard = NSStoryboard(name: "Preferences", bundle: Bundle.main)
@@ -27,22 +29,36 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.menu = statusMenu
-        loadStatusImage(name: "StatusIcon")
-        
-        // set version
-        statusMenu.items[0].title += " v\(version)"
-
-        drawStyleMenu()
+        // move this application into /Applications if necessary.
+        #if !DEBUG
+            PFMoveToApplicationsFolderIfNecessary()
+        #endif
         
         // register hotkey
         if hotkey != nil {
             saveHotkey(keycomb: hotkey!)
         }
+
+        // Start watching user settings change
+        NotificationCenter.default.addObserver(self, selector: #selector(defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+
+        // Save the current font for comparison
+        currentFont = userFont
+
+        prefWindowController.showWindow(self)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
+        NotificationCenter.default.removeObserver(self)
         HotKeyCenter.shared.unregisterAll()
+    }
+
+    func defaultsChanged(notification: Notification) {
+        let styleChanged = ( highlighter.getStyle() != userStyle )
+        let fontChanged = ( currentFont != userFont )
+
+        if styleChanged || fontChanged {
+        }
     }
     
     func highlightCode() {
@@ -68,21 +84,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
         }
     }
     
-    func drawStyleMenu() {
-        let styles = hlStyles.keys.enumerated().map { item in
-            return item.element
-        }
-        
-        for style in styles.sorted() {
-            let item = NSMenuItem(title: style, action: #selector(setStyle), keyEquivalent: "")
-            styleMenu.addItem(item)
-            
-            if highlighter.getStyle() == style {
-                setStyle(sender: item)
-            }
-        }
-    }
-    
     func updateKeyEquivalentOfHighlightMenu() {
         guard let hotkey = self.hotkey else {
             highlightCodeItem.keyEquivalent = ""
@@ -96,18 +97,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     @IBAction func highlightCodeAction(sender: AnyObject?) {
         highlightCode()
     }
-    
-    @IBAction func setStyle(sender: AnyObject?) {
-        let senderItem = sender as! NSMenuItem
-        for item in styleMenu.items {
-            item.state = NSOffState
-            if item.title == senderItem.title {
-                item.state = NSOnState
-            }
-        }
-        highlighter.setStyle(name: senderItem.title)
-        UserDefaults.standard.set(senderItem.title, forKey: "style")
-    }
 
     @IBAction func openPreference(sender: AnyObject?) {
         prefWindowController.showWindow(self)
@@ -117,7 +106,45 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     @IBAction func quitApplication(sender: AnyObject?) {
         NSApplication.shared().terminate(self)
     }
-    
+}
+
+// popup menu
+extension AppDelegate {
+    func initMenu() {
+        statusItem.menu = statusMenu
+        loadStatusImage(name: "StatusIcon")
+
+        // set version
+        statusMenu.items[0].title += " v\(version)"
+
+        drawStyleMenu()
+        updateStyleMenu()
+    }
+
+    func drawStyleMenu() {
+        let styles = hlStyles.keys.enumerated().map { item in
+            return item.element
+        }
+
+        for style in styles.sorted() {
+            let item = NSMenuItem(title: style, action: #selector(setStyleFromMenu), keyEquivalent: "")
+            styleMenu.addItem(item)
+        }
+    }
+
+    func updateStyleMenu() {
+        for item in styleMenu.items {
+            item.state = ( item.title == userStyle ) ? NSOnState : NSOffState
+        }
+    }
+
+    @IBAction func setStyleFromMenu(sender: AnyObject?) {
+        guard let styleMenuItem = sender as? NSMenuItem else {
+            return
+        }
+
+        saveStyle(style: styleMenuItem.title)
+    }
 }
 
 // visit web pages

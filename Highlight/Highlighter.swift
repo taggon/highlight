@@ -24,7 +24,6 @@ class Highlighter: UserSettings {
         }
         loadHighlightJS()
 
-        setStyle(name: "Default")
         setStyle(name: UserDefaults.standard.string(forKey: "style") ?? "Default")
     }
 

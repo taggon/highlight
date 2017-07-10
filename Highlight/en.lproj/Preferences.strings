@@ -1,27 +1,27 @@
 
-/* Class = "NSTextFieldCell"; title = "Languages"; ObjectID = "04A-gG-WMa"; */
-"04A-gG-WMa.title" = "Languages";
-
-/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "1Ht-9G-NUk"; */
-"1Ht-9G-NUk.title" = "Table View Cell";
-
 /* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
 "2PS-QP-pcK.title" = "Languages";
 
-/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "4Ye-Oh-xmM"; */
-"4Ye-Oh-xmM.title" = "Table View Cell";
-
-/* Class = "NSTableColumn"; headerCell.title = "1"; ObjectID = "5UD-FP-01e"; */
-"5UD-FP-01e.headerCell.title" = "1";
+/* Class = "NSTableColumn"; headerCell.title = "1"; ObjectID = "2qP-Vf-gOS"; */
+"2qP-Vf-gOS.headerCell.title" = "1";
 
 /* Class = "NSTextFieldCell"; title = "v1.0.0"; ObjectID = "60N-Ul-LsY"; */
 "60N-Ul-LsY.title" = "v1.0.0";
 
-/* Class = "NSTableColumn"; headerCell.title = "2"; ObjectID = "65K-Ye-fLE"; */
-"65K-Ye-fLE.headerCell.title" = "2";
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "65X-Tt-ru4"; */
+"65X-Tt-ru4.title" = "Check";
+
+/* Class = "NSButtonCell"; title = "Show line numbers in highlighted code"; ObjectID = "85V-RR-o6T"; */
+"85V-RR-o6T.title" = "Show line numbers in highlighted code";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "B8J-05-hfK"; */
+"B8J-05-hfK.title" = "Table View Cell";
 
 /* Class = "NSTextFieldCell"; title = "Style"; ObjectID = "BLU-5E-HbM"; */
 "BLU-5E-HbM.title" = "Style";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "Gma-QS-hBX"; */
+"Gma-QS-hBX.title" = "Table View Cell";
 
 /* Class = "NSTextFieldCell"; title = "© 2017 Taegon Kim "; ObjectID = "Iez-uL-80p"; */
 "Iez-uL-80p.title" = "© 2017 Taegon Kim ";
@@ -35,23 +35,26 @@
 /* Class = "NSViewController"; title = "General"; ObjectID = "O2h-iU-ciu"; */
 "O2h-iU-ciu.title" = "General";
 
-/* Class = "NSButtonCell"; title = "Check"; ObjectID = "SUD-NV-zh2"; */
-"SUD-NV-zh2.title" = "Check";
-
-/* Class = "NSTextFieldCell"; title = "Language detection is restricted to the selected languages."; ObjectID = "VuA-aV-eN8"; */
-"VuA-aV-eN8.title" = "Language detection is restricted to the selected languages.";
-
 /* Class = "NSTextFieldCell"; title = "Highlight"; ObjectID = "W8z-Re-N6q"; */
 "W8z-Re-N6q.title" = "Highlight";
 
 /* Class = "NSViewController"; title = "Style"; ObjectID = "Wbl-MD-Wd8"; */
 "Wbl-MD-Wd8.title" = "Style";
 
+/* Class = "NSTextFieldCell"; title = "Number of spaces immediately after each line number:"; ObjectID = "X1H-5f-2xK"; */
+"X1H-5f-2xK.title" = "Number of spaces immediately after each line number:";
+
 /* Class = "NSButtonCell"; title = "Select..."; ObjectID = "aZd-Ql-ME9"; */
 "aZd-Ql-ME9.title" = "Select...";
 
-/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "hKW-KG-5ma"; */
-"hKW-KG-5ma.title" = "Table View Cell";
+/* Class = "NSViewController"; title = "Languages"; ObjectID = "ajm-LN-tcW"; */
+"ajm-LN-tcW.title" = "Languages";
+
+/* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
+"deK-X4-va6.title" = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance.";
+
+/* Class = "NSTableColumn"; headerCell.title = "0"; ObjectID = "dvH-nO-iQl"; */
+"dvH-nO-iQl.headerCell.title" = "0";
 
 /* Class = "NSTextFieldCell"; title = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one."; ObjectID = "j1b-Kg-9pB"; */
 "j1b-Kg-9pB.title" = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one.";
@@ -62,23 +65,29 @@
 /* Class = "NSWindow"; title = "Preferences"; ObjectID = "jgc-RP-WDF"; */
 "jgc-RP-WDF.title" = "Preferences";
 
+/* Class = "NSTableColumn"; headerCell.title = "2"; ObjectID = "mSq-ch-IhW"; */
+"mSq-ch-IhW.headerCell.title" = "2";
+
+/* Class = "NSTextFieldCell"; title = "Line Numbers"; ObjectID = "nDw-EK-mDh"; */
+"nDw-EK-mDh.title" = "Line Numbers";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "oJY-Ef-Jrd"; */
+"oJY-Ef-Jrd.title" = "Check";
+
 /* Class = "NSViewController"; title = "About"; ObjectID = "oug-7P-IAg"; */
 "oug-7P-IAg.title" = "About";
 
 /* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "pRO-Ef-Nnf"; */
 "pRO-Ef-Nnf.title" = "Item 2";
 
-/* Class = "NSButtonCell"; title = "Check"; ObjectID = "shh-YK-Il4"; */
-"shh-YK-Il4.title" = "Check";
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "uc3-ap-uba"; */
+"uc3-ap-uba.title" = "Table View Cell";
 
 /* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "vZs-RY-NGH"; */
 "vZs-RY-NGH.title" = "Item 1";
 
-/* Class = "NSTableColumn"; headerCell.title = "0"; ObjectID = "wEe-33-4Xl"; */
-"wEe-33-4Xl.headerCell.title" = "0";
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "wdO-dc-vAf"; */
+"wdO-dc-vAf.title" = "Check";
 
 /* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "wxL-pb-316"; */
 "wxL-pb-316.title" = "Item 3";
-
-/* Class = "NSButtonCell"; title = "Check"; ObjectID = "xkX-zA-uuC"; */
-"xkX-zA-uuC.title" = "Check";
