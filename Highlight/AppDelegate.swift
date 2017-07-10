@@ -33,6 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
         #if !DEBUG
             PFMoveToApplicationsFolderIfNecessary()
         #endif
+
+        // init menu
+        initMenu()
         
         // register hotkey
         if hotkey != nil {
@@ -58,6 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
 
         if styleChanged {
             highlighter.setStyle(name: userStyle)
+            updateStyleMenu()
         }
     }
     
@@ -74,13 +78,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
                 pboard.declareTypes([NSRTFPboardType], owner: self)
                 pboard.setData(data!, forType: NSRTFPboardType)
             }
-        }
-    }
-    
-    func loadStatusImage(name: String) {
-        if let button = statusItem.button {
-            button.image = NSImage(named: name)
-            button.image!.size = NSMakeSize(18.0, 18.0)
         }
     }
     
@@ -142,8 +139,14 @@ extension AppDelegate {
         guard let styleMenuItem = sender as? NSMenuItem else {
             return
         }
-
         saveStyle(style: styleMenuItem.title)
+    }
+
+    func loadStatusImage(name: String) {
+        if let button = statusItem.button {
+            button.image = NSImage(named: name)
+            button.image!.size = NSMakeSize(18.0, 18.0)
+        }
     }
 }
 
