@@ -12,6 +12,9 @@ import Magnet
 
 protocol UserSettings { }
 
+var cachedUserFont: NSFont?
+var cachedUserStyle: String?
+
 extension UserSettings {
 
     // # Font
@@ -21,6 +24,10 @@ extension UserSettings {
     }
 
     var userFont: NSFont? {
+        if cachedUserFont != nil {
+            return cachedUserFont
+        }
+
         let fontManager = NSFontManager.shared()
         let defaults = UserDefaults.standard
         let family = defaults.string(forKey: "font-family") ?? fontManager.localizedName(forFamily: "Courier", face: nil)
@@ -31,11 +38,19 @@ extension UserSettings {
             weight: defaults.integer(forKey: "font-weight"),
             size: CGFloat(max(defaults.float(forKey: "font-size"), 12))
         )
-        
+
+        cachedUserFont = font
+
         return font
     }
     
     func saveFont(font: NSFont) {
+        if cachedUserFont == font {
+            return
+        }
+
+        cachedUserFont = font
+
         let defaults = UserDefaults.standard
         let fontManager = NSFontManager.shared()
         
@@ -46,13 +61,17 @@ extension UserSettings {
     }
     
     // # Style
-    
+
     var userStyle: String {
-        return UserDefaults.standard.string(forKey: "style") ?? "Default"
+        if cachedUserStyle == nil {
+            cachedUserStyle = UserDefaults.standard.string(forKey: "style") ?? "Default"
+        }
+        return cachedUserStyle!
     }
     
     func saveStyle(style: String) {
         if hlStyles[style] != nil {
+            cachedUserStyle = style
             UserDefaults.standard.set(style, forKey: "style")
         }
     }

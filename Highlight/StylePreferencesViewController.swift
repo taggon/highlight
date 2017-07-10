@@ -80,7 +80,6 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         let senderItem = sender as! NSMenuItem
         stylePopup.select(senderItem)
         saveStyle(style: senderItem.title)
-        UserDefaults.standard.synchronize()
     }
 
     func setupStyle() {
