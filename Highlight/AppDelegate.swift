@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
         }
 
         // Start watching user settings change
-        NotificationCenter.default.addObserver(self, selector: #selector(defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(defaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
 
         // Save the current font for comparison
         currentFont = userFont
@@ -56,7 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
         HotKeyCenter.shared.unregisterAll()
     }
 
-    func defaultsChanged(notification: Notification) {
+    func defaultsDidChange(notification: Notification) {
         let styleChanged = ( highlighter.getStyle() != userStyle )
 
         if styleChanged {

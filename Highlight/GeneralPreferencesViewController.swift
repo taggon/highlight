@@ -31,7 +31,7 @@ class GeneralPreferencesViewController: NSViewController, UserSettings {
         spacesAfterLineNumber.integerValue = spacesAfterLineNumberStepper.integerValue
         updateToggleLineNumbers()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(defaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
     }
 
     override func viewWillDisappear() {
@@ -40,7 +40,7 @@ class GeneralPreferencesViewController: NSViewController, UserSettings {
         super.viewWillDisappear()
     }
 
-    func defaultsChanged(notification: Notification) {
+    func defaultsDidChange(notification: Notification) {
         updateToggleLineNumbers()
     }
 
