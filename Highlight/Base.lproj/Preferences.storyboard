@@ -477,63 +477,61 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-I4-vz1">
-                                            <rect key="frame" x="123" y="164" width="205" height="35"/>
+                                            <rect key="frame" x="160" y="143" width="130" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="201" id="9aZ-pd-SfV"/>
                                                 <constraint firstAttribute="height" constant="35" id="QHE-I7-GsL"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Highlight" id="W8z-Re-N6q">
                                                 <font key="font" size="28" name="Helvetica-Bold"/>
-                                                <color key="textColor" red="0.29119548201560974" green="0.4927278459072113" blue="0.7754090428352356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.40322726544234394" green="0.70794932415115741" blue="0.98854053020477295" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-mn-3jH">
-                                            <rect key="frame" x="161" y="209" width="128" height="128"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="128" id="001-cQ-Psh"/>
-                                                <constraint firstAttribute="height" constant="128" id="Qls-lv-bsD"/>
-                                            </constraints>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Highlight" id="1Vb-ea-M7A"/>
-                                        </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szj-vi-jb6">
-                                            <rect key="frame" x="98" y="143" width="254" height="17"/>
+                                            <rect key="frame" x="204" y="118" width="43" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="GkG-QY-SzQ"/>
-                                                <constraint firstAttribute="width" constant="250" id="LwL-8t-Sco"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="v1.0.0" id="60N-Ul-LsY">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ9-96-4u1">
-                                            <rect key="frame" x="113" y="20" width="224" height="17"/>
+                                            <rect key="frame" x="113" y="30" width="224" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="Ybn-Nt-rpg"/>
                                                 <constraint firstAttribute="width" constant="220" id="hzW-24-syc"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="© 2017 Taegon Kim " id="Iez-uL-80p">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-mn-3jH">
+                                            <rect key="frame" x="129" y="193" width="193" height="198"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="193" id="001-cQ-Psh"/>
+                                                <constraint firstAttribute="height" constant="198" id="Qls-lv-bsD"/>
+                                            </constraints>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Highlight" id="1Vb-ea-M7A"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="hZ9-96-4u1" firstAttribute="centerX" secondItem="m2k-WE-ccQ" secondAttribute="centerX" id="1fx-sy-bWa"/>
-                                        <constraint firstItem="Bam-I4-vz1" firstAttribute="centerY" secondItem="m2k-WE-ccQ" secondAttribute="centerY" constant="35" id="6Bf-J5-QMD"/>
                                         <constraint firstItem="Bam-I4-vz1" firstAttribute="centerX" secondItem="m2k-WE-ccQ" secondAttribute="centerX" id="LNh-N6-6lD"/>
-                                        <constraint firstItem="szj-vi-jb6" firstAttribute="centerY" secondItem="m2k-WE-ccQ" secondAttribute="centerY" constant="65" id="PbN-PX-gQh"/>
-                                        <constraint firstAttribute="bottom" secondItem="hZ9-96-4u1" secondAttribute="bottom" constant="20" id="W3H-Ab-c0h"/>
+                                        <constraint firstItem="Bam-I4-vz1" firstAttribute="top" secondItem="hqP-mn-3jH" secondAttribute="bottom" constant="15" id="W1f-gj-qDR"/>
+                                        <constraint firstAttribute="bottom" secondItem="hZ9-96-4u1" secondAttribute="bottom" constant="30" id="W3H-Ab-c0h"/>
+                                        <constraint firstItem="szj-vi-jb6" firstAttribute="top" secondItem="Bam-I4-vz1" secondAttribute="bottom" constant="8" id="a12-DZ-WB9"/>
                                         <constraint firstItem="hqP-mn-3jH" firstAttribute="centerX" secondItem="m2k-WE-ccQ" secondAttribute="centerX" id="axn-qK-iA2"/>
                                         <constraint firstItem="szj-vi-jb6" firstAttribute="centerX" secondItem="m2k-WE-ccQ" secondAttribute="centerX" id="nlP-c4-exY"/>
-                                        <constraint firstItem="hqP-mn-3jH" firstAttribute="centerY" secondItem="m2k-WE-ccQ" secondAttribute="centerY" constant="-56" id="wQD-g1-fLE"/>
+                                        <constraint firstItem="hqP-mn-3jH" firstAttribute="centerY" secondItem="m2k-WE-ccQ" secondAttribute="centerY" constant="-75" id="wQD-g1-fLE"/>
                                     </constraints>
                                 </view>
                                 <color key="borderColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
-                                <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="fillColor" red="0.2393215149641037" green="0.23931626975536346" blue="0.23931984603404999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </box>
                         </subviews>
                         <constraints>
@@ -553,7 +551,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Highlight" width="1024" height="1024"/>
+        <image name="Highlight" width="366" height="377"/>
         <image name="NSColorPanel" width="32" height="32"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
