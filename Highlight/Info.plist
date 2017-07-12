@@ -35,15 +35,15 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://taggon.github.io/appcast.xml</string>
+	<string>https://taggon.github.io/appcast/highlight.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>pub.pem</string>
 	<key>URLs</key>
 	<dict>
 		<key>Homepage</key>
-		<string>https://github.com/taggon/highlight-for-mac</string>
+		<string>https://github.com/taggon/highlight</string>
 		<key>Issue Tracker</key>
-		<string>https://github.com/taggon/highlight-for-mac/issues</string>
+		<string>https://github.com/taggon/highlight/issues</string>
 	</dict>
 </dict>
 </plist>
