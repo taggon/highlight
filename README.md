@@ -1,16 +1,54 @@
-# Highlight for mac
+<div style="text-align:center">
+	<img src="https://user-images.githubusercontent.com/212034/28132290-577374c6-6777-11e7-9dd2-802606985c2b.png" width="256" height="256">
+</div>
 
-Easily convert copied plain code into syntax highlighted one.
+# Highlight
 
-## How to use
+Highlight is a rich-featured syntax highlighter for Keynote slides that allows you to get syntax-highlighted code in RTF with one click.
+Its main feature is based on [highlight.js](https://highlightjs.org/), which means 176 langauges and 79 styles are available.
+Check out the [demo](https://highlightjs.org/static/demo/) to see what you get with the application.
 
-1. Run the application.
-2. Copy any text code.  
+## Features
+
+From highlight.js
+
+* 176 languages and 79 styles
+* Automatic language detection
+* Multi-language code highliting
+
+Original featuers
+
+* Line numbers
+* Custom font
+* Global hotkey - you don't even need one click.
+* Automatic updates
+* Support English and Korean - any constributions are appreciated. :)
+
+## Installation
+
+* Download the latest version [here](https://github.com/taggon/highlight/releases).
+* Unarchive and run it.
+* You may be asked to move it into Applications folder. I strongly recommend to accept it.
+
+## Usage
+
+* When you execute the application, you will see a highlighter icon on the menu bar.
+* Copy any code you want to colorize.
   ![](https://cloud.githubusercontent.com/assets/212034/24546063/a94b57c0-1644-11e7-9eb7-47e5d1c6526c.png)
-
-3. Select this application in the menu bar and Click Highlight Code.  
+* Click on the icon and select Highlight code and a langauge or just choose the auto-detect one. Now the code is syntax highligted.
   ![](https://cloud.githubusercontent.com/assets/212034/24546095/c523e278-1644-11e7-80ab-3637c369ae4a.png)
-
-4. Paste it anywhere that accepts rich text.
-5. Tada!  
+* Paste the code wherever you want to use like Keynote.
   ![](https://cloud.githubusercontent.com/assets/212034/24546179/03231210-1645-11e7-8ec8-6ab11600dfd6.png)
+
+Want to customize the result? Open the preferences dialog.
+
+## Contribution
+
+Highlight supports multi-language UI, currently only for English and Korean.
+If you're interested in translating the application, start with copying
+[the korean translation](https://github.com/taggon/highlight/tree/master/Highlight/ko.lproj) into your language.
+
+You need to translate all files in the folder but [MoveApplication.strings](https://github.com/taggon/highlight/blob/master/Highlight/ko.lproj/MoveApplication.strings)
+that comes from [LetsMove](https://github.com/potionfactory/LetsMove) project.
+I will copy the file for your language from the project as soon as your translation is merged into the master branch.
+
