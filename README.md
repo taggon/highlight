@@ -32,16 +32,16 @@ Original featuers:
 
 ## Usage
 
-* When you execute the application, you will see a highlighter icon on the menu bar as shown in the screenshot.
-* Copy any code you want to colorize.
-  ![](https://cloud.githubusercontent.com/assets/212034/24546063/a94b57c0-1644-11e7-9eb7-47e5d1c6526c.png)
-* Click on the icon to open the popup menu. Select Highlight Code and then pick your programming language
-or just choose the auto-detect one. Now the code is syntax-highligted.   
-  ![](https://cloud.githubusercontent.com/assets/212034/24546095/c523e278-1644-11e7-80ab-3637c369ae4a.png)
-* Paste the code wherever you want (e.g. Keynote).
-  ![](https://cloud.githubusercontent.com/assets/212034/24546179/03231210-1645-11e7-8ec8-6ab11600dfd6.png)
+![](https://user-images.githubusercontent.com/212034/28166880-98238d06-6814-11e7-9418-83a286a8a67d.gif)
 
-Want to customize results? Open Preferences dialog.
+* When you execute the application, you will see a highlighter icon on the menubar as shown in the screenshot.  
+![](https://user-images.githubusercontent.com/212034/28166990-f05c99fe-6814-11e7-9ec8-c7569a20763d.png)
+* Copy any code you want to colorize.
+* Click on the icon to open the popup menu. Select Highlight Code and then pick your programming language
+or just choose the auto-detect one. Now the code is syntax-highligted.
+* Paste the code wherever you want (e.g. Keynote).
+
+Want to customize results? Open the Preferences dialog.
 
 ## Contribution
 
