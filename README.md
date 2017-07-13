@@ -2,6 +2,9 @@
 	<img src="https://user-images.githubusercontent.com/212034/28132290-577374c6-6777-11e7-9dd2-802606985c2b.png" width="256" height="256">
 </p>
 
+[[English](https://github.com/taggon/highlight/blob/master/README.md)]
+[[한국어](https://github.com/taggon/highlight/blob/master/docs/README.ko.md)]
+
 # Highlight
 
 Highlight is a rich-featured syntax highlighter for Keynote slides that allows you to get syntax-highlighted code in RTF with one click.
@@ -27,7 +30,7 @@ Original featuers:
 ## Installation
 
 * Download the latest version [here](https://github.com/taggon/highlight/releases).
-* Unarchive and run it.
+* Unarchive it and then run the application.
 * You may be asked to move it into Applications folder. I strongly recommend accepting it.
 
 ## Usage
@@ -53,4 +56,3 @@ If you're interested in translating the application, start by copying
 You need to translate all files in the folder except [MoveApplication.strings](https://github.com/taggon/highlight/blob/master/Highlight/ko.lproj/MoveApplication.strings)
 that comes from [LetsMove](https://github.com/potionfactory/LetsMove) project.
 I will copy the file for your language from the project as soon as your translation is merged into the master branch.
-
