@@ -1,6 +1,6 @@
-<div style="text-align:center">
+<p align="center">
 	<img src="https://user-images.githubusercontent.com/212034/28132290-577374c6-6777-11e7-9dd2-802606985c2b.png" width="256" height="256">
-</div>
+</p>
 
 # Highlight
 
