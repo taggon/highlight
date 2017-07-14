@@ -49,7 +49,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
         // Save the current font for comparison
         currentFont = userFont
 
-        prefWindowController.showWindow(self)
+        #if DEBUG
+            prefWindowController.showWindow(self)
+        #endif
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
