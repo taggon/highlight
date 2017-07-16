@@ -30,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45E309F21F1BB4300039C0A1 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Preferences.strings; sourceTree = "<group>"; };
+		45E309F31F1BB4300039C0A1 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		63DA08134009628B6644DACB /* Pods-Highlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.debug.xcconfig"; sourceTree = "<group>"; };
 		796E30C469239AC0F938F1D4 /* Pods_Highlight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Highlight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8607AD41AA27C6C4FBCE1B75 /* Pods-Highlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.release.xcconfig"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			children = (
 				F25AEB811E212F9B0083CB52 /* Base */,
 				F29E0C301E8E5AC8005A3DF3 /* ko */,
+				45E309F31F1BB4300039C0A1 /* tr */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			children = (
 				F21C8BF31F134B6E00BA2414 /* ko */,
 				F21C8BF41F134BBF00BA2414 /* Base */,
+				45E309F21F1BB4300039C0A1 /* tr */,
 			);
 			name = Preferences.storyboard;
 			sourceTree = "<group>";
