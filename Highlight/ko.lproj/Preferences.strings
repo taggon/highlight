@@ -53,6 +53,9 @@
 /* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
 "deK-X4-va6.title" = "구문 강조 기능은 선택한 언어에 한해서만 동작합니다. 선택한 언어가 적으면 성능이 더 좋아질 수 있습니다.";
 
+/* Class = "NSButtonCell"; title = "Language: %@"; ObjectID = "Msb-4H-9cY"; */
+"Msb-4H-9cY.title" = "언어: %@";
+
 /**
  * DO NOT TRANSLATE OR REMOVE THE FOLLOWING STRINGS
  */
@@ -62,7 +65,6 @@
 "vZs-RY-NGH.title" = "";
 "pRO-Ef-Nnf.title" = "";
 "wxL-pb-316.title" = "";
-"Msb-4H-9cY.title" = "Language: JS";
 "dvH-nO-iQl.headerCell.title" = "0";
 "2qP-Vf-gOS.headerCell.title" = "1";
 "mSq-ch-IhW.headerCell.title" = "2";

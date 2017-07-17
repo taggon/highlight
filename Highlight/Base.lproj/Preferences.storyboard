@@ -307,11 +307,11 @@
                                 </connections>
                             </button>
                             <button canDrawConcurrently="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UbX-7X-kP0">
-                                <rect key="frame" x="338" y="24" width="88" height="17"/>
+                                <rect key="frame" x="333" y="24" width="93" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="mH9-mw-9V0"/>
                                 </constraints>
-                                <buttonCell key="cell" type="inline" title="Language: JS" bezelStyle="inline" alignment="center" scrollable="YES" lineBreakMode="clipping" borderStyle="border" inset="2" id="Msb-4H-9cY">
+                                <buttonCell key="cell" type="inline" title="Language: %@" bezelStyle="inline" alignment="center" scrollable="YES" lineBreakMode="clipping" borderStyle="border" inset="2" id="Msb-4H-9cY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
                                 </buttonCell>
@@ -555,6 +555,6 @@
         <image name="NSColorPanel" width="32" height="32"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
-        <image name="Swift" width="32" height="32"/>
+        <image name="Swift" width="64" height="64"/>
     </resources>
 </document>

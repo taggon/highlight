@@ -58,6 +58,7 @@
 		F2A67B151E2257D2009D3AC1 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		F2C0630C1F12B5A7001D6019 /* pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pub.pem; sourceTree = "<group>"; };
 		F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefWindowController.swift; sourceTree = "<group>"; };
+		F2F5DBE41F1D6A0A004C364D /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MoveApplication.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +207,7 @@
 				en,
 				Base,
 				ko,
+				tr,
 			);
 			mainGroup = F25AEB661E212C6E0083CB52;
 			productRefGroup = F25AEB701E212C6E0083CB52 /* Products */;
@@ -319,6 +321,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F26B79D81F134326007A1F13 /* ko */,
+				F2F5DBE41F1D6A0A004C364D /* tr */,
 			);
 			name = MoveApplication.strings;
 			sourceTree = "<group>";
