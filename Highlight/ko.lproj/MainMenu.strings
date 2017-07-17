@@ -3,7 +3,7 @@
 "2kO-dj-y58.title" = "종료";
 
 /* Class = "NSMenuItem"; title = "Highlight"; ObjectID = "7e0-EK-iZC"; */
-"7e0-EK-iZC.title" = "Highlight";
+"7e0-EK-iZC.title" = "Highlight"; /* Do not translate */
 
 /* Class = "NSMenuItem"; title = "Highlight"; ObjectID = "eaO-KG-myD"; */
 "eaO-KG-myD.title" = "줄 번호 표시";
