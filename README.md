@@ -19,7 +19,7 @@ From highlight.js:
 * Automatic language detection
 * Multi-language code highlighting
 
-Original featuers:
+Original features:
 
 * Line numbers
 * Custom font
