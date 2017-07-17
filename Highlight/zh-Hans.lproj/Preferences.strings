@@ -1,0 +1,71 @@
+
+/* Class = "NSTextFieldCell"; title = "Languages"; ObjectID = "04A-gG-WMa"; */
+"04A-gG-WMa.title" = "语言";
+
+/* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
+"2PS-QP-pcK.title" = "语言";
+
+/* Class = "NSButtonCell"; title = "Bug Report"; ObjectID = "3S7-rh-Mnk"; */
+"3S7-rh-Mnk.title" = "报告 Bug";
+
+/* Class = "NSButtonCell"; title = "Homepage"; ObjectID = "AIx-mv-Gq6"; */
+"AIx-mv-Gq6.title" = "主页";
+
+/* Class = "NSTextFieldCell"; title = "Style"; ObjectID = "BLU-5E-HbM"; */
+"BLU-5E-HbM.title" = "主题";
+
+/* Class = "NSTextFieldCell"; title = "Hotkey"; ObjectID = "N8n-kU-hku"; */
+"N8n-kU-hku.title" = "热键";
+
+/* Class = "NSViewController"; title = "General"; ObjectID = "O2h-iU-ciu"; */
+"O2h-iU-ciu.title" = "通用";
+
+/* Class = "NSViewController"; title = "Style"; ObjectID = "ajm-LN-tcW"; */
+"ajm-LN-tcW.title" = "主题";
+
+/* Class = "NSViewController"; title = "Style"; ObjectID = "Wbl-MD-Wd8"; */
+"Wbl-MD-Wd8.title" = "主题";
+
+/* Class = "NSButtonCell"; title = "Select..."; ObjectID = "aZd-Ql-ME9"; */
+"aZd-Ql-ME9.title" = "选择...";
+
+/* Class = "NSTextFieldCell"; title = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one."; ObjectID = "j1b-Kg-9pB"; */
+"j1b-Kg-9pB.title" = "选择上方文本框并按下用于高亮剪贴板中代码的热键";
+
+/* Class = "NSTextFieldCell"; title = "Font"; ObjectID = "jAJ-Id-PgJ"; */
+"jAJ-Id-PgJ.title" = "字体";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "jgc-RP-WDF"; */
+"jgc-RP-WDF.title" = "偏好设置";
+
+/* Class = "NSViewController"; title = "About"; ObjectID = "oug-7P-IAg"; */
+"oug-7P-IAg.title" = "关于";
+
+/* Class = "NSTextFieldCell"; title = "Line Numbers"; ObjectID = "nDw-EK-mDh"; */
+"nDw-EK-mDh.title" = "行数";
+
+/* Class = "NSButtonCell"; title = "Show line numbers in highlighted code"; ObjectID = "85V-RR-o6T"; */
+"85V-RR-o6T.title" = "在高亮代码中显示行数";
+
+/* Class = "NSTextFieldCell"; title = "Number of spaces immediately after each line number:"; ObjectID = "X1H-5f-2xK"; */
+"X1H-5f-2xK.title" = "行数后紧接空格个数：";
+
+/* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
+"deK-X4-va6.title" = "语法高亮仅于选中的语言起作用。减少语言数量可以提高性能。";
+
+/**
+ * DO NOT TRANSLATE OR REMOVE THE FOLLOWING STRINGS
+ */
+"oJY-Ef-Jrd.title" = "";
+"wdO-dc-vAf.title" = "";
+"65X-Tt-ru4.title" = "";
+"vZs-RY-NGH.title" = "";
+"pRO-Ef-Nnf.title" = "";
+"wxL-pb-316.title" = "";
+"Msb-4H-9cY.title" = "Language: JS";
+"dvH-nO-iQl.headerCell.title" = "0";
+"2qP-Vf-gOS.headerCell.title" = "1";
+"mSq-ch-IhW.headerCell.title" = "2";
+"W8z-Re-N6q.title" = "Highlight";
+"60N-Ul-LsY.title" = "v1.0.0";
+"Iez-uL-80p.title" = "© 2017 Taegon Kim ";
