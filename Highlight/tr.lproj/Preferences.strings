@@ -1,0 +1,84 @@
+
+/* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
+"2PS-QP-pcK.title" = "Diller";
+
+/* Class = "NSTableColumn"; headerCell.title = "1"; ObjectID = "2qP-Vf-gOS"; */
+"2qP-Vf-gOS.headerCell.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "v1.0.0"; ObjectID = "60N-Ul-LsY"; */
+"60N-Ul-LsY.title" = "v1.0.0";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "65X-Tt-ru4"; */
+"65X-Tt-ru4.title" = "Kontrol Et";
+
+/* Class = "NSButtonCell"; title = "Show line numbers in highlighted code"; ObjectID = "85V-RR-o6T"; */
+"85V-RR-o6T.title" = "Renklendirilmiş kodda satır numarasını göster";
+
+/* Class = "NSTextFieldCell"; title = "Style"; ObjectID = "BLU-5E-HbM"; */
+"BLU-5E-HbM.title" = "Stil";
+
+/* Class = "NSTextFieldCell"; title = "© 2017 Taegon Kim "; ObjectID = "Iez-uL-80p"; */
+"Iez-uL-80p.title" = "© 2017 Taegon Kim ";
+
+/* Class = "NSButtonCell"; title = "Language: JS"; ObjectID = "Msb-4H-9cY"; */
+"Msb-4H-9cY.title" = "Dil: JS";
+
+/* Class = "NSTextFieldCell"; title = "Hotkey"; ObjectID = "N8n-kU-hku"; */
+"N8n-kU-hku.title" = "Kısayol";
+
+/* Class = "NSViewController"; title = "General"; ObjectID = "O2h-iU-ciu"; */
+"O2h-iU-ciu.title" = "Genel";
+
+/* Class = "NSTextFieldCell"; title = "Highlight"; ObjectID = "W8z-Re-N6q"; */
+"W8z-Re-N6q.title" = "Renklendir";
+
+/* Class = "NSViewController"; title = "Style"; ObjectID = "Wbl-MD-Wd8"; */
+"Wbl-MD-Wd8.title" = "Stil";
+
+/* Class = "NSTextFieldCell"; title = "Number of spaces immediately after each line number:"; ObjectID = "X1H-5f-2xK"; */
+"X1H-5f-2xK.title" = "Her bir satır numarasından sonra verilecek boşluk sayısı:";
+
+/* Class = "NSButtonCell"; title = "Select..."; ObjectID = "aZd-Ql-ME9"; */
+"aZd-Ql-ME9.title" = "Seç...";
+
+/* Class = "NSViewController"; title = "Languages"; ObjectID = "ajm-LN-tcW"; */
+"ajm-LN-tcW.title" = "Diller";
+
+/* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
+"deK-X4-va6.title" = "Sözdizimi renklendirme sadece seçili dillerde çalışacaktır. Az dil seçimi performansı artırabilir.";
+
+/* Class = "NSTableColumn"; headerCell.title = "0"; ObjectID = "dvH-nO-iQl"; */
+"dvH-nO-iQl.headerCell.title" = "0";
+
+/* Class = "NSTextFieldCell"; title = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one."; ObjectID = "j1b-Kg-9pB"; */
+"j1b-Kg-9pB.title" = "Yalın kodunuzu renklendirilmiş koda çevirmek için istediğiniz kısa yolu yukarıdaki alanı seçip istediğiniz kısa yolu girerek belirleyin.";
+
+/* Class = "NSTextFieldCell"; title = "Font"; ObjectID = "jAJ-Id-PgJ"; */
+"jAJ-Id-PgJ.title" = "Font";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "jgc-RP-WDF"; */
+"jgc-RP-WDF.title" = "Tercihler";
+
+/* Class = "NSTableColumn"; headerCell.title = "2"; ObjectID = "mSq-ch-IhW"; */
+"mSq-ch-IhW.headerCell.title" = "2";
+
+/* Class = "NSTextFieldCell"; title = "Line Numbers"; ObjectID = "nDw-EK-mDh"; */
+"nDw-EK-mDh.title" = "Satır Numaraları";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "oJY-Ef-Jrd"; */
+"oJY-Ef-Jrd.title" = "Kontrol Et";
+
+/* Class = "NSViewController"; title = "About"; ObjectID = "oug-7P-IAg"; */
+"oug-7P-IAg.title" = "Hakkında";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "pRO-Ef-Nnf"; */
+"pRO-Ef-Nnf.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "vZs-RY-NGH"; */
+"vZs-RY-NGH.title" = "Item 1";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "wdO-dc-vAf"; */
+"wdO-dc-vAf.title" = "Kontrol Et";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "wxL-pb-316"; */
+"wxL-pb-316.title" = "Item 3";
