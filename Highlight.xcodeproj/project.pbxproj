@@ -35,7 +35,6 @@
 		8607AD41AA27C6C4FBCE1B75 /* Pods-Highlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.release.xcconfig"; sourceTree = "<group>"; };
 		E97AFD8E1F1CE3CC00BE8A07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Preferences.strings"; sourceTree = "<group>"; };
 		E97AFD8F1F1CE3CC00BE8A07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
-		E97AFD901F1CE3CC00BE8A07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MoveApplication.strings"; sourceTree = "<group>"; };
 		F21C8BF31F134B6E00BA2414 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Preferences.strings; sourceTree = "<group>"; };
 		F21C8BF41F134BBF00BA2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
 		F24592111F126EB400727164 /* RGBtoHSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBtoHSV.swift; sourceTree = "<group>"; };
@@ -335,7 +334,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				F26B79D81F134326007A1F13 /* ko */,
-				E97AFD901F1CE3CC00BE8A07 /* zh-Hans */,
 			);
 			name = MoveApplication.strings;
 			sourceTree = "<group>";
