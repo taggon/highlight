@@ -30,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45E309F21F1BB4300039C0A1 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Preferences.strings; sourceTree = "<group>"; };
+		45E309F31F1BB4300039C0A1 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		63DA08134009628B6644DACB /* Pods-Highlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.debug.xcconfig"; sourceTree = "<group>"; };
 		796E30C469239AC0F938F1D4 /* Pods_Highlight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Highlight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8607AD41AA27C6C4FBCE1B75 /* Pods-Highlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Highlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Highlight/Pods-Highlight.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		F2A67B151E2257D2009D3AC1 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		F2C0630C1F12B5A7001D6019 /* pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pub.pem; sourceTree = "<group>"; };
 		F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefWindowController.swift; sourceTree = "<group>"; };
+		F2F5DBE41F1D6A0A004C364D /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MoveApplication.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +210,7 @@
 				Base,
 				ko,
 				"zh-Hans",
+				tr,
 			);
 			mainGroup = F25AEB661E212C6E0083CB52;
 			productRefGroup = F25AEB701E212C6E0083CB52 /* Products */;
@@ -242,20 +246,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Highlight/Pods-Highlight-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KeyHolder/KeyHolder.framework",
-				"${BUILT_PRODUCTS_DIR}/LetsMove/LetsMove.framework",
-				"${BUILT_PRODUCTS_DIR}/Magnet/Magnet.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyHolder.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LetsMove.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Magnet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -268,16 +261,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Highlight-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DD6BDBA87B3A6B4E66A076BA /* [CP] Copy Pods Resources */ = {
@@ -326,6 +316,7 @@
 				F25AEB811E212F9B0083CB52 /* Base */,
 				F29E0C301E8E5AC8005A3DF3 /* ko */,
 				E97AFD8F1F1CE3CC00BE8A07 /* zh-Hans */,
+				45E309F31F1BB4300039C0A1 /* tr */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -334,6 +325,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F26B79D81F134326007A1F13 /* ko */,
+				F2F5DBE41F1D6A0A004C364D /* tr */,
 			);
 			name = MoveApplication.strings;
 			sourceTree = "<group>";
@@ -344,6 +336,7 @@
 				F21C8BF31F134B6E00BA2414 /* ko */,
 				F21C8BF41F134BBF00BA2414 /* Base */,
 				E97AFD8E1F1CE3CC00BE8A07 /* zh-Hans */,
+				45E309F21F1BB4300039C0A1 /* tr */,
 			);
 			name = Preferences.storyboard;
 			sourceTree = "<group>";

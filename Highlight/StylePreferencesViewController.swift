@@ -23,12 +23,15 @@ class StylePreferencesViewController: NSViewController, UserSettings {
 
     var snippet: String!
     var lang = "js"
+    var langLabelFormat: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         buildLangMenu()
         disableWordWrap()
         loadSnippet(type: lang)
+        langLabelFormat = langButton.title
+        langButton.title = String(format: langLabelFormat, "JS")
     }
 
     override func viewDidAppear() {
@@ -159,7 +162,7 @@ extension StylePreferencesViewController {
         guard let item = sender as? NSMenuItem else { return }
 
         loadSnippet(type: languages[item.title]!)
-        langButton.title = "Language: \(item.title)"
+        langButton.title = String(format: langLabelFormat, item.title)
         lang = languages[item.title]!
         
         refreshCode()

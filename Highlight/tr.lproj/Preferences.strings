@@ -1,60 +1,54 @@
 
 /* Class = "NSTextFieldCell"; title = "Languages"; ObjectID = "04A-gG-WMa"; */
-"04A-gG-WMa.title" = "언어";
+"04A-gG-WMa.title" = "Diller";
 
 /* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
-"2PS-QP-pcK.title" = "언어";
-
-/* Class = "NSButtonCell"; title = "Bug Report"; ObjectID = "3S7-rh-Mnk"; */
-"3S7-rh-Mnk.title" = "버그 신고";
-
-/* Class = "NSButtonCell"; title = "Homepage"; ObjectID = "AIx-mv-Gq6"; */
-"AIx-mv-Gq6.title" = "홈페이지";
+"2PS-QP-pcK.title" = "Diller";
 
 /* Class = "NSTextFieldCell"; title = "Style"; ObjectID = "BLU-5E-HbM"; */
-"BLU-5E-HbM.title" = "스타일";
+"BLU-5E-HbM.title" = "Stil";
 
 /* Class = "NSTextFieldCell"; title = "Hotkey"; ObjectID = "N8n-kU-hku"; */
-"N8n-kU-hku.title" = "단축키";
+"N8n-kU-hku.title" = "Kısayol";
 
 /* Class = "NSViewController"; title = "General"; ObjectID = "O2h-iU-ciu"; */
-"O2h-iU-ciu.title" = "일반";
+"O2h-iU-ciu.title" = "Genel";
 
 /* Class = "NSViewController"; title = "Style"; ObjectID = "ajm-LN-tcW"; */
-"ajm-LN-tcW.title" = "언어";
+"ajm-LN-tcW.title" = "Diller";
 
 /* Class = "NSViewController"; title = "Style"; ObjectID = "Wbl-MD-Wd8"; */
-"Wbl-MD-Wd8.title" = "스타일";
+"Wbl-MD-Wd8.title" = "Stil";
 
 /* Class = "NSButtonCell"; title = "Select..."; ObjectID = "aZd-Ql-ME9"; */
-"aZd-Ql-ME9.title" = "선택...";
+"aZd-Ql-ME9.title" = "Seç...";
 
 /* Class = "NSTextFieldCell"; title = "Select the above field and type the hotkey you want to use to convert your copied plain code into the highlighted one."; ObjectID = "j1b-Kg-9pB"; */
-"j1b-Kg-9pB.title" = "위 필드를 선택한 후 미리 복사한 코드를 구문 강조하여 복사할 때 사용할 단축키를 설정하세요.";
+"j1b-Kg-9pB.title" = "Yalın kodunuzu renklendirilmiş koda çevirmek için istediğiniz kısa yolu yukarıdaki alanı seçip istediğiniz kısa yolu girerek belirleyin.";
 
 /* Class = "NSTextFieldCell"; title = "Font"; ObjectID = "jAJ-Id-PgJ"; */
-"jAJ-Id-PgJ.title" = "글꼴";
+"jAJ-Id-PgJ.title" = "Font";
 
 /* Class = "NSWindow"; title = "Preferences"; ObjectID = "jgc-RP-WDF"; */
-"jgc-RP-WDF.title" = "환경설정";
+"jgc-RP-WDF.title" = "Tercihler";
 
 /* Class = "NSViewController"; title = "About"; ObjectID = "oug-7P-IAg"; */
-"oug-7P-IAg.title" = "이 프로그램은";
+"oug-7P-IAg.title" = "Hakkında";
 
 /* Class = "NSTextFieldCell"; title = "Line Numbers"; ObjectID = "nDw-EK-mDh"; */
-"nDw-EK-mDh.title" = "줄 번호";
+"nDw-EK-mDh.title" = "Satır Numaraları";
 
 /* Class = "NSButtonCell"; title = "Show line numbers in highlighted code"; ObjectID = "85V-RR-o6T"; */
-"85V-RR-o6T.title" = "구문 강조된 코드에서 줄 번호를 표시합니다.";
+"85V-RR-o6T.title" = "Renklendirilmiş kodda satır numarasını göster";
 
 /* Class = "NSTextFieldCell"; title = "Number of spaces immediately after each line number:"; ObjectID = "X1H-5f-2xK"; */
-"X1H-5f-2xK.title" = "줄 번호와 코드 사이에 표시할 여백 스페이스의 갯수:";
+"X1H-5f-2xK.title" = "Her bir satır numarasından sonra verilecek boşluk sayısı:";
 
 /* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
-"deK-X4-va6.title" = "구문 강조 기능은 선택한 언어에 한해서만 동작합니다. 선택한 언어가 적으면 성능이 더 좋아질 수 있습니다.";
+"deK-X4-va6.title" = "Sözdizimi renklendirme sadece seçili dillerde çalışacaktır. Az dil seçimi performansı artırabilir.";
 
 /* Class = "NSButtonCell"; title = "Language: %@"; ObjectID = "Msb-4H-9cY"; */
-"Msb-4H-9cY.title" = "언어: %@";
+"Msb-4H-9cY.title" = "Dil: %@";
 
 /**
  * DO NOT TRANSLATE OR REMOVE THE FOLLOWING STRINGS

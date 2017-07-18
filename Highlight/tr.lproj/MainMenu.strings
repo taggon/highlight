@@ -1,33 +1,33 @@
 
 /* Class = "NSMenuItem"; title = "Quit"; ObjectID = "2kO-dj-y58"; */
-"2kO-dj-y58.title" = "종료";
+"2kO-dj-y58.title" = "Çık";
 
 /* Class = "NSMenuItem"; title = "Highlight"; ObjectID = "7e0-EK-iZC"; */
 "7e0-EK-iZC.title" = "Highlight"; /* Do not translate */
 
-/* Class = "NSMenuItem"; title = "Highlight"; ObjectID = "eaO-KG-myD"; */
-"eaO-KG-myD.title" = "줄 번호 표시";
-
-/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "Cak-uC-bOn"; */
-"Cak-uC-bOn.title" = "환경설정...";
+/* Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "Cak-uC-bOn"; */
+"Cak-uC-bOn.title" = "Tercihler...";
 
 /* Class = "NSMenu"; title = "Styles"; ObjectID = "JgB-tL-Aap"; */
-"JgB-tL-Aap.title" = "스타일";
+"JgB-tL-Aap.title" = "Stiller";
 
 /* Class = "NSMenuItem"; title = "Report Issues..."; ObjectID = "cJW-q1-t5Y"; */
-"cJW-q1-t5Y.title" = "버그 신고...";
+"cJW-q1-t5Y.title" = "Problem Bildir...";
 
-/* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "ipy-gK-Auz"; */
-"ipy-gK-Auz.title" = "업데이트 확인...";
-
-/* Class = "NSMenuItem"; title = "Visit Homepage..."; ObjectID = "q61-bd-wOJ"; */
-"q61-bd-wOJ.title" = "홈페이지...";
-
-/* Class = "NSMenuItem"; title = "Highlight Code (Auto-detect)"; ObjectID = "r5b-UX-VfX"; */
-"r5b-UX-VfX.title" = "구문강조 후 복사 (언어 자동 감지)";
+/* Class = "NSMenuItem"; title = "Show Line Numbers"; ObjectID = "eaO-KG-myD"; */
+"eaO-KG-myD.title" = "Satır Numaralarını Göster";
 
 /* Class = "NSMenuItem"; title = "Highlight Code"; ObjectID = "fpy-ku-YlT"; */
-"fpy-ku-YlT.title" = "구문강조 후 복사";
+"fpy-ku-YlT.title" = "Kodu Renklendir";
+
+/* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "ipy-gK-Auz"; */
+"ipy-gK-Auz.title" = "Güncellemeleri Denetle...";
+
+/* Class = "NSMenuItem"; title = "Visit Homepage..."; ObjectID = "q61-bd-wOJ"; */
+"q61-bd-wOJ.title" = "Anasayfayı ziyaret et...";
+
+/* Class = "NSMenuItem"; title = "Highlight Code (Auto-detect)"; ObjectID = "r5b-UX-VfX"; */
+"r5b-UX-VfX.title" = "Kodu Renklendir (Otomatik)";
 
 /* Class = "NSMenuItem"; title = "Styles"; ObjectID = "wlZ-TW-NyO"; */
-"wlZ-TW-NyO.title" = "스타일";
+"wlZ-TW-NyO.title" = "Stiller";
