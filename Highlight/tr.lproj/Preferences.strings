@@ -5,12 +5,6 @@
 /* Class = "NSMenu"; title = "Languages"; ObjectID = "2PS-QP-pcK"; */
 "2PS-QP-pcK.title" = "Diller";
 
-/* Class = "NSButtonCell"; title = "Bug Report"; ObjectID = "3S7-rh-Mnk"; */
-"3S7-rh-Mnk.title" = "버그 신고";
-
-/* Class = "NSButtonCell"; title = "Homepage"; ObjectID = "AIx-mv-Gq6"; */
-"AIx-mv-Gq6.title" = "홈페이지";
-
 /* Class = "NSTextFieldCell"; title = "Style"; ObjectID = "BLU-5E-HbM"; */
 "BLU-5E-HbM.title" = "Stil";
 
