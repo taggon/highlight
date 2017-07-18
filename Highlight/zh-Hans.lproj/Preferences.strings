@@ -53,6 +53,9 @@
 /* Class = "NSTextFieldCell"; title = "Syntax highlighting will work with the selected languages only. Fewer languages can improve performance."; ObjectID = "deK-X4-va6"; */
 "deK-X4-va6.title" = "语法高亮仅于选中的语言起作用。减少语言数量可以提高性能。";
 
+/* Class = "NSButtonCell"; title = "Language: %@"; ObjectID = "Msb-4H-9cY"; */
+"Msb-4H-9cY.title" = "语言: %@";
+
 /**
  * DO NOT TRANSLATE OR REMOVE THE FOLLOWING STRINGS
  */
