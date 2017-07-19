@@ -6,7 +6,7 @@
 "2PS-QP-pcK.title" = "语言";
 
 /* Class = "NSButtonCell"; title = "Bug Report"; ObjectID = "3S7-rh-Mnk"; */
-"3S7-rh-Mnk.title" = "报告 Bug";
+"3S7-rh-Mnk.title" = "错误报告";
 
 /* Class = "NSButtonCell"; title = "Homepage"; ObjectID = "AIx-mv-Gq6"; */
 "AIx-mv-Gq6.title" = "主页";
