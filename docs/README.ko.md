@@ -30,6 +30,7 @@ highlight.js의 기능:
   * 한국어
   * 터키어 - [@tosbaha](https://github.com/tosbaha)님
   * 중국어(간체) - [@xnth97](https://github.com/xnth97)님
+
 다른 언어 번역도 환영합니다. :)
 
 ## 설치

@@ -30,6 +30,7 @@ Original features:
   * Korean
   * Turkish - Thanks to [@tosbaha](https://github.com/tosbaha)
   * Chinese Simplified - Thanks to [@xnth97](https://github.com/xnth97)
+
 Want to add support for your language? Send me translations! :)
 
 ## Installation
@@ -49,7 +50,7 @@ Want to add support for your language? Send me translations! :)
 or just choose the auto-detect one. Now the code is syntax-highligted.
 * Paste the code wherever you want (e.g. Keynote).
 
-Want to customize results? Open the Preferences dialog.
+Do you like to customize the results? Just open the Preferences dialog. You will see how.
 
 ## Contribution
 
