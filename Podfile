@@ -1,5 +1,5 @@
 project 'Highlight.xcodeproj'
-platform :osx, '10.11'
+platform :osx, '10.12'
 use_frameworks!
 
 target 'Highlight' do

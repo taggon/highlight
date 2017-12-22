@@ -15,7 +15,7 @@ class AboutPreferencesViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
         versionField.stringValue = "Version \(appDelegate.version) (Build \(appDelegate.buildNumber))"
     }
 

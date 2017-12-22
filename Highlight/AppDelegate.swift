@@ -18,12 +18,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     @IBOutlet weak var highlightCodeItem: NSMenuItem!
     @IBOutlet weak var langMenu: NSMenu!
 
-    var statusItem: NSStatusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+    var statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     var highlighter: Highlighter = Highlighter()
     var currentFont: NSFont?
     
     lazy var prefWindowController: NSWindowController! = {
-        let storyboard = NSStoryboard(name: "Preferences", bundle: Bundle.main)
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Preferences"), bundle: Bundle.main)
         let controller = storyboard.instantiateInitialController() as! PrefWindowController
         
         return controller
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
         HotKeyCenter.shared.unregisterAll()
     }
 
-    func defaultsDidChange(notification: Notification) {
+    @objc func defaultsDidChange(notification: Notification) {
         let styleChanged = ( highlighter.getStyle() != userStyle )
 
         if styleChanged {
@@ -71,15 +71,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     func highlightCode(lang: String = "") {
         DispatchQueue.global().async {
             // get text from the pasteboard
-            let pboard = NSPasteboard.general()
+            let pboard = NSPasteboard.general
             
-            guard let code = pboard.string(forType: NSPasteboardTypeString) else { return }
+            guard let code = pboard.string(forType: NSPasteboard.PasteboardType.string) else { return }
 
             let attrStr = self.highlighter.paint(code: code, lang: lang)
-            let data = try? attrStr.data(from: NSMakeRange(0, attrStr.length), documentAttributes: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType])
+            let data = try? attrStr.data(from: NSMakeRange(0, attrStr.length), documentAttributes: [NSAttributedString.DocumentAttributeKey.documentType: NSAttributedString.DocumentType.rtf])
             if data != nil {
-                pboard.declareTypes([NSRTFPboardType], owner: self)
-                pboard.setData(data!, forType: NSRTFPboardType)
+                pboard.declareTypes([NSPasteboard.PasteboardType.rtf], owner: self)
+                pboard.setData(data!, forType: NSPasteboard.PasteboardType.rtf)
             }
         }
     }
@@ -91,7 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     func updateKeyEquivalentOfHighlightMenu() {
         guard let hotkey = self.hotkey else {
             highlightCodeItem.keyEquivalent = ""
-            highlightCodeItem.keyEquivalentModifierMask = NSEventModifierFlags(rawValue: 0)
+            highlightCodeItem.keyEquivalentModifierMask = NSEvent.ModifierFlags(rawValue: 0)
             return
         }
         highlightCodeItem.keyEquivalent = hotkey.characters
@@ -108,7 +108,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     }
     
     @IBAction func quitApplication(sender: AnyObject?) {
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
 }
 
@@ -142,11 +142,11 @@ extension AppDelegate {
 
     func updateStyleMenu() {
         for item in styleMenu.items {
-            item.state = ( item.title == userStyle ) ? NSOnState : NSOffState
+            item.state = ( item.title == userStyle ) ? NSControl.StateValue.on : NSControl.StateValue.off
         }
     }
 
-    func setStyleFromMenu(sender: AnyObject?) {
+    @objc func setStyleFromMenu(sender: AnyObject?) {
         guard let styleMenuItem = sender as? NSMenuItem else {
             return
         }
@@ -155,7 +155,7 @@ extension AppDelegate {
 
     func loadStatusImage(name: String) {
         if let button = statusItem.button {
-            button.image = NSImage(named: name)
+            button.image = NSImage(named: NSImage.Name(rawValue: name))
             button.image!.size = NSMakeSize(18.0, 18.0)
         }
     }
@@ -171,7 +171,7 @@ extension AppDelegate {
         }
     }
 
-    func didSelectLanguage(sender: AnyObject?) {
+    @objc func didSelectLanguage(sender: AnyObject?) {
         guard let langItem = sender as? NSMenuItem else {
             return
         }
@@ -188,7 +188,7 @@ extension AppDelegate {
             return
         }
         if let urlString = urls[urlKey] {
-            NSWorkspace.shared().open(URL(string: urlString)!)
+            NSWorkspace.shared.open(URL(string: urlString)!)
         }
     }
     

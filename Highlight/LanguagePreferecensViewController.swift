@@ -15,7 +15,7 @@ class LanguagePreferecensViewController: NSViewController, NSTableViewDataSource
     var langNames:[String] = []
 
     private var appDelegate: AppDelegate {
-        return NSApplication.shared().delegate as! AppDelegate
+        return NSApplication.shared.delegate as! AppDelegate
     }
     
     override func viewDidLoad() {
@@ -45,16 +45,16 @@ class LanguagePreferecensViewController: NSViewController, NSTableViewDataSource
         let selectedLangs = userLangs
         
         if selectedLangs.contains(hlLanguages[name]!) {
-            button.state = NSOnState
+            button.state = NSControl.StateValue.on
         }
         
         return button
     }
     
-    func selectLang(sender: AnyObject?) {
+    @objc func selectLang(sender: AnyObject?) {
         guard let button = sender as? NSButton else { return }
         let lang = hlLanguages[button.title]!
-        if button.state == NSOnState {
+        if button.state == NSControl.StateValue.on {
             addLang(lang: lang)
         } else {
             removeLang(lang: lang)

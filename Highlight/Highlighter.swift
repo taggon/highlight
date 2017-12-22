@@ -86,7 +86,7 @@ class Highlighter: UserSettings {
         attrStr = NSMutableAttributedString(html: html.data(using: .utf8)!, options: [:], documentAttributes: nil)!
 
         // set the default font size
-        attrStr.addAttribute(NSFontAttributeName, value: userFont ?? defaultFont, range: NSMakeRange(0, attrStr.length))
+        attrStr.addAttribute(NSAttributedStringKey.font, value: userFont ?? defaultFont, range: NSMakeRange(0, attrStr.length))
         
         return attrStr
     }
@@ -96,9 +96,9 @@ class Highlighter: UserSettings {
         let regex = try! NSRegularExpression(pattern: "<(span|pre)\\s+class=\"([^\"]+)\">", options: [])
         var anchorPos = 0
 
-        while let match = regex.firstMatch(in: str, options: [], range: NSMakeRange(anchorPos, str.characters.count - anchorPos)) {
+        while let match = regex.firstMatch(in: str, options: [], range: NSMakeRange(anchorPos, str.count - anchorPos)) {
             let strNS = str as NSString
-            let classNames = strNS.substring(with: match.rangeAt(2)).components(separatedBy: .whitespacesAndNewlines)
+            let classNames = strNS.substring(with: match.range(at: 2)).components(separatedBy: .whitespacesAndNewlines)
 
             var style = ""
             for className in classNames {
@@ -119,14 +119,13 @@ class Highlighter: UserSettings {
             if style == "" {
                 anchorPos = match.range.location + match.range.length
             } else {
-                let replacement = "<\(strNS.substring(with: match.rangeAt(1))) style=\"\(style)\">"
-                str = str.substring(to: str.index(str.startIndex, offsetBy: match.range.location)) +
+                let replacement = "<\(strNS.substring(with: match.range(at: 1))) style=\"\(style)\">"
+                str = str[..<str.index(str.startIndex, offsetBy: match.range.location)] +
                     replacement +
-                    str.substring(from: str.index(str.startIndex, offsetBy: match.range.location + match.range.length))
-                anchorPos = match.range.location + replacement.characters.count
+                    str[str.index(str.startIndex, offsetBy: match.range.location + match.range.length)...]
+                anchorPos = match.range.location + replacement.count
             }
         }
-        
         return str
     }
     
@@ -137,11 +136,11 @@ class Highlighter: UserSettings {
 
     func addLineNumbers(code: String) -> String {
         var lines = code.components(separatedBy: .newlines)
-        let maxDigit = "\(lines.count)".characters.count
+        let maxDigit = "\(lines.count)".count
         let padding = "".padding(toLength: lineNumberPadding, withPad: " ", startingAt: 0)
 
         for (index, line) in lines.enumerated() {
-            let lineNum = "".padding(toLength: maxDigit - "\(index + 1)".characters.count, withPad: " ", startingAt: 0) + "\(index + 1)"
+            let lineNum = "".padding(toLength: maxDigit - "\(index + 1)".count, withPad: " ", startingAt: 0) + "\(index + 1)"
             lines[index] = "<span class=\"hljs-line-number\">\(lineNum)</span>\(padding)\(line)"
         }
 

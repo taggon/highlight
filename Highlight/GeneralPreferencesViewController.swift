@@ -40,16 +40,16 @@ class GeneralPreferencesViewController: NSViewController, UserSettings {
         super.viewWillDisappear()
     }
 
-    func defaultsDidChange(notification: Notification) {
+    @objc func defaultsDidChange(notification: Notification) {
         updateToggleLineNumbers()
     }
 
     func updateToggleLineNumbers() {
-        toggleLineNumbers.state = showLineNumbers ? NSOnState : NSOffState
+        toggleLineNumbers.state = showLineNumbers ? NSControl.StateValue.on : NSControl.StateValue.off
     }
 
     @IBAction func toggleLineNumbersDidChange(sender: AnyObject) {
-        saveShowLineNumbers(display: toggleLineNumbers.state == NSOnState)
+        saveShowLineNumbers(display: toggleLineNumbers.state == NSControl.StateValue.on)
     }
 
     @IBAction func spacesAfterLineNumberDidChange(sender: AnyObject) {

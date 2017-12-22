@@ -20,7 +20,7 @@ extension UserSettings {
     // # Font
     
     var defaultFont: NSFont {
-        return NSFontManager.shared().font(withFamily: "Courier", traits: NSFontTraitMask(rawValue: 0), weight: Int(NSFontWeightRegular), size: CGFloat(14.0))!
+        return NSFontManager.shared.font(withFamily: "Courier", traits: NSFontTraitMask(rawValue: 0), weight: Int((NSFont.Weight.regular).rawValue), size: CGFloat(14.0))!
     }
 
     var userFont: NSFont? {
@@ -28,7 +28,7 @@ extension UserSettings {
             return cachedUserFont
         }
 
-        let fontManager = NSFontManager.shared()
+        let fontManager = NSFontManager.shared
         let defaults = UserDefaults.standard
         let family = defaults.string(forKey: "font-family") ?? fontManager.localizedName(forFamily: "Courier", face: nil)
 
@@ -52,7 +52,7 @@ extension UserSettings {
         cachedUserFont = font
 
         let defaults = UserDefaults.standard
-        let fontManager = NSFontManager.shared()
+        let fontManager = NSFontManager.shared
         
         defaults.set(font.familyName ?? font.fontName, forKey: "font-family")
         defaults.set(Float(font.pointSize), forKey: "font-size")
@@ -116,7 +116,7 @@ extension UserSettings {
     }
     
     func saveHotkey(keycomb: KeyCombo) {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
         let hotkey = HotKey(identifier: "highlight:hotkey", keyCombo: keycomb, target: appDelegate, action: #selector(AppDelegate.highlightCodeAuto))
         let info = ["keycode": keycomb.keyCode, "modifiers": keycomb.modifiers]
         
@@ -135,7 +135,7 @@ extension UserSettings {
     }
     
     func removeHotkey() {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
         UserDefaults.standard.removeObject(forKey: "highlight:hotkey")
         HotKeyCenter.shared.unregisterHotKey(with: "highlight:hotkey")
         appDelegate.updateKeyEquivalentOfHighlightMenu()

@@ -18,7 +18,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
     @IBOutlet weak var langMenu: NSMenu!
 
     private var appDelegate: AppDelegate {
-        return NSApplication.shared().delegate as! AppDelegate
+        return NSApplication.shared.delegate as! AppDelegate
     }
 
     var snippet: String!
@@ -60,7 +60,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         container.widthTracksTextView = false
     }
 
-    func defaultsDidChange(notification: Notification) {
+    @objc func defaultsDidChange(notification: Notification) {
         setupStyle()
         refreshCode()
     }
@@ -79,7 +79,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         }
     }
 
-    func setStyle(sender: AnyObject?) {
+    @objc func setStyle(sender: AnyObject?) {
         let senderItem = sender as! NSMenuItem
         stylePopup.select(senderItem)
         saveStyle(style: senderItem.title)
@@ -92,7 +92,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         }
     }
 
-    func selectFont(sender: AnyObject?) {
+    @objc func selectFont(sender: AnyObject?) {
         let fontManager = sender as? NSFontManager
         if let font = fontManager?.convert(.systemFont(ofSize: 10)) {
             saveFont(font: font)
@@ -125,9 +125,9 @@ class StylePreferencesViewController: NSViewController, UserSettings {
     @IBAction func openFontPanel(sender: AnyObject?) {
         let font = userFont ?? defaultFont
         let buttonRect = fontSelectButton.window!.convertToScreen(fontSelectButton.frame)
-        let panel = NSFontPanel.shared()
+        let panel = NSFontPanel.shared
         let panelOrigin = CGPoint(x: buttonRect.origin.x, y: buttonRect.origin.y - panel.frame.height)
-        let fontManager = NSFontManager.shared()
+        let fontManager = NSFontManager.shared
 
         panel.setFrameOrigin(panelOrigin)
 
@@ -158,7 +158,7 @@ extension StylePreferencesViewController {
         }
     }
     
-    func languageDidChange(sender: AnyObject?) {
+    @objc func languageDidChange(sender: AnyObject?) {
         guard let item = sender as? NSMenuItem else { return }
 
         loadSnippet(type: languages[item.title]!)
@@ -174,6 +174,6 @@ extension StylePreferencesViewController {
     }
     
     @IBAction func showLangMenu(sender: AnyObject?) {
-        NSMenu.popUpContextMenu(langMenu, with: NSApplication.shared().currentEvent!, for: langButton)
+        NSMenu.popUpContextMenu(langMenu, with: NSApplication.shared.currentEvent!, for: langButton)
     }
 }

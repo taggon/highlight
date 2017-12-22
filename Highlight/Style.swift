@@ -87,13 +87,13 @@ class Style {
     func setCode(code: String) {
         let css = preprocess(input: code)
         let cssNS = css as NSString
-        let matches = regexStylesheet.matches(in: css, options: [], range: NSMakeRange(0, css.characters.count))
+        let matches = regexStylesheet.matches(in: css, options: [], range: NSMakeRange(0, css.count))
         
         rulesets = []
         
         for match in matches {
-            let selectors = cssNS.substring(with: match.rangeAt(1)).trimmingCharacters(in: .whitespacesAndNewlines)
-            let ruleset = cssNS.substring(with: match.rangeAt(2)).trimmingCharacters(in: .whitespacesAndNewlines)
+            let selectors = cssNS.substring(with: match.range(at: 1)).trimmingCharacters(in: .whitespacesAndNewlines)
+            let ruleset = cssNS.substring(with: match.range(at: 2)).trimmingCharacters(in: .whitespacesAndNewlines)
             
             if selectors == "" || ruleset == "" {
                 continue
@@ -111,7 +111,7 @@ class Style {
     
     func preprocess(input: String) -> String {
         // remove comment and new lines
-        let code  = regexPreprocess.stringByReplacingMatches(in: input, options: [], range: NSMakeRange(0, input.characters.count), withTemplate: "")
+        let code  = regexPreprocess.stringByReplacingMatches(in: input, options: [], range: NSMakeRange(0, input.count), withTemplate: "")
         
         return code
     }
@@ -125,12 +125,12 @@ class Style {
     
     func parseRuleset(input: String) -> [Style.Declaration] {
         let inputNS = input as NSString
-        let matches = regexDeclaration.matches(in: input, options: [], range: NSMakeRange(0, input.characters.count))
+        let matches = regexDeclaration.matches(in: input, options: [], range: NSMakeRange(0, input.count))
         var declarations:[Style.Declaration] = []
 
         for match in matches {
-            let prop = inputNS.substring(with: match.rangeAt(1)).trimmingCharacters(in: .whitespacesAndNewlines)
-            let value = inputNS.substring(with: match.rangeAt(2)).trimmingCharacters(in: .whitespacesAndNewlines)
+            let prop = inputNS.substring(with: match.range(at: 1)).trimmingCharacters(in: .whitespacesAndNewlines)
+            let value = inputNS.substring(with: match.range(at: 2)).trimmingCharacters(in: .whitespacesAndNewlines)
 
             if prop == "" || value == "" {
                 continue
@@ -148,21 +148,21 @@ class Style {
         
         if webColors[color] != nil {
             hexColor = webColors[color]!
-        } else if let match = regexColor.firstMatch(in: color, options: [], range: NSMakeRange(0, color.characters.count)) {
-            hexColor = (color as NSString).substring(with: match.rangeAt(1))
-        } else if let match = regexRGBA.firstMatch(in: color, options: [], range: NSMakeRange(0, color.characters.count)) {
+        } else if let match = regexColor.firstMatch(in: color, options: [], range: NSMakeRange(0, color.count)) {
+            hexColor = (color as NSString).substring(with: match.range(at: 1))
+        } else if let match = regexRGBA.firstMatch(in: color, options: [], range: NSMakeRange(0, color.count)) {
             let colorNS = color as NSString
             return CGColor(
-                red: CGFloat( ( colorNS.substring(with: match.rangeAt(1)) as NSString ).floatValue / 255.0 ),
-                green: CGFloat( ( colorNS.substring(with: match.rangeAt(2)) as NSString ).floatValue / 255.0 ),
-                blue: CGFloat( ( colorNS.substring(with: match.rangeAt(3)) as NSString ).floatValue / 255.0 ),
-                alpha: CGFloat( ( colorNS.substring(with: match.rangeAt(4)) as NSString ).floatValue )
+                red: CGFloat( ( colorNS.substring(with: match.range(at: 1)) as NSString ).floatValue / 255.0 ),
+                green: CGFloat( ( colorNS.substring(with: match.range(at: 2)) as NSString ).floatValue / 255.0 ),
+                blue: CGFloat( ( colorNS.substring(with: match.range(at: 3)) as NSString ).floatValue / 255.0 ),
+                alpha: CGFloat( ( colorNS.substring(with: match.range(at: 4)) as NSString ).floatValue )
             )
         } else {
             return nil
         }
 
-        if hexColor.characters.count == 3 {
+        if hexColor.count == 3 {
             let regex = try! NSRegularExpression(pattern: "[0-9a-f]")
             hexColor = regex.stringByReplacingMatches(in: hexColor, options: [], range: NSMakeRange(0, 3), withTemplate: "$0$0")
         }
