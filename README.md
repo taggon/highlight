@@ -25,7 +25,12 @@ Original features:
 * Custom font
 * Global hotkey - you don't even need to click.
 * Automatic updates
-* Supports English and Korean - any constributions are appreciated. :)
+* Supports multi-language UI
+  * English
+  * Korean
+  * Turkish - Thanks to [@tosbaha](https://github.com/tosbaha)
+  * Chinese Simplified - Thanks to [@xnth97](https://github.com/xnth97)
+Want to add support for your language? Send me translations! :)
 
 ## Installation
 
@@ -48,11 +53,9 @@ Want to customize results? Open the Preferences dialog.
 
 ## Contribution
 
-Highlight supports multi-language UI, currently only for English and Korean.
+Highlight supports multi-language UI, currently only for few languages including English and Korean.
 If you're interested in translating the application, start by copying
 [the Korean translation folder](https://github.com/taggon/highlight/tree/master/Highlight/ko.lproj) into your respective language folder
 (e.g. pr.lproj for Portuguese, ru.lproj for Russian, etc).
 
-You need to translate all files in the folder except [MoveApplication.strings](https://github.com/taggon/highlight/blob/master/Highlight/ko.lproj/MoveApplication.strings)
-that comes from [LetsMove](https://github.com/potionfactory/LetsMove) project.
-I will copy the file for your language from the project as soon as your translation is merged into the master branch.
+You need to translate all files in the folder. Because the MoveApplication.strings comes from [LetsMove](https://github.com/potionfactory/LetsMove) project, you can copy the same file from the project if exists.

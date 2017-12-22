@@ -25,7 +25,12 @@ highlight.js의 기능:
 * 커스텀 폰트
 * 전역 단축키 - 클릭조차 필요없습니다.
 * 자동 업데이트
-* 영어와 한국어 UI 지원 - 다른 언어 번역도 환영합니다. :)
+* 다국어 UI 지원
+  * 영어
+  * 한국어
+  * 터키어 - [@tosbaha](https://github.com/tosbaha)님
+  * 중국어(간체) - [@xnth97](https://github.com/xnth97)님
+다른 언어 번역도 환영합니다. :)
 
 ## 설치
 
@@ -52,5 +57,4 @@ Highlight는 다국어 UI를 지원하는데 현재는 영어와 한국어를 �
 [한국어 번역 폴더](https://github.com/taggon/highlight/tree/master/Highlight/ko.lproj)를 원하는 언어
 (예. 포르투갈어라면 pr.lproj, 러시아어라면 ru.lproj 등)에 해당하는 폴더로 복사하세요.
 
-폴더 안에 있는 파일은 [LetsMove](https://github.com/potionfactory/LetsMove) 프로젝트에서 가져 온  [MoveApplication.strings](https://github.com/taggon/highlight/blob/master/Highlight/ko.lproj/MoveApplication.strings)를 제외하고는 모두 번역해야 합니다.
-작성한 언어가 마스터 브랜치에 병합되고 나면 그 언어에 해당하는 파일을 LetsMove 프로젝트로부터 제가 직접 복사할 것입니다.
+폴더 안에 있는 파일은 모두 번역해주셔야 합니다. 단, MoveApplication.strings 파일은 [LetsMove](https://github.com/potionfactory/LetsMove) 프로젝트에서 가져 온 것이므로 해당 프로젝트에 번역 파일이 존재한다면 그대로 복사해서 사용해도 괜찮습니다.
