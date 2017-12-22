@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
             updateStyleMenu()
         }
     }
-    
+
     func highlightCode(lang: String = "") {
         DispatchQueue.global().async {
             // get text from the pasteboard
@@ -82,6 +82,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
                 pboard.setData(data!, forType: NSRTFPboardType)
             }
         }
+    }
+    
+    @objc func highlightCodeAuto() {
+        highlightCode();
     }
     
     func updateKeyEquivalentOfHighlightMenu() {

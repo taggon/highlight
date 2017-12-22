@@ -1,8 +1,9 @@
 project 'Highlight.xcodeproj'
+platform :osx, '10.11'
 use_frameworks!
 
 target 'Highlight' do
-	pod 'KeyHolder', :git => 'https://github.com/taggon/KeyHolder.git'
+	pod 'KeyHolder'
     pod 'Magnet'
 	pod 'Sparkle'
 	pod 'LetsMove'

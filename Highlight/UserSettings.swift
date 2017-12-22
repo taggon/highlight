@@ -117,7 +117,7 @@ extension UserSettings {
     
     func saveHotkey(keycomb: KeyCombo) {
         let appDelegate = NSApplication.shared().delegate as! AppDelegate
-        let hotkey = HotKey(identifier: "highlight:hotkey", keyCombo: keycomb, target: appDelegate, action: #selector(AppDelegate.highlightCode))
+        let hotkey = HotKey(identifier: "highlight:hotkey", keyCombo: keycomb, target: appDelegate, action: #selector(AppDelegate.highlightCodeAuto))
         let info = ["keycode": keycomb.keyCode, "modifiers": keycomb.modifiers]
         
         if keycomb.modifiers == 0 {

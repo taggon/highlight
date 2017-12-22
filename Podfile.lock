@@ -1,31 +1,25 @@
 PODS:
-  - KeyHolder (2.0.0):
+  - HotKey (0.1.0)
+  - KeyHolder (2.0.1):
     - Magnet (~> 2.0)
   - LetsMove (1.22)
   - Magnet (2.0.1)
   - Sparkle (1.17.0)
 
 DEPENDENCIES:
-  - KeyHolder (from `https://github.com/taggon/KeyHolder.git`)
+  - HotKey
+  - KeyHolder
   - LetsMove
   - Magnet
   - Sparkle
 
-EXTERNAL SOURCES:
-  KeyHolder:
-    :git: https://github.com/taggon/KeyHolder.git
-
-CHECKOUT OPTIONS:
-  KeyHolder:
-    :commit: 14644656e283a9bb10abbb6b96b7e33a115be131
-    :git: https://github.com/taggon/KeyHolder.git
-
 SPEC CHECKSUMS:
-  KeyHolder: b062a8e003254133b95453a79d7bb9e3ccf29e50
+  HotKey: aa2b99ed0a4d7026e1bc15b6ae206a70e9a1851f
+  KeyHolder: 33180865d66f40088758915f30ba7017e96ca264
   LetsMove: 407d4d14815e6dc1549b6a9fe8e4b0f6aed3e305
   Magnet: d4a1767953d02c2141f5b572ea483244fe0878d5
   Sparkle: ccfb47699feea7b40b51cf3176f69404e5b1da6c
 
-PODFILE CHECKSUM: 7756d4816b686e8edbe97b210db559afc6a8e410
+PODFILE CHECKSUM: 0493aeca99f016541ddc5b82bdc45b9fa0bc7d37
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.3.1
