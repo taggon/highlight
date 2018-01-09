@@ -83,7 +83,7 @@ class Highlighter: UserSettings {
         }
 
         let html = parseClassAsInlineStyles(html: "<pre class=\"hljs\"><code>\(renderedCode)</code></pre>")
-        attrStr = NSMutableAttributedString(html: html.data(using: .utf8)!, options: [:], documentAttributes: nil)!
+        attrStr = NSMutableAttributedString(html: html.data(using: .unicode)!, options: [:], documentAttributes: nil)!
 
         // set the default font size
         attrStr.addAttribute(NSAttributedStringKey.font, value: userFont ?? defaultFont, range: NSMakeRange(0, attrStr.length))
