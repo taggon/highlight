@@ -8,7 +8,7 @@
 # Highlight
 
 Highlight is a rich-featured syntax highlighter for Keynote slides that allows you to get syntax-highlighted code in RTF with one click.
-Its main feature is based on [highlight.js](https://highlightjs.org/), which means 176 langauges and 79 styles are available.
+Its main feature is based on [highlight.js](https://highlightjs.org/), which means 185 langauges and 89 styles are available.
 Check out the [demo](https://highlightjs.org/static/demo/) to see what you get with the application.
 
 ## Features

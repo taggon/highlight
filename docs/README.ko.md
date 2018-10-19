@@ -8,7 +8,7 @@
 # Highlight
 
 Highlight는 클릭 한 번으로 키노트 슬라이드에 문법이 강조되어 색상이 입혀진 RTF 형식의 코드를 붙여넣을 수 있으며, 다양한 기능을 갖춘 문법 강조 프로그램입니다.
-주요 기능은 [highlight.js](https://highlightjs.org/)를 기반으로 하고 있으므로, 마찬가지로 176개의 언어와 79개의 스타일을 지원합니다.
+주요 기능은 [highlight.js](https://highlightjs.org/)를 기반으로 하고 있으므로, 마찬가지로 185개의 언어와 89개의 스타일을 지원합니다.
 이 애플리케이션을 사용했을 때 코드가 어떻게 표현되는지 궁금한 분은 [데모](https://highlightjs.org/static/demo/)를 확인해보시기 바랍니다.
 
 ## 기능
