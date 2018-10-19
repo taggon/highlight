@@ -1,9 +1,9 @@
 PODS:
-  - KeyHolder (2.1.0):
-    - Magnet (~> 2.1)
+  - KeyHolder (3.0.1):
+    - Magnet (~> 2.3)
   - LetsMove (1.24)
-  - Magnet (2.1.0)
-  - Sparkle (1.18.1)
+  - Magnet (2.3.0)
+  - Sparkle (1.20.0)
 
 DEPENDENCIES:
   - KeyHolder
@@ -12,10 +12,10 @@ DEPENDENCIES:
   - Sparkle
 
 SPEC CHECKSUMS:
-  KeyHolder: 22fc9d2c939bf5a24078d0bbb2a354d9da1386e3
+  KeyHolder: 142932db4eac7420b003e2eae94c9a61b8b53cb1
   LetsMove: fefe56bc7bc7fb7d37049e28a14f297961229fc5
-  Magnet: 6c26f03a279b9340bb6a86a73a1314d2da110219
-  Sparkle: 06ea33170007c5937ee54da481b4481af98fac79
+  Magnet: 85344b019d023e26062199aeb5b4ad1f8d41c5df
+  Sparkle: 48999e7ee032f05ca05e28451eadf4af8ede6b44
 
 PODFILE CHECKSUM: 68bc0dfd1ee7ebc780c9df40923ddb9e768b6b31
 

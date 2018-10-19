@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
     var currentFont: NSFont?
     
     lazy var prefWindowController: NSWindowController! = {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Preferences"), bundle: Bundle.main)
+        let storyboard = NSStoryboard(name: "Preferences", bundle: Bundle.main)
         let controller = storyboard.instantiateInitialController() as! PrefWindowController
         
         return controller
@@ -155,7 +155,7 @@ extension AppDelegate {
 
     func loadStatusImage(name: String) {
         if let button = statusItem.button {
-            button.image = NSImage(named: NSImage.Name(rawValue: name))
+            button.image = NSImage(named: name)
             button.image!.size = NSMakeSize(18.0, 18.0)
         }
     }

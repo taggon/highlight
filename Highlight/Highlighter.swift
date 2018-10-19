@@ -86,7 +86,7 @@ class Highlighter: UserSettings {
         attrStr = NSMutableAttributedString(html: html.data(using: .unicode)!, options: [:], documentAttributes: nil)!
 
         // set the default font size
-        attrStr.addAttribute(NSAttributedStringKey.font, value: userFont ?? defaultFont, range: NSMakeRange(0, attrStr.length))
+        attrStr.addAttribute(NSAttributedString.Key.font, value: userFont ?? defaultFont, range: NSMakeRange(0, attrStr.length))
         
         return attrStr
     }
