@@ -3,14 +3,16 @@
 	"author": "Taegon Kim",
 	"private": true,
 	"scripts": {
-		"postinstall": "n-clean Highlight/scripts && npm run copy-css && node build.js",
-		"copy-css": "n-copy --source node_modules/highlight.js/styles --destination Highlight/scripts/styles '*'"
+		"postinstall": "del Highlight/scripts && npm run copy-css && node build.js",
+		"copy-css": "make-dir Highlight/scripts/styles && cpy node_modules/highlight.js/styles/*.css Highlight/scripts/styles"
 	},
 	"dependencies": {
+		"cpy-cli": "^2.0.0",
 		"cssmin": "^0.4.3",
-		"glob": "^7.1.1",
-		"highlight.js": "^9.12.0",
-		"npm-build-tools": "^2.2.5",
-		"uglify-js": "^3.2.2"
+		"del-cli": "^1.1.0",
+		"glob": "^7.1.3",
+		"highlight.js": "^9.13.1",
+		"make-dir-cli": "^1.0.0",
+		"uglify-js": "^3.3.9"
 	}
 }
