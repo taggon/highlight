@@ -15,7 +15,7 @@ Check out the [demo](https://highlightjs.org/static/demo/) to see what you get w
 
 From highlight.js:
 
-* 176 languages and 79 styles
+* 185 languages and 89 styles
 * Automatic language detection
 * Multi-language code highlighting
 
