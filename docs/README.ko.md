@@ -51,6 +51,18 @@ highlight.js의 기능:
 
 더 자세하게 결과물을 조절하고 싶다면? 환경설정 대화상자를 살펴보시기 바랍니다.
 
+## 빌드하는 법
+
+[CocoaPods](https://cocoapods.org/)를 설치한 후 다음 명령어를 프로젝트 루트 폴더에서 실행합니다.
+[NodeJS](https://nodejs.org)도 필요하므로 미리 설치해두세요.
+
+```
+$ pods update && pods install
+$ npm i
+```
+
+프로젝트의 워크스페이스 파일(`Highlight.xcworkspace`)를 열어서 빌드를 실행합니다.
+
 ## 기여 방법
 
 Highlight는 다국어 UI를 지원하는데 현재는 영어와 한국어를 지원합니다.

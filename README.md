@@ -52,6 +52,18 @@ or just choose the auto-detect one. Now the code is syntax-highligted.
 
 Do you like to customize the results? Just open the Preferences dialog. You will see how.
 
+## How to build
+
+Once you install [CocoaPods](https://cocoapods.org/) on your system, run the following command in the project root directory.
+You may need to setup [NodeJS](https://nodejs.org).
+
+```
+$ pods update && pods install
+$ npm i
+```
+
+Open the workspace by double-clicking `Highlight.xcworkspace` then build it. It should just work.
+
 ## Contribution
 
 Highlight supports multi-language UI, currently only for few languages including English and Korean.
