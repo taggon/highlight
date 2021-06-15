@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="57.5" y="-56.5"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Pref Tab View Controller-->
         <scene sceneID="Cru-EV-yAQ">
             <objects>
-                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="0" tabStyle="toolbar" canPropagateSelectedChildViewControllerTitle="NO" id="JtN-cq-QYP" sceneMemberID="viewController">
+                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="0" tabStyle="toolbar" canPropagateSelectedChildViewControllerTitle="NO" id="JtN-cq-QYP" customClass="PrefTabViewController" customModule="Highlight" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" image="NSPreferencesGeneral" id="Pya-f8-baD"/>
                         <tabViewItem image="Swift" id="fYy-Zd-XU9"/>
