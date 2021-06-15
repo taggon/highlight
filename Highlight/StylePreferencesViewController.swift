@@ -109,9 +109,10 @@ class StylePreferencesViewController: NSViewController, UserSettings {
     func refreshCode() {
         let containerRuleset = appDelegate.highlighter.currentStyle?[".hljs"]
         let bgColor = containerRuleset?["background"]?.color ?? containerRuleset?["background-color"]?.color ?? CGColor.white
-
+        let highlighter = appDelegate.highlighter
+        
         DispatchQueue.global().async {
-            let text = self.appDelegate.highlighter.paint(code: self.snippet)
+            let text = highlighter.paint(code: self.snippet)
             DispatchQueue.main.async {
                 self.codeView.isEditable = true
                 self.codeView.string = ""
