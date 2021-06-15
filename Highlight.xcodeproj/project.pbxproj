@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -120,13 +120,13 @@
 				F25AEB7F1E212E830083CB52 /* Preferences */,
 				F25AEB721E212C6E0083CB52 /* AppDelegate.swift */,
 				F24B1DCC1E2B1B1400FCE0A7 /* AppDelegate+Version.swift */,
-				F25AEB801E212F9B0083CB52 /* MainMenu.xib */,
-				F2663F0D1E87EA6400951DE6 /* Constant.swift */,
-				F25AEB791E212C6E0083CB52 /* Info.plist */,
 				F2663F151E8889B700951DE6 /* Highlighter.swift */,
 				F2663F171E88EFC400951DE6 /* Style.swift */,
 				F29B17071E8D1BF80060CA02 /* UserSettings.swift */,
 				F24592111F126EB400727164 /* RGBtoHSV.swift */,
+				F2663F0D1E87EA6400951DE6 /* Constant.swift */,
+				F25AEB801E212F9B0083CB52 /* MainMenu.xib */,
+				F25AEB791E212C6E0083CB52 /* Info.plist */,
 			);
 			path = Highlight;
 			sourceTree = "<group>";
@@ -139,8 +139,8 @@
 				F25EE5EA1F1240EA00722817 /* LanguagePreferecensViewController.swift */,
 				F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */,
 				F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */,
-				F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */,
 				F2BC10D71FED7B460032D547 /* BaseWindow.swift */,
+				F29E0C241E8E4B91005A3DF3 /* Preferences.storyboard */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -177,7 +177,6 @@
 				F25AEB6C1E212C6E0083CB52 /* Frameworks */,
 				F25AEB6D1E212C6E0083CB52 /* Resources */,
 				24A10E0555FF08C35A963764 /* [CP] Embed Pods Frameworks */,
-				DD6BDBA87B3A6B4E66A076BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,7 +194,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Taegon Kim";
 				TargetAttributes = {
 					F25AEB6E1E212C6E0083CB52 = {
@@ -207,8 +206,8 @@
 				};
 			};
 			buildConfigurationList = F25AEB6A1E212C6E0083CB52 /* Build configuration list for PBXProject "Highlight" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -251,7 +250,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Highlight/Pods-Highlight-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Highlight/Pods-Highlight-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeyHolder/KeyHolder.framework",
 				"${BUILT_PRODUCTS_DIR}/LetsMove/LetsMove.framework",
 				"${BUILT_PRODUCTS_DIR}/Magnet/Magnet.framework",
@@ -266,7 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Highlight/Pods-Highlight-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Highlight/Pods-Highlight-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		766968E432CB1E35FC04933A /* [CP] Check Pods Manifest.lock */ = {
@@ -285,21 +284,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD6BDBA87B3A6B4E66A076BA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Highlight/Pods-Highlight-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -388,6 +372,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -446,6 +431,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -467,7 +453,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -476,10 +463,14 @@
 			baseConfigurationReference = 63DA08134009628B6644DACB /* Pods-Highlight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PJ627876A5;
 				INFOPLIST_FILE = Highlight/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.taegon.Highlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,10 +483,14 @@
 			baseConfigurationReference = 8607AD41AA27C6C4FBCE1B75 /* Pods-Highlight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PJ627876A5;
 				INFOPLIST_FILE = Highlight/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = kim.taegon.Highlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
