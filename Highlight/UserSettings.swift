@@ -87,7 +87,7 @@ extension UserSettings {
     }
     
     func addLang(lang: String) {
-        if userLangs.index(of: lang) != nil {
+        if userLangs.firstIndex(of: lang) != nil {
             return
         }
         
@@ -98,7 +98,7 @@ extension UserSettings {
     }
     
     func removeLang(lang: String) {
-        guard let idx = userLangs.index(of: lang) else { return }
+        guard let idx = userLangs.firstIndex(of: lang) else { return }
         var newLangs = userLangs
         newLangs.remove(at: idx)
         
