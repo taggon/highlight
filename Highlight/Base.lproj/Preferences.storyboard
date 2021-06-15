@@ -367,7 +367,7 @@
         <!--Languages-->
         <scene sceneID="Xk9-6U-hbC">
             <objects>
-                <viewController title="Languages" showSeguePresentationStyle="single" id="ajm-LN-tcW" customClass="LanguagePreferecensViewController" customModule="Highlight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Languages" showSeguePresentationStyle="single" id="ajm-LN-tcW" customClass="LanguagePreferencesViewController" customModule="Highlight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="zEb-7o-d6R">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="369"/>
                         <autoresizingMask key="autoresizingMask"/>

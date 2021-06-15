@@ -15,7 +15,7 @@
 		F25AEB871E213D230083CB52 /* AboutPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB851E213D230083CB52 /* AboutPreferencesViewController.swift */; };
 		F25AEB8B1E213D360083CB52 /* StylePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB891E213D360083CB52 /* StylePreferencesViewController.swift */; };
 		F25AEB8F1E213D570083CB52 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */; };
-		F25EE5EB1F1240EA00722817 /* LanguagePreferecensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EE5EA1F1240EA00722817 /* LanguagePreferecensViewController.swift */; };
+		F25EE5EB1F1240EA00722817 /* LanguagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EE5EA1F1240EA00722817 /* LanguagePreferencesViewController.swift */; };
 		F2663F0E1E87EA6400951DE6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F0D1E87EA6400951DE6 /* Constant.swift */; };
 		F2663F161E8889B700951DE6 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F151E8889B700951DE6 /* Highlighter.swift */; };
 		F2663F181E88EFC400951DE6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2663F171E88EFC400951DE6 /* Style.swift */; };
@@ -51,7 +51,7 @@
 		F25AEB851E213D230083CB52 /* AboutPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPreferencesViewController.swift; sourceTree = "<group>"; };
 		F25AEB891E213D360083CB52 /* StylePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePreferencesViewController.swift; sourceTree = "<group>"; };
 		F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
-		F25EE5EA1F1240EA00722817 /* LanguagePreferecensViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePreferecensViewController.swift; sourceTree = "<group>"; };
+		F25EE5EA1F1240EA00722817 /* LanguagePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePreferencesViewController.swift; sourceTree = "<group>"; };
 		F2663F0D1E87EA6400951DE6 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F2663F151E8889B700951DE6 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
 		F2663F171E88EFC400951DE6 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 			children = (
 				F25AEB851E213D230083CB52 /* AboutPreferencesViewController.swift */,
 				F25AEB891E213D360083CB52 /* StylePreferencesViewController.swift */,
-				F25EE5EA1F1240EA00722817 /* LanguagePreferecensViewController.swift */,
+				F25EE5EA1F1240EA00722817 /* LanguagePreferencesViewController.swift */,
 				F25AEB8D1E213D570083CB52 /* GeneralPreferencesViewController.swift */,
 				F2DFC4C41E2F5FA3009F4623 /* PrefWindowController.swift */,
 				F2BC10D71FED7B460032D547 /* BaseWindow.swift */,
@@ -289,7 +289,7 @@
 				F24592121F126EB400727164 /* RGBtoHSV.swift in Sources */,
 				F2BC10D81FED7B460032D547 /* BaseWindow.swift in Sources */,
 				F25AEB731E212C6E0083CB52 /* AppDelegate.swift in Sources */,
-				F25EE5EB1F1240EA00722817 /* LanguagePreferecensViewController.swift in Sources */,
+				F25EE5EB1F1240EA00722817 /* LanguagePreferencesViewController.swift in Sources */,
 				F24B1DCD1E2B1B1400FCE0A7 /* AppDelegate+Version.swift in Sources */,
 				F25AEB8B1E213D360083CB52 /* StylePreferencesViewController.swift in Sources */,
 				F29B17081E8D1BF80060CA02 /* UserSettings.swift in Sources */,
