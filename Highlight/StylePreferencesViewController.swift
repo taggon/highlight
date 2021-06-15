@@ -112,7 +112,7 @@ class StylePreferencesViewController: NSViewController, UserSettings {
         let highlighter = appDelegate.highlighter
         
         DispatchQueue.global().async {
-            let text = highlighter.paint(code: self.snippet)
+            let text = highlighter.paint(code: self.snippet, lang: self.lang)
             DispatchQueue.main.async {
                 self.codeView.isEditable = true
                 self.codeView.string = ""
