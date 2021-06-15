@@ -80,6 +80,6 @@ extension GeneralPreferencesViewController: RecordViewDelegate {
         saveHotkey(keycomb: keycomb)
     }
     
-    func recordView(_ recordView: RecordView, didChangeKeyCombo keyCombo: KeyCombo) {
+    func recordView(_ recordView: RecordView, didChangeKeyCombo keyCombo: KeyCombo?) {
     }
 }

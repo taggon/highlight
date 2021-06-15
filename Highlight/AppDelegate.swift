@@ -95,7 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
             return
         }
         highlightCodeItem.keyEquivalent = hotkey.characters
-        highlightCodeItem.keyEquivalentModifierMask = KeyTransformer.cocoaFlags(from: hotkey.modifiers)
+        highlightCodeItem.keyEquivalentModifierMask = NSEvent.ModifierFlags(carbonModifiers: hotkey.modifiers)
     }
     
     @IBAction func highlightCodeAction(sender: AnyObject?) {

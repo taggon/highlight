@@ -58,8 +58,8 @@ Once you install [CocoaPods](https://cocoapods.org/) on your system, run the fol
 You may need to setup [NodeJS](https://nodejs.org).
 
 ```
-$ pods update && pods install
-$ npm i
+$ pod install
+$ npm install
 ```
 
 Open the workspace by double-clicking `Highlight.xcworkspace` then build it. It should just work.
