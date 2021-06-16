@@ -477,7 +477,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-I4-vz1">
-                                            <rect key="frame" x="160" y="132" width="130" height="34"/>
+                                            <rect key="frame" x="160" y="137" width="130" height="34"/>
                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Highlight" id="W8z-Re-N6q">
                                                 <font key="font" size="28" name="Helvetica-Bold"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -485,7 +485,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="szj-vi-jb6">
-                                            <rect key="frame" x="204" y="108" width="43" height="16"/>
+                                            <rect key="frame" x="204" y="113" width="43" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="v1.0.0" id="60N-Ul-LsY">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -512,7 +512,7 @@
                                     <constraints>
                                         <constraint firstItem="hZ9-96-4u1" firstAttribute="centerX" secondItem="m2k-WE-ccQ" secondAttribute="centerX" id="1fx-sy-bWa"/>
                                         <constraint firstItem="Bam-I4-vz1" firstAttribute="centerX" secondItem="m2k-WE-ccQ" secondAttribute="centerX" id="LNh-N6-6lD"/>
-                                        <constraint firstItem="Bam-I4-vz1" firstAttribute="top" secondItem="hqP-mn-3jH" secondAttribute="bottom" constant="15" id="W1f-gj-qDR"/>
+                                        <constraint firstItem="Bam-I4-vz1" firstAttribute="top" secondItem="hqP-mn-3jH" secondAttribute="bottom" constant="10" id="W1f-gj-qDR"/>
                                         <constraint firstAttribute="bottom" secondItem="hZ9-96-4u1" secondAttribute="bottom" constant="30" id="W3H-Ab-c0h"/>
                                         <constraint firstItem="szj-vi-jb6" firstAttribute="top" secondItem="Bam-I4-vz1" secondAttribute="bottom" constant="8" id="a12-DZ-WB9"/>
                                         <constraint firstItem="hqP-mn-3jH" firstAttribute="centerX" secondItem="m2k-WE-ccQ" secondAttribute="centerX" id="axn-qK-iA2"/>
@@ -540,7 +540,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Highlight" width="366" height="377"/>
+        <image name="Highlight" width="360" height="360"/>
         <image name="NSColorPanel" width="32" height="32"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
