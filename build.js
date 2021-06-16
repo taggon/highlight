@@ -71,8 +71,8 @@ let jsTask = Promise.all(
 	console.log('⏱  Compiling the Highlight package file...');
 
 	return new Promise( (resolve, reject) => {
-		//const code = hljs;
-		const code = uglify.minify(hljs, { sourceMap: false, mangle: false }).code;
+		const code = hljs;
+		//const code = uglify.minify(hljs, { sourceMap: false, mangle: false }).code;
 
 		fs.writeFile('Highlight/scripts/highlight.pack.js', code, (err) => {
 			if (err) return reject(err);
