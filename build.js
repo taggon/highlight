@@ -15,7 +15,7 @@ let cssTask = Promise.all(
 
 				let filename = path.basename(filepath, '.css');
 				let newPath = filepath.replace(/\.css$/, '.min.css');
-				let style = styleNames[ filename ] || filename.replace(/(?:^|[_-])([a-z])/g, ($0, $1) => ' ' + $1.toUpperCase() ).trim();
+				let style = styleNames[ filename ] || filename.replace(/(?:^|[._-])([a-zA-Z0-9])/g, ($0, $1) => ' ' + $1.toUpperCase() ).trim();
 
 				fs.unlink(filepath, () => {});
 				fs.writeFile( newPath, cssmin(data), (err) => {
@@ -41,13 +41,14 @@ let cssTask = Promise.all(
 
 // 
 let jsTask = Promise.all(
-	glob.sync('node_modules/highlight.js/lib/languages/*.js', {absolute: true}).map( (filepath) => {
+	glob.sync('node_modules/highlight.js/lib/languages/+([a-zA-Z0-9_-]).js', {absolute: true}).map( (filepath) => {
 		return new Promise( (resolve, reject) => {
 			fs.readFile(filepath, {encoding: 'utf8'}, (err, data) => {
 				if (err) return reject(err);
 
 				let filename = path.basename(filepath, '.js');
-				data = data.replace(/^module.exports\s*=\s*/, `self.hljs.registerLanguage('${filename}',`).replace(/;$/, ');');
+				data = '(function() {' + data + '})();'
+				data = data.replace(/module.exports\s*=\s*(\w+)/, `highlightGlobalInstance.registerLanguage('${filename}', $1)`)
 
 				resolve( { lang: filename, data } );
 			} );
@@ -55,9 +56,9 @@ let jsTask = Promise.all(
 	} )
 )
 .then( (langs) => {
-	let hljs = fs.readFileSync('node_modules/highlight.js/lib/highlight.js');
+	let hljs = fs.readFileSync('node_modules/highlight.js/lib/core.js', {encoding: 'utf8'});
 
-	hljs = 'var self={};' + hljs;
+	hljs = hljs.replace(/module.exports\s*=\s*(\w+);/, `var highlightGlobalInstance = highlight;`)
 
 	// load the order of registration
 	let order = (fs.readFileSync('node_modules/highlight.js/lib/index.js')+"")

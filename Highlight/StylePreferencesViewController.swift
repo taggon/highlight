@@ -146,7 +146,7 @@ extension StylePreferencesViewController {
             "PHP": "php",
             "Java": "java",
             "C++": "cpp",
-            "HTML": "html",
+            "HTML": "xml",
             "CSS": "css",
         ]
     }
