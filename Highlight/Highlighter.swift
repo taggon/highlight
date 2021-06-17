@@ -82,7 +82,7 @@ class Highlighter: UserSettings {
             renderedCode = addLineNumbers(code: renderedCode)
         }
 
-        let html = parseClassAsInlineStyles(html: "<pre class=\"hljs\"><code>\(renderedCode)</code></pre>")
+        let html = parseClassAsInlineStyles(html: "<pre class=\"hljs\" style=\"display:inline\"><code style=\"display:inline\">\(renderedCode)</code></pre>")
         attrStr = NSMutableAttributedString(html: html.data(using: .unicode)!, options: [:], documentAttributes: nil)!
 
         // set the default font size
