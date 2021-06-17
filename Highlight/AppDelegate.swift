@@ -48,10 +48,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
 
         // Save the current font for comparison
         currentFont = userFont
-
-        #if DEBUG
-            prefWindowController.showWindow(self)
-        #endif
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -163,11 +159,12 @@ extension AppDelegate {
     // # Languages
 
     func drawLangMenu() {
-        for lang in userLangs {
-            if let langName = hlLanguages.first(where: { $1 == lang })?.key {
-                let item = NSMenuItem(title: langName, action: #selector(didSelectLanguage), keyEquivalent: "")
-                langMenu.addItem(item)
-            }
+        langMenu.removeAllItems()
+        
+        let langNames = userLangs.compactMap { langName in hlLanguages.first(where: { $1 == langName })?.key }
+        for lang in langNames.sorted() {
+            let item = NSMenuItem(title: lang, action: #selector(didSelectLanguage), keyEquivalent: "")
+            langMenu.addItem(item)
         }
     }
 

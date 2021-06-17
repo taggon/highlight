@@ -40,6 +40,7 @@ class LanguagePreferencesViewController: NSViewController, NSTableViewDataSource
         button.title = name
         button.setButtonType(.switch)
         button.lineBreakMode = .byTruncatingTail
+        button.target = self
         button.action = #selector(selectLang)
         
         let selectedLangs = userLangs
