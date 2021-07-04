@@ -48,10 +48,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
 
         // Save the current font for comparison
         currentFont = userFont
-
-        #if DEBUG
-            prefWindowController.showWindow(self)
-        #endif
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -95,7 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UserSettings {
             return
         }
         highlightCodeItem.keyEquivalent = hotkey.characters
-        highlightCodeItem.keyEquivalentModifierMask = KeyTransformer.cocoaFlags(from: hotkey.modifiers)
+        highlightCodeItem.keyEquivalentModifierMask = NSEvent.ModifierFlags(carbonModifiers: hotkey.modifiers)
     }
     
     @IBAction func highlightCodeAction(sender: AnyObject?) {
@@ -156,18 +152,19 @@ extension AppDelegate {
     func loadStatusImage(name: String) {
         if let button = statusItem.button {
             button.image = NSImage(named: name)
-            button.image!.size = NSMakeSize(18.0, 18.0)
+            button.image!.size = NSMakeSize(15.0, 15.0)
         }
     }
 
     // # Languages
 
     func drawLangMenu() {
-        for lang in userLangs {
-            if let langName = hlLanguages.first(where: { $1 == lang })?.key {
-                let item = NSMenuItem(title: langName, action: #selector(didSelectLanguage), keyEquivalent: "")
-                langMenu.addItem(item)
-            }
+        langMenu.removeAllItems()
+        
+        let langNames = userLangs.compactMap { langName in hlLanguages.first(where: { $1 == langName })?.key }
+        for lang in langNames.sorted() {
+            let item = NSMenuItem(title: lang, action: #selector(didSelectLanguage), keyEquivalent: "")
+            langMenu.addItem(item)
         }
     }
 

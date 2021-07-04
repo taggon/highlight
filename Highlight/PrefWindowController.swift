@@ -23,7 +23,7 @@ class PrefWindowController: NSWindowController, NSToolbarDelegate {
         var frame = window?.frame
 
         if frame != nil {
-            frame?.size.width = CGFloat( 550 )
+            frame?.size.width = CGFloat( 600 )
             frame?.size.height = CGFloat( 500 )
             window?.setFrame(frame!, display: false)
         }

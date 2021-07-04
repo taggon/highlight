@@ -87,7 +87,7 @@ extension UserSettings {
     }
     
     func addLang(lang: String) {
-        if userLangs.index(of: lang) != nil {
+        if userLangs.firstIndex(of: lang) != nil {
             return
         }
         
@@ -98,7 +98,7 @@ extension UserSettings {
     }
     
     func removeLang(lang: String) {
-        guard let idx = userLangs.index(of: lang) else { return }
+        guard let idx = userLangs.firstIndex(of: lang) else { return }
         var newLangs = userLangs
         newLangs.remove(at: idx)
         
@@ -112,13 +112,13 @@ extension UserSettings {
             return nil
         }
         
-        return KeyCombo(keyCode: hotkeyInfo["keycode"]!, carbonModifiers: hotkeyInfo["modifiers"]!)
+        return KeyCombo(QWERTYKeyCode: hotkeyInfo["keycode"]!, carbonModifiers: hotkeyInfo["modifiers"]!)
     }
     
     func saveHotkey(keycomb: KeyCombo) {
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
         let hotkey = HotKey(identifier: "highlight:hotkey", keyCombo: keycomb, target: appDelegate, action: #selector(AppDelegate.highlightCodeAuto))
-        let info = ["keycode": keycomb.keyCode, "modifiers": keycomb.modifiers]
+        let info = ["keycode": keycomb.QWERTYKeyCode, "modifiers": keycomb.modifiers]
         
         if keycomb.modifiers == 0 {
             return

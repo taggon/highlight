@@ -15,7 +15,7 @@ Check out the [demo](https://highlightjs.org/static/demo/) to see what you get w
 
 From highlight.js:
 
-* 185 languages and 89 styles
+* 191 languages and 238 styles
 * Automatic language detection
 * Multi-language code highlighting
 
@@ -58,8 +58,8 @@ Once you install [CocoaPods](https://cocoapods.org/) on your system, run the fol
 You may need to setup [NodeJS](https://nodejs.org).
 
 ```
-$ pods update && pods install
-$ npm i
+$ pod install
+$ npm install
 ```
 
 Open the workspace by double-clicking `Highlight.xcworkspace` then build it. It should just work.

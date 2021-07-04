@@ -1,5 +1,5 @@
 //
-//  LanguagePreferecensViewController.swift
+//  LanguagePreferencesViewController.swift
 //  Highlight
 //
 //  Created by Taegon Kim on 09/07/2017.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class LanguagePreferecensViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, UserSettings {
+class LanguagePreferencesViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, UserSettings {
 
     @IBOutlet weak var langs: NSTableView!
     
@@ -40,6 +40,7 @@ class LanguagePreferecensViewController: NSViewController, NSTableViewDataSource
         button.title = name
         button.setButtonType(.switch)
         button.lineBreakMode = .byTruncatingTail
+        button.target = self
         button.action = #selector(selectLang)
         
         let selectedLangs = userLangs

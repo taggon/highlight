@@ -36,7 +36,7 @@ class Highlighter: UserSettings {
         let js = try! String(contentsOfFile: jsPath!, encoding: .utf8)
 
         context.evaluateScript(js)
-        hljs = context.objectForKeyedSubscript("self").forProperty("hljs")
+        hljs = context.objectForKeyedSubscript("highlightGlobalInstance")
     }
     
     func isValidStyle(name: String) -> Bool {
@@ -65,8 +65,8 @@ class Highlighter: UserSettings {
 
         if lang != "" {
             // use a specific language
-            let langVar = JSValue(object: lang, in: context)!
-            result = hljs.invokeMethod("highlight", withArguments: [langVar, codeVar])!.forProperty("value")
+            let options = JSValue(object: ["language": lang], in: context)!
+            result = hljs.invokeMethod("highlight", withArguments: [codeVar, options])!.forProperty("value")
         } else {
             // auto detect language
             let subset = getDefaultSubsetLanguages()
@@ -82,7 +82,7 @@ class Highlighter: UserSettings {
             renderedCode = addLineNumbers(code: renderedCode)
         }
 
-        let html = parseClassAsInlineStyles(html: "<pre class=\"hljs\"><code>\(renderedCode)</code></pre>")
+        let html = parseClassAsInlineStyles(html: "<pre class=\"hljs\" style=\"display:inline\"><code style=\"display:inline\">\(renderedCode)</code></pre>")
         attrStr = NSMutableAttributedString(html: html.data(using: .unicode)!, options: [:], documentAttributes: nil)!
 
         // set the default font size
