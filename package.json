@@ -7,7 +7,7 @@
 		"copy-css": "make-dir Highlight/scripts/styles && cpy 'node_modules/highlight.js/styles/**/*.css' Highlight/scripts/styles"
 	},
 	"dependencies": {
-		"cpy-cli": "^3.1.1",
+		"cpy-cli": "^4.2.0",
 		"cssmin": "^0.4.3",
 		"del-cli": "^4.0.0",
 		"glob": "^7.1.7",
